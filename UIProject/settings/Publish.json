@@ -1,0 +1,35 @@
+{
+  "path": "../Assets/_Res/UI",
+  "branchPath": "",
+  "fileExtension": "bytes",
+  "packageCount": 2,
+  "compressDesc": true,
+  "binaryFormat": true,
+  "jpegQuality": 80,
+  "compressPNG": false,
+  "codeGeneration": {
+    "allowGenCode": true,
+    "codePath": "../Assets/LuaScripts/ToolGen",
+    "classNamePrefix": "",
+    "memberNamePrefix": "m_",
+    "packageName": "",
+    "ignoreNoname": false,
+    "getMemberByName": true,
+    "codeType": ""
+  },
+  "includeHighResolution": 1,
+  "branchProcessing": 1,
+  "seperatedAtlasForBranch": false,
+  "atlasSetting": {
+    "maxSize": 1024,
+    "paging": true,
+    "sizeOption": "pot",
+    "forceSquare": false,
+    "allowRotation": true,
+    "trimImage": true
+  },
+  "include2x": true,
+  "include3x": false,
+  "include4x": false,
+  "fileName": "Publish"
+}

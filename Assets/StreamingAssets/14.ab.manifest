@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 3043072650
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: bb4f708035731e2c81cecaee33a0bc49
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e7a8211d1220a65f149cab164f436878
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_Res/UI/14_chat_fui.bytes
+- Assets/_Res/UI/14_chat_atlas0.png
+Dependencies: []

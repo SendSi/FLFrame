@@ -1,0 +1,23 @@
+--- This is an automatically generated class by FairyGUI. Please do not modify it. ---
+
+---@class dialogueBtn01 : CS.FairyGUI.GButton
+---@field public __ui CS.FairyGUI.GButton
+---@field public m_button CS.FairyGUI.Controller
+---@field public m_n0 CS.FairyGUI.GImage
+---@field public m_title CS.FairyGUI.GTextField
+---@field public m_contentLbl CS.FairyGUI.GTextField
+local dialogueBtn01 = {};
+
+dialogueBtn01.URL = "ui://common/dialogueBtn01";
+
+function dialogueBtn01:OnConstruct(windowCom)
+	local tb = {
+	m_button = windowCom:GetController("button"),
+	m_n0 = windowCom:GetChild("n0"),
+	m_title = windowCom:GetChild("title"),
+	m_contentLbl = windowCom:GetChild("contentLbl"),
+	}
+	return tb
+end
+
+return dialogueBtn01;

@@ -1,0 +1,17 @@
+--- This is an automatically generated class by FairyGUI. Please do not modify it. ---
+
+---@class main_right_function2 : CS.FairyGUI.GComponent
+---@field public __ui CS.FairyGUI.GComponent
+---@field public m_list CS.FairyGUI.GList
+local main_right_function2 = {};
+
+main_right_function2.URL = "ui://main/main_right_function2";
+
+function main_right_function2:OnConstruct(windowCom)
+	local tb = {
+	m_list = windowCom:GetChild("list"),
+	}
+	return tb
+end
+
+return main_right_function2;
