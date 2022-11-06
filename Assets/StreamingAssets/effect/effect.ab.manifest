@@ -1,0 +1,30 @@
+ManifestFileVersion: 0
+CRC: 176087420
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 05a158409be02a3ad008122934942e01
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5c9e583739725229b391d40aa5981f67
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/_Res/Effect/Effect1.mat
+- Assets/_Res/Effect/Effect1.prefab
+Dependencies: []

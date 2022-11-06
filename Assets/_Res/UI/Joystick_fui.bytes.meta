@@ -3,5 +3,5 @@ guid: 70668c631738f97479c21789c8686948
 TextScriptImporter:
   externalObjects: {}
   userData: 
-  assetBundleName: joystick.ab
-  assetBundleVariant: 
+  assetBundleName: ui/ui
+  assetBundleVariant: ab

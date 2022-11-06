@@ -3,5 +3,5 @@ guid: f59802f030fd12a4680bb4330e917dcd
 TextScriptImporter:
   externalObjects: {}
   userData: 
-  assetBundleName: gesture.ab
-  assetBundleVariant: 
+  assetBundleName: ui/ui
+  assetBundleVariant: ab

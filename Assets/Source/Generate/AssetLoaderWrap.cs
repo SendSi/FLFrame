@@ -9,7 +9,6 @@ public class AssetLoaderWrap
 		L.BeginClass(typeof(AssetLoader), typeof(UnityEngine.MonoBehaviour));
 		L.RegFunction("InitIsLoadBundle", InitIsLoadBundle);
 		L.RegFunction("AddPackage", AddPackage);
-		L.RegFunction("LoadDependencies", LoadDependencies);
 		L.RegFunction("LoadUIPackage", LoadUIPackage);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
@@ -54,35 +53,35 @@ public class AssetLoaderWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int LoadDependencies(IntPtr L)
-	{
-		try
-		{
-			ToLua.CheckArgsCount(L, 3);
-			AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
-			System.Collections.Generic.List<string> arg0 = (System.Collections.Generic.List<string>)ToLua.CheckObject(L, 2, typeof(System.Collections.Generic.List<string>));
-			System.Action<System.Collections.Generic.List<string>> arg1 = (System.Action<System.Collections.Generic.List<string>>)ToLua.CheckDelegate<System.Action<System.Collections.Generic.List<string>>>(L, 3);
-			obj.LoadDependencies(arg0, arg1);
-			return 0;
-		}
-		catch (Exception e)
-		{
-			return LuaDLL.toluaL_exception(L, e);
-		}
-	}
-
-	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
 	static int LoadUIPackage(IntPtr L)
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 3);
-			AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
-			string arg0 = ToLua.CheckString(L, 2);
-			System.Action<System.Collections.Generic.List<string>> arg1 = (System.Action<System.Collections.Generic.List<string>>)ToLua.CheckDelegate<System.Action<System.Collections.Generic.List<string>>>(L, 3);
-			System.Collections.IEnumerator o = obj.LoadUIPackage(arg0, arg1);
-			ToLua.Push(L, o);
-			return 1;
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 3)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				System.Action<System.Collections.Generic.List<string>> arg1 = (System.Action<System.Collections.Generic.List<string>>)ToLua.CheckDelegate<System.Action<System.Collections.Generic.List<string>>>(L, 3);
+				System.Collections.IEnumerator o = obj.LoadUIPackage(arg0, arg1);
+				ToLua.Push(L, o);
+				return 1;
+			}
+			else if (count == 4)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				System.Action<System.Collections.Generic.List<string>> arg1 = (System.Action<System.Collections.Generic.List<string>>)ToLua.CheckDelegate<System.Action<System.Collections.Generic.List<string>>>(L, 3);
+				bool arg2 = LuaDLL.luaL_checkboolean(L, 4);
+				System.Collections.IEnumerator o = obj.LoadUIPackage(arg0, arg1, arg2);
+				ToLua.Push(L, o);
+				return 1;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: AssetLoader.LoadUIPackage");
+			}
 		}
 		catch (Exception e)
 		{

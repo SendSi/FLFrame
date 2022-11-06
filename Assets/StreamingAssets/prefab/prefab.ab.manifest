@@ -1,15 +1,25 @@
 ManifestFileVersion: 0
-CRC: 2254415770
+CRC: 3992317250
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: e64d3247e93431e914ee3a53dbc3348c
+    Hash: 941353ab2c4c8e1b4fe6e1260dffdaf0
   TypeTreeHash:
     serializedVersion: 2
-    Hash: 703e81fb8889b3c0f372c5615409d3df
+    Hash: 11819b888e8b219a20c9fcc749f56548
 HashAppended: 0
 ClassTypes:
 - Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 65
   Script: {instanceID: 0}
 - Class: 114
   Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -31,5 +41,6 @@ SerializeReferenceClassIdentifiers:
 - AssemblyName: UnityEngine.UI
   ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
 Assets:
+- Assets/_Res/Prefab/Cube.prefab
 - Assets/_Res/Prefab/Canvas.prefab
 Dependencies: []
