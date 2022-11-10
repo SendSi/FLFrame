@@ -1,6 +1,5 @@
 --region LuaCodeWriter
 local LuaCodeWriter = fclass()
-
 function LuaCodeWriter:ctor(config)
     config = config or {}
     self.blockStart = config.blockStart or '{'
@@ -21,10 +20,8 @@ function LuaCodeWriter:ctor(config)
 
     self:writeMark()
 end
-
 function LuaCodeWriter:writeMark()
     table.insert(self.lines, '--- This is an automatically generated class by FairyGUI. Please do not modify it. ---')
-    table.insert(self.lines, '')
 end
 
 function LuaCodeWriter:writeln(format, ...)
@@ -92,7 +89,6 @@ function LuaCodeWriter:save(filePath)
 
     CS.System.IO.File.WriteAllText(filePath, str)
 end
-
 --endregion
 
 local projectCustomPropertiesDic;
@@ -149,7 +145,7 @@ function genCode(handler)
     handler:SetupCodeFolder(exportCodePath, lua_file_extension_name) --check if target folder exists, and delete old files
     local getMemberByName = settings.getMemberByName
     local classTemplateTxt = CS.System.IO.File.ReadAllText(PluginPath .. "/component_template.txt");
-    local gLabelTemplateTxt = CS.System.IO.File.ReadAllText(PluginPath .. "/view_template.txt");
+
     if (classTemplateTxt == "") then
         fprint("component_template.txt content null.")
         return ;
@@ -159,43 +155,19 @@ function genCode(handler)
     local writer = LuaCodeWriter.new({ blockFromNewLine = false, usingTabs = true })
     for i = 0, classCnt - 1 do
         local classInfo = classes[i]
-        if classInfo.superClassName=="CS.FairyGUI.GLabel" then
+        if classInfo.superClassName == "CS.FairyGUI.GLabel" then
             fprint(classInfo.className)
         end
 
-        local _classTemplateTxt =classInfo.superClassName=="CS.FairyGUI.GLabel" and gLabelTemplateTxt or classTemplateTxt ;
+        local _classTemplateTxt = classTemplateTxt;
 
         local members = classInfo.members
         writer:reset()
-        fprint(classInfo.className.."    "..classInfo.superClassName)
+        fprint(classInfo.className .. "    " .. classInfo.superClassName)
 
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$className", classInfo.className);
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$superClassName", classInfo.superClassName);
-        if (key_wrapper_namespace ~= "") then
-            _classTemplateTxt = string.gsub(_classTemplateTxt, "$namespace", key_wrapper_namespace .. ".");
-        else
-            _classTemplateTxt = string.gsub(_classTemplateTxt, "$namespace", "");
-        end
-
-        --local _classFieldAnnotation = string.format('---@field public %s %s\n', "__ui", classInfo.superClassName);
         local memberCnt = members.Count
-        --for j = 0, memberCnt - 1 do
-        --    if (j > 0) then
-        --        _classFieldAnnotation = _classFieldAnnotation .. "\n";
-        --    end
-        --    local memberInfo = members[j]
-        --    _classFieldAnnotation = _classFieldAnnotation .. string.format('---@field public %s %s', memberInfo.varName, memberInfo.type);
-        --end
-        --
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$classFieldAnnotation", "--字段省略");
-
-        -- local _urlValue = string.format('"ui://%s%s"', handler.pkg.id, classInfo.classId)
-        local _urlValue = string.format('"ui://%s/%s"', handler.pkg.name, classInfo.resName)
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$urlValue", _urlValue);
-
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiPackageName", handler.pkg.name);
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiResName", classInfo.resName);
-
         local _classFieldInstatiation = "";
         for j = 0, memberCnt - 1 do
             local memberInfo = members[j]
@@ -225,101 +197,156 @@ function genCode(handler)
         end
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$classFieldInstantiation", _classFieldInstatiation);
 
-        local _uiEvents =""
-        local _uiEventMethods=""
-        for j = 0, memberCnt - 1 do
-            local memberInfo = members[j]
-            if string.find(memberInfo.name,"Btn") then
-                _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".onClick:Add(function()self:OnClick"..memberInfo.name.."()end)\n");
-                _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnClick"..memberInfo.name.."()end\n");
-            elseif string.find(memberInfo.name,"Ctrl") then
-                _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".onChanged:Add(function()self:OnChanged"..memberInfo.name.."()end)\n");
-                _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnChanged"..memberInfo.name.."()end\n");
-            elseif string.find(memberInfo.name,"List") then
-                _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".itemRenderer=function(index,gObject)self:OnRenderer"..memberInfo.name.."(index,gObject)end)\n");
-                _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnRenderer"..memberInfo.name.."(index,gObject)end\n");
-            end
-        end
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiEvents", _uiEvents);
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiEventMethods", _uiEventMethods);
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$createDate",os.date("%Y/%m/%d %H:%M") );
-
- local _bindEventInstatiation = "";
-        for j = 0, memberCnt - 1 do
-            local memberInfo = members[j]
-            if memberInfo.group == 0 then
-            	if string.find(memberInfo.varName,"btn")~=nil or string.find(memberInfo.varName,"Btn")~=nil or string.find(memberInfo.varName,"BTN")~=nil then
-            		if j > 0 then
-               			 _bindEventInstatiation = _bindEventInstatiation .. "\n";
-           			end
-           			_bindEventInstatiation = _bindEventInstatiation .. "\t";
-                    _bindEventInstatiation = _bindEventInstatiation .. string.format('self.%s.onClick:Add(function() end)', memberInfo.varName);
-            	end                
-            end
-        end
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$bindEventInstantiation", _bindEventInstatiation);
-
-	    writer:writeln('%s', _classTemplateTxt);
+        writer:writeln('%s', _classTemplateTxt);
         writer:save(exportCodePath .. '/' .. classInfo.className .. '.' .. lua_file_extension_name)
     end
-
     writer:reset()
 
-    -- local binderTemplateTxt = CS.System.IO.File.ReadAllText(PluginPath .. "/binder_template.txt");
+    ----------------------------------------------------------------    ----------------------------------------------------------------
+    -- local binderTemplateTxt = CS.System.IO.File.ReadAllText(PluginPath .. "/GLabel.txt");
     -- if (binderTemplateTxt == "") then
-    --     fprint("binder_template.txt content null.")
+    --     fprint("GLabel.txt content null.")
     --     return ;
     -- end
     -- local binderName = codePkgName .. 'Binder'
-
+    --
     -- local _requireStatement = "";
+    --
+    --local _uiEvents =""
+    --local _uiEventMethods=""
+    --
+    --for j = 0, memberCnt - 1 do
+    --    local memberInfo = members[j]
+    --    if string.find(memberInfo.name,"Btn") then
+    --        _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".onClick:Add(function()self:OnClick"..memberInfo.name.."()end)\n");
+    --        _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnClick"..memberInfo.name.."()end\n");
+    --    elseif string.find(memberInfo.name,"Ctrl") then
+    --        _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".onChanged:Add(function()self:OnChanged"..memberInfo.name.."()end)\n");
+    --        _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnChanged"..memberInfo.name.."()end\n");
+    --    elseif string.find(memberInfo.name,"List") then
+    --        _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".itemRenderer=function(index,gObject)self:OnRenderer"..memberInfo.name.."(index,gObject)end)\n");
+    --        _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnRenderer"..memberInfo.name.."(index,gObject)end\n");
+    --    end
+    --end
+    --_classTemplateTxt = string.gsub(_classTemplateTxt, "$uiEvents", _uiEvents);
+    --_classTemplateTxt = string.gsub(_classTemplateTxt, "$uiEventMethods", _uiEventMethods);
+    --_classTemplateTxt = string.gsub(_classTemplateTxt, "$createDate",os.date("%Y/%m/%d %H:%M") );
 
-    -- for i = 0, classCnt - 1 do
-    --     if (i > 0) then
-    --         _requireStatement =_requireStatement .. "\n";
-    --     end
-    --     local classInfo = classes[i]
-    --     _requireStatement = _requireStatement .. string.format('%s = require("%s%s.%s");', classInfo.className, lua_path_root, codePkgName, classInfo.className);
-    -- end
+    --local _uiEvents =""
+    --local _uiEventMethods=""
+    --for j = 0, memberCnt - 1 do
+    --    local memberInfo = members[j]
+    --    if string.find(memberInfo.name,"Btn") then
+    --        _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".onClick:Add(function()self:OnClick"..memberInfo.name.."()end)\n");
+    --        _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnClick"..memberInfo.name.."()end\n");
+    --    elseif string.find(memberInfo.name,"Ctrl") then
+    --        _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".onChanged:Add(function()self:OnChanged"..memberInfo.name.."()end)\n");
+    --        _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnChanged"..memberInfo.name.."()end\n");
+    --    elseif string.find(memberInfo.name,"List") then
+    --        _uiEvents = _uiEvents .. ("--   --self.uiComs."..memberInfo.varName..".itemRenderer=function(index,gObject)self:OnRenderer"..memberInfo.name.."(index,gObject)end)\n");
+    --        _uiEventMethods = _uiEventMethods .. ("--   --function "..classInfo.resName..":OnRenderer"..memberInfo.name.."(index,gObject)end\n");
+    --    end
+    --end
+    --
+    local gLabelTemplateTxt = CS.System.IO.File.ReadAllText(PluginPath .. "/GLabel.txt");
+    for i = 0, classCnt - 1 do
+        local classInfo = classes[i]
+        if classInfo.superClassName == "CS.FairyGUI.GLabel" then
+            local _classTemplateTxt = gLabelTemplateTxt
+            local members = classInfo.members
+            local memberCnt = members.Count
+            local _uiEvents = ""
+            local _uiEventMethods = ""
+            for j = 0, memberCnt - 1 do
+                local memberInfo = members[j]
+                if string.find(memberInfo.name, "Btn") then
+                    _uiEvents = _uiEvents .. ("--   --self.uiComs." .. memberInfo.varName .. ".onClick:Add(function()self:OnClick" .. memberInfo.name .. "()end)\n");
+                    _uiEventMethods = _uiEventMethods .. ("--   --function " .. classInfo.resName .. ":OnClick" .. memberInfo.name .. "()end\n");
+                elseif string.find(memberInfo.name, "Ctrl") then
+                    _uiEvents = _uiEvents .. ("--   --self.uiComs." .. memberInfo.varName .. ".onChanged:Add(function()self:OnChanged" .. memberInfo.name .. "()end)\n");
+                    _uiEventMethods = _uiEventMethods .. ("--   --function " .. classInfo.resName .. ":OnChanged" .. memberInfo.name .. "()end\n");
+                elseif string.find(memberInfo.name, "List") then
+                    _uiEvents = _uiEvents .. ("--   --self.uiComs." .. memberInfo.varName .. ".itemRenderer=function(index,gObject)self:OnRenderer" .. memberInfo.name .. "(index,gObject)end\n");
+                    _uiEventMethods = _uiEventMethods .. ("--   --function " .. classInfo.resName .. ":OnRenderer" .. memberInfo.name .. "(index,gObject)end\n");
+                end
+            end
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiEvents", _uiEvents);
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiEventMethods", _uiEventMethods);
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$createDate", os.date("%Y/%m/%d %H:%M"));
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiResName", classInfo.resName);
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$uiPackageName", handler.pkg.name);
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$className", classInfo.className);
 
-    -- binderTemplateTxt = string.gsub(binderTemplateTxt, "$requireStatement", _requireStatement);
-    -- binderTemplateTxt = string.gsub(binderTemplateTxt, "$binderClassName", binderName);
+            local _bindEventInstatiation = "";
+            for j = 0, memberCnt - 1 do
+                local memberInfo = members[j]
+                if memberInfo.group == 0 then
+                    if string.find(memberInfo.varName, "btn") ~= nil or string.find(memberInfo.varName, "Btn") ~= nil or string.find(memberInfo.varName, "BTN") ~= nil then
+                        if j > 0 then
+                            _bindEventInstatiation = _bindEventInstatiation .. "\n";
+                        end
+                        _bindEventInstatiation = _bindEventInstatiation .. "\t";
+                        _bindEventInstatiation = _bindEventInstatiation .. string.format('self.%s.onClick:Add(function() end)', memberInfo.varName);
+                    end
+                end
+            end
+            _classTemplateTxt = string.gsub(_classTemplateTxt, "$bindEventInstantiation", _bindEventInstatiation);
+            --CS.System.IO.File.WriteAllText(handler.exportCodePath .. "/init.lua", _classTemplateTxt);
+            fprint(_classTemplateTxt)
+            writer:writeln('%s', _classTemplateTxt);
 
-    -- local _bindStatement = "";
-    -- for i = 0, classCnt - 1 do
-    --     if (i > 0) then
-    --         _bindStatement = _bindStatement .. "\n";
-    --     end
-    --     local classInfo = classes[i]
-    --     _bindStatement = _bindStatement .. "\t";
+            local name = string.gsub(exportCodePath .. '/' .. classInfo.className .. '.lua', "UI_", "");
+            writer:save(name)
+        end
+        writer:reset()
+    end
 
-    --     if (key_wrapper_namespace ~= "") then
-    --         _bindStatement = _bindStatement .. string.format('%sUIObjectFactory.SetPackageItemExtension(%s.URL, typeof(%s));', key_wrapper_namespace .. ".", classInfo.className, classInfo.className);
-    --     else
-    --         _bindStatement = _bindStatement .. string.format('UIObjectFactory.SetPackageItemExtension(%s.URL,typeof(%s));', classInfo.className, classInfo.className);
-    --     end
-
-
-    -- end
-    -- binderTemplateTxt = string.gsub(binderTemplateTxt, "$bindStatement", _bindStatement);
-    -- writer:writeln('%s', binderTemplateTxt);
-    -- writer:save(exportCodePath .. '/' .. binderName .. '.' .. lua_file_extension_name)
-
-    -- writer:reset()
-
-    -- local _readSuccess, _initTxt = pcall(function()
-    --     return CS.System.IO.File.ReadAllText(handler.exportCodePath .. "/init.lua");
-    -- end);
-    -- if(not _readSuccess) then
-    --     _initTxt = "";
-    -- end
-    -- local _requireStatement = string.format('local %s = require("%s%s.%s");',binderName, lua_path_root,codePkgName, binderName);
-    -- _requireStatement = _requireStatement .. string.format('\n%s:BindAll();',binderName);
-    -- if(string.find(_initTxt,_requireStatement,1,true) == nil) then
-    --     _requireStatement = _requireStatement .. "\n";
-    --     _initTxt = _initTxt .. _requireStatement;
-    --     CS.System.IO.File.WriteAllText(handler.exportCodePath .. "/init.lua", _initTxt);
-    -- end
+    --
+    --    if (i > 0) then
+    --        _requireStatement =_requireStatement .. "\n";
+    --    end
+    --    local classInfo = classes[i]
+    --    _requireStatement = _requireStatement .. string.format('%s = require("%s%s.%s");', classInfo.className, lua_path_root, codePkgName, classInfo.className);
+    --end
+    --
+    --binderTemplateTxt = string.gsub(binderTemplateTxt, "$requireStatement", _requireStatement);
+    --binderTemplateTxt = string.gsub(binderTemplateTxt, "$binderClassName", binderName);
+    --
+    --local _bindStatement = "";
+    --for i = 0, classCnt - 1 do
+    --    if (i > 0) then
+    --        _bindStatement = _bindStatement .. "\n";
+    --    end
+    --    local classInfo = classes[i]
+    --    _bindStatement = _bindStatement .. "\t";
+    --
+    --    if (key_wrapper_namespace ~= "") then
+    --        _bindStatement = _bindStatement .. string.format('%sUIObjectFactory.SetPackageItemExtension(%s.URL, typeof(%s));', key_wrapper_namespace .. ".", classInfo.className, classInfo.className);
+    --    else
+    --        _bindStatement = _bindStatement .. string.format('UIObjectFactory.SetPackageItemExtension(%s.URL,typeof(%s));', classInfo.className, classInfo.className);
+    --    end
+    --
+    --
+    --end
+    --binderTemplateTxt = string.gsub(binderTemplateTxt, "$bindStatement", _bindStatement);
+    --writer:writeln('%s', binderTemplateTxt);
+    --writer:save(exportCodePath .. '/' .. binderName .. '.' .. lua_file_extension_name)
+    --
+    --writer:reset()
+    --
+    --local _readSuccess, _initTxt = pcall(function()
+    --    return CS.System.IO.File.ReadAllText(handler.exportCodePath .. "/init.lua");
+    --end);
+    --if(not _readSuccess) then
+    --    _initTxt = "";
+    --end
+    --local _requireStatement = string.format('local %s = require("%s%s.%s");',binderName, lua_path_root,codePkgName, binderName);
+    --_requireStatement = _requireStatement .. string.format('\n%s:BindAll();',binderName);
+    --if(string.find(_initTxt,_requireStatement,1,true) == nil) then
+    --    _requireStatement = _requireStatement .. "\n";
+    --    _initTxt = _initTxt .. _requireStatement;
+    --    CS.System.IO.File.WriteAllText(handler.exportCodePath .. "/init.lua", _initTxt);
+    --end
 end
 
 
