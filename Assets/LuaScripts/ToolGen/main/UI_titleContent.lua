@@ -1,0 +1,14 @@
+--- This is an automatically generated class by FairyGUI. Please do not modify it. ---
+
+---@class UI_titleContent : CS.FairyGUI.GComponent
+--字段省略
+local UI_titleContent = {};
+--UI_titleContent.URL = "ui://main/titleContent";
+function UI_titleContent:OnConstruct(windowCom)
+	local tb = {
+	m_col = windowCom:GetController("col"),
+	m_title = windowCom:GetChild("title"),
+	}
+	return tb
+end
+return UI_titleContent;

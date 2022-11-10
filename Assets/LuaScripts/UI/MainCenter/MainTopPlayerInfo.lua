@@ -8,7 +8,7 @@ local MainTopPlayerInfo = {}
 
 function MainTopPlayerInfo:Init(rootUI)
     if rootUI then
-        self.uiComs = require('ToolGen.main.mainTopPlayerInfo'):OnConstruct(rootUI.m_playerInfo)
+        self.uiComs = require('ToolGen.main.UI_mainTopPlayerInfo'):OnConstruct(rootUI.m_playerInfo)
 
         self.uiComs.m_HeadIconBtn.onClick:Add(function()
             require("UI.MainRole.ProxyMainRoleModule"):OpenRoleMainView()

@@ -10,7 +10,7 @@ local GlobalEvent = require("Core.GlobalEvent")
 local EventName = require("Core.EventName")
 
 function MainCenterView:LoadComponent()
-    self.uiComs = require('ToolGen.main.MainCenterView'):OnConstruct(self.contentPane)
+    self.uiComs = require('ToolGen.main.UI_MainCenterView'):OnConstruct(self.contentPane)
 
     require("UI.MainCenter.FunctionsEles"):Init(self.uiComs)
     require("UI.MainCenter.MainTopPlayerInfo"):Init(self.uiComs)

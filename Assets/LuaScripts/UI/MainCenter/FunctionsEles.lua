@@ -31,7 +31,7 @@ local mTitleClick = {
 
 function FunctionsEles:Init(rootUI)
     if rootUI then
-        self.uiComs = require('ToolGen.main.functionsEles'):OnConstruct(rootUI.m_functionsEles)
+        self.uiComs = require('ToolGen.main.UI_functionsEles'):OnConstruct(rootUI.m_functionsEles)
 
         self.uiComs.m_btnList.onClickItem:Add(function(context)
             local fun = mTitleClick[context.data.title]

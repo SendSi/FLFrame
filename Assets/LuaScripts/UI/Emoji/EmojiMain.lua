@@ -3,7 +3,7 @@ local EmojiMain = fgui.window_class(UIWindow)
 local Timer = Timer
 
 function EmojiMain:LoadComponent()
-    self.uiComs = require('ToolGen.Emoji.Main'):OnConstruct(self.contentPane)
+    self.uiComs = require('ToolGen.Emoji.UI_Main'):OnConstruct(self.contentPane)
 end
 
 function EmojiMain:BindRegisterEvent()

@@ -1,22 +1,19 @@
 ---@class $className : $superClassName
 $classFieldAnnotation
 local $className = {};
-
-$className.URL = $urlValue;
-
+--$className.URL = $urlValue;
 function $className:OnConstruct(windowCom)
 	local tb = {
 $classFieldInstantiation
 	}
 	return tb
 end
-
 return $className;
 
 --[[
 @Description: $uiPackageName.$uiResName 工具生成的.匹配标签(窗口).自行copy字符串到文件中去
 @Author:
-@Date: Created in $createDate
+@Date: Created in 
 --]]
 --[[
 local EventManager = require('Event.EventManager')
@@ -30,7 +27,7 @@ end
 --local UIView = require('UI.UIView')
 --local $uiResName = fgui.window_class(UIView)
 --function $uiResName:OnLoadFinished()
---    --self.uiComs = require('UI.Packages.$uiPackageName.$className'):OnConstruct(self.contentPane)--self.uiComs在UIView.lua已有定义
+--    --self.uiComs = require('UI.Packages.$uiPackageName.$className'):OnConstruct(self.contentPane)--self.uiComs在UIWindow.lua已有定义
 $uiEvents--   --元素事件上,匹配元素名字 *Btn,*Ctrl,*List
 --end
 

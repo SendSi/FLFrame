@@ -207,7 +207,7 @@ local gmBtn1 = fgui.extension_class(FairyGUI.GButton)
 fgui.register_extension("ui://GMView/gmBtn1", gmBtn1)
 
 function GMView:LoadComponent()
-    self.uiComs = require('ToolGen.GMView.GMView'):OnConstruct(self.contentPane)
+    self.uiComs = require('ToolGen.GMView.UI_GMView'):OnConstruct(self.contentPane)
 
     local count = #GMConfig
     self.uiComs.m_list_1.itemRenderer = function(index, gObject)
@@ -268,7 +268,7 @@ function GMView:OnShown()
 end
 
 function gmBtn1:ctor()
-    self.gmBtn1_UI = require('ToolGen.GMView.gmBtn1'):OnConstruct(self)
+    self.gmBtn1_UI = require('ToolGen.GMView.UI_gmBtn1'):OnConstruct(self)
 
 end
 

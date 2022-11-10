@@ -8,7 +8,7 @@ local MainModifyView =  fgui.window_class(UIWindow)
 local EventName = require('Core.EventName')
 
 function MainModifyView:LoadComponent()
-    self.uiComs = require('ToolGen.07_***.MainModifyView'):OnConstruct(self.contentPane)
+    self.uiComs = require('ToolGen.07_***.UI_MainModifyView'):OnConstruct(self.contentPane)
 end
 function MainModifyView:AddBindGlobalEvent()
     local eventData = {

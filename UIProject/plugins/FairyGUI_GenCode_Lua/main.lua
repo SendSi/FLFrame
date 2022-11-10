@@ -159,11 +159,15 @@ function genCode(handler)
     local writer = LuaCodeWriter.new({ blockFromNewLine = false, usingTabs = true })
     for i = 0, classCnt - 1 do
         local classInfo = classes[i]
-        local _classTemplateTxt =classInfo.superClassName=="GLabel" and gLabelTemplateTxt or classTemplateTxt ;
+        if classInfo.superClassName=="CS.FairyGUI.GLabel" then
+            fprint(classInfo.className)
+        end
+
+        local _classTemplateTxt =classInfo.superClassName=="CS.FairyGUI.GLabel" and gLabelTemplateTxt or classTemplateTxt ;
 
         local members = classInfo.members
         writer:reset()
-        fprint(classInfo.className)
+        fprint(classInfo.className.."    "..classInfo.superClassName)
 
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$className", classInfo.className);
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$superClassName", classInfo.superClassName);
@@ -173,17 +177,17 @@ function genCode(handler)
             _classTemplateTxt = string.gsub(_classTemplateTxt, "$namespace", "");
         end
 
-        local _classFieldAnnotation = string.format('---@field public %s %s\n', "__ui", classInfo.superClassName);
+        --local _classFieldAnnotation = string.format('---@field public %s %s\n', "__ui", classInfo.superClassName);
         local memberCnt = members.Count
-        for j = 0, memberCnt - 1 do
-            if (j > 0) then
-                _classFieldAnnotation = _classFieldAnnotation .. "\n";
-            end
-            local memberInfo = members[j]
-            _classFieldAnnotation = _classFieldAnnotation .. string.format('---@field public %s %s', memberInfo.varName, memberInfo.type);
-        end
-
-        _classTemplateTxt = string.gsub(_classTemplateTxt, "$classFieldAnnotation", _classFieldAnnotation);
+        --for j = 0, memberCnt - 1 do
+        --    if (j > 0) then
+        --        _classFieldAnnotation = _classFieldAnnotation .. "\n";
+        --    end
+        --    local memberInfo = members[j]
+        --    _classFieldAnnotation = _classFieldAnnotation .. string.format('---@field public %s %s', memberInfo.varName, memberInfo.type);
+        --end
+        --
+        _classTemplateTxt = string.gsub(_classTemplateTxt, "$classFieldAnnotation", "--字段省略");
 
         -- local _urlValue = string.format('"ui://%s%s"', handler.pkg.id, classInfo.classId)
         local _urlValue = string.format('"ui://%s/%s"', handler.pkg.name, classInfo.resName)

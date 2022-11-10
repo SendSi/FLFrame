@@ -57,7 +57,7 @@ public class SmallMenu : EditorWindow
         EditorWindow.GetWindow(typeof(CSRequestScripts_New), false, "F8工具(非Odin版本)", true);
     }
 
-    [MenuItem("Tools/小工具/Prefab丢失的Miss %&#P")]
+    [MenuItem("Tools/小工具/引用丢失(Miss) %&#P")]
     public static void ShowPrefabNullSprite()
     {
         GetWindow<ReferenceMissHelpTools>(false);

@@ -10,7 +10,7 @@
   "codeGeneration": {
     "allowGenCode": true,
     "codePath": "../Assets/LuaScripts/ToolGen",
-    "classNamePrefix": "",
+    "classNamePrefix": "UI_",
     "memberNamePrefix": "m_",
     "packageName": "",
     "ignoreNoname": false,

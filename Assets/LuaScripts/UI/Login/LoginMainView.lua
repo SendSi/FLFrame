@@ -10,8 +10,8 @@ local GlobalEvent = require("Core.GlobalEvent")
 local EventName = require("Core.EventName")
 
 function LoginMainView:LoadComponent()
-    loggZSX("进来这里了")
-    self.uiComs = require('ToolGen.login.LoginMainView'):OnConstruct(self.contentPane)
+    loggZSX("进来这里了--1")
+    --self.uiComs = require('ToolGen.login.UI_LoginMainView'):OnConstruct(self.contentPane)
 
     self.uiComs.m_loginBtn.onClick:Add(function()
         require("UI.MainCenter.ProxyMainCenterModule"):OpenMainCenter()

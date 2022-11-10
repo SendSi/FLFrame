@@ -14,6 +14,7 @@ function UIWindow:ctor(uiConfig)
     self.isActive = true --页面 是否在 打开中
     self.name = package .. "_" .. view
     self:Center()
+    self.uiComs = require('ToolGen.'..package..'.UI_'..view):OnConstruct(self.contentPane)
     self:LoadComponent()
     self:CheckBindCloseBtn()
     self:RegisterGlobalEvent()

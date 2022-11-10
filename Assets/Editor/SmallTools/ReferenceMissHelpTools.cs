@@ -6,7 +6,7 @@ public class ReferenceMissHelpTools : GetAssetHelpTools
 {
     private Dictionary<GameObject, List<string>> mDicLookPrefabs = new Dictionary<GameObject, List<string>>();
     private Vector2 scrollPosition = Vector2.zero;
-    private string mSearchPath = @"Assets\_Resources";
+    private string mSearchPath = @"Assets";
     //private string mSearchPath = @"Assets\_Resource\UI\Prefabs";
     private bool isGenerateHierarchy = false;
 
