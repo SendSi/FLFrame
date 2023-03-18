@@ -153,5 +153,17 @@ public class AssetLoader : MonoBehaviour
         }
     }
 
+    public void LoadAssetAsync()
+    {
+
+    }
+
+    public void InstantiateAsync()
+    {
+
+    }
+
+
+
 
 }
