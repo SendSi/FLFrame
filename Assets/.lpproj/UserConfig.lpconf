@@ -1,0 +1,121 @@
+<GlobalConfig CodeFontSize = "22"/>
+<BreakpointList>
+  <Breakpoint State = "BreakpointActive" Filename = "LuaScripts/Core/UIMgr.lua" LineIndex = "59"/>
+  <Breakpoint State = "BreakpointActive" Filename = "LuaScripts/Core/UIMgr.lua" LineIndex = "84"/>
+  <Breakpoint State = "BreakpointActive" Filename = "LuaScripts/Core/UIMgr.lua" LineIndex = "91"/>
+  <Breakpoint State = "BreakpointActive" Filename = "LuaScripts/Core/UIMgr.lua" LineIndex = "93"/>
+  <Breakpoint State = "BreakpointActive" Filename = "LuaScripts/Core/UIMgr.lua" LineIndex = "16"/>
+  <Breakpoint State = "BreakpointActive" Filename = "LuaScripts/Core/UIMgr.lua" LineIndex = "28"/>
+</BreakpointList>
+<WatchList/>
+<ProjectUI>
+  <TreeState BaseX = "0" BaseY = "0" AlternativeItem = "LuaFolders#Assets">
+    <SelectedList>
+      <Selected Path = "LuaFolders"/>
+    </SelectedList>
+    <ExpandedList>
+      <Expanded Path = "LuaFolders"/>
+    </ExpandedList>
+  </TreeState>
+</ProjectUI>
+<FindAnReplaceUI
+  Pattern = "LoadPackage"
+  MatchCase = "false"
+  MatchWholeWord = "false"
+  UseRegEx = "false"
+  Target = ""
+  Replace = ""/>
+<MainWindow
+  X = "2412"
+  Y = "632"
+  Width = "1280"
+  Height = "720"
+  Maximized = "true"
+  LastCodeFilename = "E:/gitHub/FLFrame/Assets/LuaScripts/Core/UIMgr.lua">
+  <DockingControl>
+    <DockingNode DockingDirection = "Horizontal">
+      <DockingNode DockingDirection = "None">
+        <DockingBlock Width = "293" Height = "963" DocumentStyle = "false">
+          <DockingCard
+            Text = "Project"
+            Tag = ""
+            ActivePage = "true"
+            ActivateTime = "0"/>
+          <DockingCard
+            Text = "Outline"
+            Tag = ""
+            ActivePage = "false"
+            ActivateTime = "0"/>
+        </DockingBlock>
+      </DockingNode>
+      <DockingNode DockingDirection = "Vertical">
+        <DockingNode DockingDirection = "None">
+          <DockingBlock Width = "1608" Height = "618" DocumentStyle = "true">
+            <DockingCard
+              Text = "UIMgr.lua"
+              Tag = "E:/gitHub/FLFrame/Assets/LuaScripts/Core/UIMgr.lua"
+              ActivePage = "true"
+              ActivateTime = "444201348"
+              CaretLineIndex = "79"
+              CaretCodeCharIndex = "44"
+              BaseX = "0"
+              BaseY = "-1584"/>
+            <DockingCard
+              Text = "Main.lua"
+              Tag = "E:/gitHub/FLFrame/Assets/LuaScripts/Main.lua"
+              ActivePage = "false"
+              ActivateTime = "442729627"
+              CaretLineIndex = "37"
+              CaretCodeCharIndex = "0"
+              BaseX = "0"
+              BaseY = "-558"/>
+          </DockingBlock>
+        </DockingNode>
+        <DockingNode DockingDirection = "None">
+          <DockingBlock Width = "1608" Height = "338" DocumentStyle = "false">
+            <DockingCard
+              Text = "Output"
+              Tag = ""
+              ActivePage = "true"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Call Stack"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Locals"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Globals"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Watches"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Autos"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Breakpoints"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+            <DockingCard
+              Text = "Find Result"
+              Tag = ""
+              ActivePage = "false"
+              ActivateTime = "0"/>
+          </DockingBlock>
+        </DockingNode>
+      </DockingNode>
+    </DockingNode>
+  </DockingControl>
+</MainWindow>

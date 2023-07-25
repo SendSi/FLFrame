@@ -2,9 +2,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
+using UnityEngine.ResourceManagement.AsyncOperations;
+using UnityEngine.ResourceManagement.ResourceLocations;
+using UnityEngine.U2D;
 using static FairyGUI.UIPackage;
+using static Reporter;
+using static UnityEditor.AddressableAssets.Build.Layout.BuildLayout;
 
 public class AssetLoader : MonoBehaviour
 {
@@ -64,6 +72,95 @@ public class AssetLoader : MonoBehaviour
             LoadDependencies_Editor(names, load);
         }
     }
+
+    //public void AddPackageAddressable(string package, Action<List<string>> load)
+    //{
+    //    Debug.LogError(package);
+    //    Addressables.LoadAssetAsync<TextAsset>(package).Completed += obj =>
+    //    {
+    //        var text = obj.Result;
+
+    //        var tPack = UIPackage.AddPackage(text.bytes,null, (string name, string extension, Type type, PackageItem ite) =>
+    //        {
+    //            if (type == typeof(Texture))
+    //            {
+    //                var t = Addressables.LoadAssetAsync<Texture>(name + extension).Task;
+    //                ite.owner.SetItemAsset(ite, t, DestroyMethod.Destroy);
+
+    //                //var names = GetDependencies(tPack);
+    //                //load?.Invoke(names);
+    //            }
+    //        });
+    //    };
+    //}
+
+    //public void AddPackageAddressable(string fairy_package, Action<List<string>> load)
+    //{
+    //    Debug.LogError(fairy_package);
+    //    Addressables.LoadAssetAsync<object>(fairy_package).Completed += handle =>
+    //    {
+    //        load(handle.Result);
+    //    };
+    //}
+
+    public async void AddPackageAddressable(string addressName, Action<object> load)
+    {
+        await AddPackageAddressable1(addressName, load);
+    }
+
+    private static async Task AddPackageAddressable1(string addressName, Action<object> load)
+    {
+        var pkgAsset = await Addressables.LoadAssetAsync<TextAsset>(addressName).Task;
+        var packageName = addressName.Split("/")[1];
+        UIPackage.AddPackage(
+            pkgAsset.bytes,
+            packageName,
+            async (string name, string extension, Type type, PackageItem ite) =>
+            {
+
+                if (type == typeof(Texture))
+                {
+                    Texture t = await Addressables.LoadAssetAsync<Texture>(name + extension).Task;
+                    ite.owner.SetItemAsset(ite, t, DestroyMethod.Custom);
+
+                }
+            });
+        load?.Invoke(null);
+        Addressables.Release(pkgAsset);
+    }
+
+
+    Dictionary<string, List<string>> KeyList = new Dictionary<string, List<string>>();
+    private IEnumerator Preload()
+    {
+        AsyncOperationHandle<IList<IResourceLocation>> handle = Addressables.LoadResourceLocationsAsync("UI");
+        yield return handle;
+        IList<IResourceLocation> locations = handle.Result;
+
+        //获得所有Label为UI的资源的地址
+        foreach (IResourceLocation location in locations)
+        {
+            string key = location.PrimaryKey.Substring(3);
+            key = key.Substring(0, key.IndexOf('_'));
+            //key为FairyGUI的包名
+            List<string> addresses;
+            if (!KeyList.ContainsKey(key))
+            {
+                addresses = new List<string>();
+                KeyList.Add(key, addresses);
+            }
+            else
+            {
+                addresses = KeyList[key];
+            }
+
+            //将资源地址添加到包名对应的地址列表中
+            addresses.Add(location.PrimaryKey);
+        }
+
+        Addressables.Release(handle);
+    }
+
 
 
     public IEnumerator LoadUIPackage(string package, Action<List<string>> load, bool isLoadDepend = false)//loadDepend加载依赖包
@@ -153,16 +250,44 @@ public class AssetLoader : MonoBehaviour
         }
     }
 
-    public void LoadAssetAsync()
+
+
+    public void InstantiateAsync(string addressName, Action<object> callback = null, AssetType assetType = AssetType.Prefab)
     {
-
+        LoadAssetAsync(addressName, obj =>
+        {
+            object objResult = null;
+            switch (assetType)
+            {
+                case AssetType.Prefab:
+                    break;
+                case AssetType.Texture:
+                    objResult = obj.Result;
+                    break;
+                case AssetType.SpriteAtlas:
+                    objResult = obj.Result;
+                    break;
+                case AssetType.TextAsset:
+                    objResult = obj.Result;
+                    break;
+                case AssetType.Font:
+                    objResult = obj.Result;
+                    break;
+                default:
+                    break;
+            }
+            callback?.Invoke(objResult);
+        });
     }
-
-    public void InstantiateAsync()
+    //public void LoadAssetAsync(string addressName, Action<AsyncOperationHandle<IList<object>>> callback = null)
+    public void LoadAssetAsync(string addressName, Action<AsyncOperationHandle<object>> callback = null)
     {
-
+        var handler = Addressables.LoadAssetAsync<object>(addressName);
+        handler.Completed += obj =>
+        {
+            callback?.Invoke(handler);
+        };
     }
-
 
 
 

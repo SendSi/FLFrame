@@ -1,9 +1,6 @@
 --- This is an automatically generated class by FairyGUI. Please do not modify it. ---
-
 ---@class UI_clothes_btn_02 : CS.FairyGUI.GButton
---字段省略
 local UI_clothes_btn_02 = {};
---UI_clothes_btn_02.URL = "ui://login/clothes_btn_02";
 function UI_clothes_btn_02:OnConstruct(windowCom)
 	local tb = {
 	m_button = windowCom:GetController("button"),

@@ -7,6 +7,7 @@ local UIHelper=require("Core.UIHelper")
 function UIWindow:ctor(uiConfig)
     local view = uiConfig.viewName
     local package = uiConfig.packageName
+    loggZSXError(package,view)
     self.contentPane = UIPackage.CreateObject(package, view)
     UIHelper:MakeObjectFullScreen(self.contentPane,uiConfig.matchMode)
     self.sortingOrder = uiConfig.sortingOrder or 0
@@ -70,7 +71,7 @@ function UIWindow:UnRegisterGlobalEvent()
     self.registerGlobalList = false
 end
 
----先distroy  再 onHide
+---先destroy  再 onHide
 function UIWindow:Destroy()
     self:UnRegisterGlobalEvent()
     self:ReleaseUIObject()
@@ -79,6 +80,7 @@ end
 
 --移除本包
 function UIWindow:ReleasePackage()
+    loggZSXError("移除")
     if self.uiConfig then
         local package = self.uiConfig.packageName
         DataCacheMgr:TryRemovePackage(package)
@@ -96,24 +98,21 @@ end
 
 --C# 看源码
 function UIWindow:OnInit()
-    loginfo('Window-OnInit')
+
 end
 --C#
 function UIWindow:OnShown()
-    loginfo('Window-onShown')
+
 end
 --C#  onRemovedFromStage 才触发
 function UIWindow:OnHide()
     self.isActive = false
-    loginfo('Window-OnHide')
 end
 --C#
 function UIWindow:DoShowAnimation()
-    loginfo('Window-DoShowAnimation')
 end
 --C#
 function UIWindow:DoHideAnimation()
-    loginfo('Window-DoHideAnimation')
 end
 
 return UIWindow

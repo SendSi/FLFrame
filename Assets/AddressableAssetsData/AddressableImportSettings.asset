@@ -45,3 +45,13 @@ MonoBehaviour:
     LabelMode: 0
     simplified: 0
     addressReplacement: Test/${asset}
+  - path: ^Assets/_Res/Font/(?<asset>[^/]+)\.(ttf|otf)
+    matchType: 1
+    groupName: Font
+    groupTemplate: {fileID: 11400000, guid: ba2399b419a054546adf6b9f9fdf508c, type: 2}
+    groupTemplateApplicationMode: 1
+    labelRefs: []
+    dynamicLabels: []
+    LabelMode: 0
+    simplified: 0
+    addressReplacement: Font/${asset}

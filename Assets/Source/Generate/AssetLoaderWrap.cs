@@ -9,9 +9,10 @@ public class AssetLoaderWrap
 		L.BeginClass(typeof(AssetLoader), typeof(UnityEngine.MonoBehaviour));
 		L.RegFunction("InitIsLoadBundle", InitIsLoadBundle);
 		L.RegFunction("AddPackage", AddPackage);
+		L.RegFunction("AddPackageAddressable", AddPackageAddressable);
 		L.RegFunction("LoadUIPackage", LoadUIPackage);
-		L.RegFunction("LoadAssetAsync", LoadAssetAsync);
 		L.RegFunction("InstantiateAsync", InstantiateAsync);
+		L.RegFunction("LoadAssetAsync", LoadAssetAsync);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("editorBundle", get_editorBundle, null);
@@ -46,6 +47,24 @@ public class AssetLoaderWrap
 			string arg0 = ToLua.CheckString(L, 2);
 			System.Action<System.Collections.Generic.List<string>> arg1 = (System.Action<System.Collections.Generic.List<string>>)ToLua.CheckDelegate<System.Action<System.Collections.Generic.List<string>>>(L, 3);
 			obj.AddPackage(arg0, arg1);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int AddPackageAddressable(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 3);
+			AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+			string arg0 = ToLua.CheckString(L, 2);
+			System.Action<object> arg1 = (System.Action<object>)ToLua.CheckDelegate<System.Action<object>>(L, 3);
+			obj.AddPackageAddressable(arg0, arg1);
 			return 0;
 		}
 		catch (Exception e)
@@ -92,14 +111,40 @@ public class AssetLoaderWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int LoadAssetAsync(IntPtr L)
+	static int InstantiateAsync(IntPtr L)
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 1);
-			AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
-			obj.LoadAssetAsync();
-			return 0;
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 2)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				obj.InstantiateAsync(arg0);
+				return 0;
+			}
+			else if (count == 3)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				System.Action<object> arg1 = (System.Action<object>)ToLua.CheckDelegate<System.Action<object>>(L, 3);
+				obj.InstantiateAsync(arg0, arg1);
+				return 0;
+			}
+			else if (count == 4)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				System.Action<object> arg1 = (System.Action<object>)ToLua.CheckDelegate<System.Action<object>>(L, 3);
+				AssetType arg2 = (AssetType)ToLua.CheckObject(L, 4, typeof(AssetType));
+				obj.InstantiateAsync(arg0, arg1, arg2);
+				return 0;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: AssetLoader.InstantiateAsync");
+			}
 		}
 		catch (Exception e)
 		{
@@ -108,14 +153,31 @@ public class AssetLoaderWrap
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int InstantiateAsync(IntPtr L)
+	static int LoadAssetAsync(IntPtr L)
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 1);
-			AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
-			obj.InstantiateAsync();
-			return 0;
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 2)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				obj.LoadAssetAsync(arg0);
+				return 0;
+			}
+			else if (count == 3)
+			{
+				AssetLoader obj = (AssetLoader)ToLua.CheckObject<AssetLoader>(L, 1);
+				string arg0 = ToLua.CheckString(L, 2);
+				System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>> arg1 = (System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>)ToLua.CheckDelegate<System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>>(L, 3);
+				obj.LoadAssetAsync(arg0, arg1);
+				return 0;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: AssetLoader.LoadAssetAsync");
+			}
 		}
 		catch (Exception e)
 		{

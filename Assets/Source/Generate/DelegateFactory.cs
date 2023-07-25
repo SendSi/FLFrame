@@ -40,6 +40,8 @@ public class DelegateFactory
 		dict.Add(typeof(FairyGUI.UIObjectFactory.GComponentCreator), factory.FairyGUI_UIObjectFactory_GComponentCreator);
 		dict.Add(typeof(FairyGUI.UIObjectFactory.GLoaderCreator), factory.FairyGUI_UIObjectFactory_GLoaderCreator);
 		dict.Add(typeof(System.Action<System.Collections.Generic.List<string>>), factory.System_Action_System_Collections_Generic_List_string);
+		dict.Add(typeof(System.Action<object>), factory.System_Action_object);
+		dict.Add(typeof(System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>), factory.System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object);
 		dict.Add(typeof(UnityEngine.Application.AdvertisingIdentifierCallback), factory.UnityEngine_Application_AdvertisingIdentifierCallback);
 		dict.Add(typeof(UnityEngine.Application.LowMemoryCallback), factory.UnityEngine_Application_LowMemoryCallback);
 		dict.Add(typeof(UnityEngine.Application.LogCallback), factory.UnityEngine_Application_LogCallback);
@@ -75,6 +77,8 @@ public class DelegateFactory
 		DelegateTraits<FairyGUI.UIObjectFactory.GComponentCreator>.Init(factory.FairyGUI_UIObjectFactory_GComponentCreator);
 		DelegateTraits<FairyGUI.UIObjectFactory.GLoaderCreator>.Init(factory.FairyGUI_UIObjectFactory_GLoaderCreator);
 		DelegateTraits<System.Action<System.Collections.Generic.List<string>>>.Init(factory.System_Action_System_Collections_Generic_List_string);
+		DelegateTraits<System.Action<object>>.Init(factory.System_Action_object);
+		DelegateTraits<System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>>.Init(factory.System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object);
 		DelegateTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Init(factory.UnityEngine_Application_AdvertisingIdentifierCallback);
 		DelegateTraits<UnityEngine.Application.LowMemoryCallback>.Init(factory.UnityEngine_Application_LowMemoryCallback);
 		DelegateTraits<UnityEngine.Application.LogCallback>.Init(factory.UnityEngine_Application_LogCallback);
@@ -110,6 +114,8 @@ public class DelegateFactory
 		TypeTraits<FairyGUI.UIObjectFactory.GComponentCreator>.Init(factory.Check_FairyGUI_UIObjectFactory_GComponentCreator);
 		TypeTraits<FairyGUI.UIObjectFactory.GLoaderCreator>.Init(factory.Check_FairyGUI_UIObjectFactory_GLoaderCreator);
 		TypeTraits<System.Action<System.Collections.Generic.List<string>>>.Init(factory.Check_System_Action_System_Collections_Generic_List_string);
+		TypeTraits<System.Action<object>>.Init(factory.Check_System_Action_object);
+		TypeTraits<System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>>.Init(factory.Check_System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object);
 		TypeTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Init(factory.Check_UnityEngine_Application_AdvertisingIdentifierCallback);
 		TypeTraits<UnityEngine.Application.LowMemoryCallback>.Init(factory.Check_UnityEngine_Application_LowMemoryCallback);
 		TypeTraits<UnityEngine.Application.LogCallback>.Init(factory.Check_UnityEngine_Application_LogCallback);
@@ -145,6 +151,8 @@ public class DelegateFactory
 		StackTraits<FairyGUI.UIObjectFactory.GComponentCreator>.Push = factory.Push_FairyGUI_UIObjectFactory_GComponentCreator;
 		StackTraits<FairyGUI.UIObjectFactory.GLoaderCreator>.Push = factory.Push_FairyGUI_UIObjectFactory_GLoaderCreator;
 		StackTraits<System.Action<System.Collections.Generic.List<string>>>.Push = factory.Push_System_Action_System_Collections_Generic_List_string;
+		StackTraits<System.Action<object>>.Push = factory.Push_System_Action_object;
+		StackTraits<System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>>.Push = factory.Push_System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object;
 		StackTraits<UnityEngine.Application.AdvertisingIdentifierCallback>.Push = factory.Push_UnityEngine_Application_AdvertisingIdentifierCallback;
 		StackTraits<UnityEngine.Application.LowMemoryCallback>.Push = factory.Push_UnityEngine_Application_LowMemoryCallback;
 		StackTraits<UnityEngine.Application.LogCallback>.Push = factory.Push_UnityEngine_Application_LogCallback;
@@ -1594,6 +1602,120 @@ public class DelegateFactory
 	}
 
 	void Push_System_Action_System_Collections_Generic_List_string(IntPtr L, System.Action<System.Collections.Generic.List<string>> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Action_object_Event : LuaDelegate
+	{
+		public System_Action_object_Event(LuaFunction func) : base(func) { }
+		public System_Action_object_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(object param0)
+		{
+			func.BeginPCall();
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(object param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.Push(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public System.Action<object> System_Action_object(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Action<object> fn = delegate(object param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Action_object_Event target = new System_Action_object_Event(func);
+			System.Action<object> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Action_object_Event target = new System_Action_object_Event(func, self);
+			System.Action<object> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Action_object(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Action<object>), L, pos);
+	}
+
+	void Push_System_Action_object(IntPtr L, System.Action<object> o)
+	{
+		ToLua.Push(L, o);
+	}
+
+	class System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event : LuaDelegate
+	{
+		public System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event(LuaFunction func) : base(func) { }
+		public System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event(LuaFunction func, LuaTable self) : base(func, self) { }
+
+		public void Call(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object> param0)
+		{
+			func.BeginPCall();
+			func.PushValue(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+
+		public void CallWithSelf(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object> param0)
+		{
+			func.BeginPCall();
+			func.Push(self);
+			func.PushValue(param0);
+			func.PCall();
+			func.EndPCall();
+		}
+	}
+
+	public System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>> System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object(LuaFunction func, LuaTable self, bool flag)
+	{
+		if (func == null)
+		{
+			System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>> fn = delegate(UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object> param0) { };
+			return fn;
+		}
+
+		if(!flag)
+		{
+			System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event target = new System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event(func);
+			System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>> d = target.Call;
+			target.method = d.Method;
+			return d;
+		}
+		else
+		{
+			System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event target = new System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object_Event(func, self);
+			System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>> d = target.CallWithSelf;
+			target.method = d.Method;
+			return d;
+		}
+	}
+
+	bool Check_System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object(IntPtr L, int pos)
+	{
+		return TypeChecker.CheckDelegateType(typeof(System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>), L, pos);
+	}
+
+	void Push_System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object(IntPtr L, System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>> o)
 	{
 		ToLua.Push(L, o);
 	}

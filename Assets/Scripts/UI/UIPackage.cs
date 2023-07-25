@@ -366,6 +366,7 @@ namespace FairyGUI
             ByteBuffer buffer = new ByteBuffer(descData);
 
             UIPackage pkg = new UIPackage();
+            //Debug.LogError(loadFunc);
             pkg._loadAsyncFunc = loadFunc;
             if (!pkg.LoadPackage(buffer, assetNamePrefix))
                 return null;
@@ -1174,6 +1175,7 @@ namespace FairyGUI
 
         public object GetItemAsset(PackageItem item)
         {
+            //Debug.LogError("进来 吗");
             switch (item.type)
             {
                 case PackageItemType.Image:
@@ -1266,7 +1268,7 @@ namespace FairyGUI
         {
             string ext = Path.GetExtension(item.file);
             string fileName = item.file.Substring(0, item.file.Length - ext.Length);
-
+            //Debug.LogError("ext");
             if (_loadAsyncFunc != null)
             {
                 _loadAsyncFunc(fileName, ext, typeof(Texture), item);
@@ -1358,7 +1360,7 @@ namespace FairyGUI
         {
             string ext = Path.GetExtension(item.file);
             string fileName = item.file.Substring(0, item.file.Length - ext.Length);
-
+            //Debug.LogError("LoadSound");
             if (_loadAsyncFunc != null)
             {
                 _loadAsyncFunc(fileName, ext, typeof(AudioClip), item);

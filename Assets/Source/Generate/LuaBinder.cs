@@ -10,6 +10,7 @@ public static class LuaBinder
 		float t = Time.realtimeSinceStartup;
 		L.BeginModule(null);
 		LuaInterface_DebuggerWrap.Register(L);
+		AssetTypeWrap.Register(L);
 		AssetLoaderWrap.Register(L);
 		TestLoaderWrap.Register(L);
 		EmojiAtlasWrap.Register(L);
@@ -52,13 +53,43 @@ public static class LuaBinder
 		FairyGUI_WindowWrap.Register(L);
 		FairyGUI_GObjectPoolWrap.Register(L);
 		FairyGUI_RelationsWrap.Register(L);
-		FairyGUI_RelationTypeWrap.Register(L);
 		FairyGUI_TimersWrap.Register(L);
 		FairyGUI_GTweenWrap.Register(L);
 		FairyGUI_GTweenerWrap.Register(L);
-		FairyGUI_EaseTypeWrap.Register(L);
+		FairyGUI_DynamicFontWrap.Register(L);
+		FairyGUI_FontManagerWrap.Register(L);
 		FairyGUI_TweenValueWrap.Register(L);
 		FairyGUI_UIObjectFactoryWrap.Register(L);
+		FairyGUI_PackageItemWrap.Register(L);
+		FairyGUI_RelationTypeWrap.Register(L);
+		FairyGUI_EaseTypeWrap.Register(L);
+		FairyGUI_PackageItemTypeWrap.Register(L);
+		FairyGUI_ObjectTypeWrap.Register(L);
+		FairyGUI_DestroyMethodWrap.Register(L);
+		FairyGUI_AlignTypeWrap.Register(L);
+		FairyGUI_VertAlignTypeWrap.Register(L);
+		FairyGUI_OverflowTypeWrap.Register(L);
+		FairyGUI_FillTypeWrap.Register(L);
+		FairyGUI_AutoSizeTypeWrap.Register(L);
+		FairyGUI_ScrollTypeWrap.Register(L);
+		FairyGUI_ScrollBarDisplayTypeWrap.Register(L);
+		FairyGUI_ListLayoutTypeWrap.Register(L);
+		FairyGUI_ListSelectionModeWrap.Register(L);
+		FairyGUI_ProgressTitleTypeWrap.Register(L);
+		FairyGUI_ButtonModeWrap.Register(L);
+		FairyGUI_TransitionActionTypeWrap.Register(L);
+		FairyGUI_GroupLayoutTypeWrap.Register(L);
+		FairyGUI_ChildrenRenderOrderWrap.Register(L);
+		FairyGUI_PopupDirectionWrap.Register(L);
+		FairyGUI_FlipTypeWrap.Register(L);
+		FairyGUI_FillMethodWrap.Register(L);
+		FairyGUI_OriginHorizontalWrap.Register(L);
+		FairyGUI_OriginVerticalWrap.Register(L);
+		FairyGUI_Origin90Wrap.Register(L);
+		FairyGUI_Origin180Wrap.Register(L);
+		FairyGUI_Origin360Wrap.Register(L);
+		FairyGUI_FocusRuleWrap.Register(L);
+		FairyGUI_BaseFontWrap.Register(L);
 		L.RegFunction("EventCallback1", FairyGUI_EventCallback1);
 		L.RegFunction("EventCallback0", FairyGUI_EventCallback0);
 		L.RegFunction("ListItemRenderer", FairyGUI_ListItemRenderer);
@@ -82,6 +113,8 @@ public static class LuaBinder
 		L.EndModule();
 		L.EndModule();
 		L.BeginModule("UnityEngine");
+		UnityEngine_TextAssetWrap.Register(L);
+		UnityEngine_TouchScreenKeyboardTypeWrap.Register(L);
 		UnityEngine_BehaviourWrap.Register(L);
 		UnityEngine_MonoBehaviourWrap.Register(L);
 		UnityEngine_GameObjectWrap.Register(L);
@@ -130,6 +163,11 @@ public static class LuaBinder
 		L.RegFunction("PCMSetPositionCallback", UnityEngine_AudioClip_PCMSetPositionCallback);
 		L.EndModule();
 		L.EndModule();
+		L.BeginModule("LuaPerfect");
+		LuaPerfect_ObjectRefWrap.Register(L);
+		LuaPerfect_ObjectItemWrap.Register(L);
+		LuaPerfect_ObjectFormaterWrap.Register(L);
+		L.EndModule();
 		L.BeginModule("System");
 		L.RegFunction("Action", System_Action);
 		L.RegFunction("Predicate_int", System_Predicate_int);
@@ -138,6 +176,8 @@ public static class LuaBinder
 		L.RegFunction("Func_int_int", System_Func_int_int);
 		L.RegFunction("Action_FairyGUI_PackageItem", System_Action_FairyGUI_PackageItem);
 		L.RegFunction("Action_System_Collections_Generic_List_string", System_Action_System_Collections_Generic_List_string);
+		L.RegFunction("Action_object", System_Action_object);
+		L.RegFunction("Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object", System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object);
 		L.RegFunction("Action_bool", System_Action_bool);
 		L.RegFunction("Action_string", System_Action_string);
 		L.RegFunction("Func_bool", System_Func_bool);
@@ -908,6 +948,60 @@ public static class LuaBinder
 			{
 				LuaTable self = ToLua.CheckLuaTable(L, 2);
 				Delegate arg1 = DelegateTraits<System.Action<System.Collections.Generic.List<string>>>.Create(func, self);
+				ToLua.Push(L, arg1);
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_Action_object(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.Action<object>>.Create(func);
+				ToLua.Push(L, arg1);
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.Action<object>>.Create(func, self);
+				ToLua.Push(L, arg1);
+			}
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int System_Action_UnityEngine_ResourceManagement_AsyncOperations_AsyncOperationHandle_object(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+			LuaFunction func = ToLua.CheckLuaFunction(L, 1);
+
+			if (count == 1)
+			{
+				Delegate arg1 = DelegateTraits<System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>>.Create(func);
+				ToLua.Push(L, arg1);
+			}
+			else
+			{
+				LuaTable self = ToLua.CheckLuaTable(L, 2);
+				Delegate arg1 = DelegateTraits<System.Action<UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<object>>>.Create(func, self);
 				ToLua.Push(L, arg1);
 			}
 			return 1;

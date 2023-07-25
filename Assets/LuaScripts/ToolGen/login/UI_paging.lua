@@ -1,9 +1,6 @@
 --- This is an automatically generated class by FairyGUI. Please do not modify it. ---
-
 ---@class UI_paging : CS.FairyGUI.GButton
---字段省略
 local UI_paging = {};
---UI_paging.URL = "ui://login/paging";
 function UI_paging:OnConstruct(windowCom)
 	local tb = {
 	m_button = windowCom:GetController("button"),

@@ -1,0 +1,23 @@
+---@class System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event : LuaInterface.LuaDelegate
+System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event = {}
+
+---@param func : LuaInterface.LuaFunction
+---@return System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event
+function System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event(func)
+end
+
+---@param func : LuaInterface.LuaFunction
+---@param self : LuaInterface.LuaTable
+---@return System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event
+function System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event(func, self)
+end
+
+---@param param0 : UnityEngine.PhysicsScene
+---@param param1 : Unity.Collections.NativeArray
+function System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event:Call(param0, param1)
+end
+
+---@param param0 : UnityEngine.PhysicsScene
+---@param param1 : Unity.Collections.NativeArray
+function System_Action_UnityEngine_PhysicsScene_Unity_Collections_NativeArray_UnityEngine_ModifiableContactPair_Event:CallWithSelf(param0, param1)
+end

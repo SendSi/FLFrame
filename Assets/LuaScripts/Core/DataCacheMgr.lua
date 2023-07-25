@@ -3,6 +3,7 @@ local AssetLoaderInstance = AssetLoader.Instance
 local UIConfig = require("Core.UIConfig")
 local mPackage = {}--key=包名,value=引用次数
 local UIPackage = FairyGUI.UIPackage
+local UI_PACKAGE_PREFIX = "UI/"
 
 function DataCacheMgr:TryAddPackage(package, act)
     if mPackage[package] then
@@ -23,6 +24,13 @@ function DataCacheMgr:TryAddPackage(package, act)
                 act()
             end
         end)
+
+        --AssetLoaderInstance:AddPackageAddressable((UI_PACKAGE_PREFIX .. package), function(object)
+        --    loggZSXError((UI_PACKAGE_PREFIX .. package))
+        --    if act then
+        --        act()
+        --    end
+        --end)
     end
 end
 
