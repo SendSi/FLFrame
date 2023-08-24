@@ -6,62 +6,33 @@
 
 local UIWindow = require('Core.UIWindow')
 local LoginMainView = fgui.window_class(UIWindow)
-local GlobalEvent = require("Core.GlobalEvent")
-local EventName = require("Core.EventName")
 
 function LoginMainView:LoadComponent()
     --self.uiComs = require('ToolGen.login.UI_LoginMainView'):OnConstruct(self.contentPane)
+    loggZSXError("进来---------------LoginMainView")
 
     self.uiComs.m_loginBtn.onClick:Add(function()
         require("UI.MainCenter.ProxyMainCenterModule"):OpenMainCenter()
         self:CloseWindow()
     end)
-  end
-
-local mEventUIds
-
-local function tEventTest(data, value)
-    loggZSXWarning(data.key)
-    loggZSXWarning(value)
-end
-local function tEventClick()
-    loggZSXWarning("onClick")
-end
-
-function LoginMainView:BindRegisterEvent()
-    --self.closeBtn.onClick:Add(function()
-    --    self:CloseWindow()--父类
-    --end)
-    --
-    --self.uiComs.m_btn1.onClick:Add(function()
-    --    GlobalEvent:Fire(EventName.TestEvent, { key = "a", value = true }, "参数我")
-    --end)
-    --self.uiComs.m_btn2.onClick:Add(function()
-    --    GlobalEvent:Fire(EventName.TestOnClick)
-    --end)
-    --
-    --mEventUIds = {
-    --    GlobalEvent:AddListener(EventName.TestEvent, tEventTest),
-    --    GlobalEvent:AddListener(EventName.TestOnClick, tEventClick)
-    --}
+    self:Show()
 end
 
 function LoginMainView:SetData(str)
-    loggZSXWarning(str)
+    loggZSXError(str)
 end
 
 function LoginMainView:OnHide()
     UIWindow.OnHide(self)
-    --if mEventUIds and #mEventUIds > 0 then
-    --    for i = 1, #mEventUIds do
-    --        GlobalEvent:RemoveListener(mEventUIds[i])
-    --    end
-    --    mEventUIds = nil
-    --end
 end
 
 function LoginMainView:OnShown()
     UIWindow.OnShown(self)
+end
+
+function LoginMainView:Show()
+    self.visible = true
+    self.contentPane.visible = true
 end
 
 return LoginMainView

@@ -2,24 +2,24 @@ local UIWindow = fgui.window_class()
 local UIPackage = FairyGUI.UIPackage
 local DataCacheMgr = require("Core.DataCacheMgr")
 local GlobalEvent = require("Core.GlobalEvent")
-local UIHelper=require("Core.UIHelper")
+--local UIHelper = require("Core.UIHelper")
 
 function UIWindow:ctor(uiConfig)
     local view = uiConfig.viewName
     local package = uiConfig.packageName
-    loggZSXError(package,view)
     self.contentPane = UIPackage.CreateObject(package, view)
-    UIHelper:MakeObjectFullScreen(self.contentPane,uiConfig.matchMode)
+    --UIHelper:MakeObjectFullScreen(self.contentPane, uiConfig.matchMode)
     self.sortingOrder = uiConfig.sortingOrder or 0
 
     self.isActive = true --页面 是否在 打开中
     self.name = package .. "_" .. view
     self:Center()
-    self.uiComs = require('ToolGen.'..package..'.UI_'..view):OnConstruct(self.contentPane)
+    self.uiComs = require('ToolGen.' .. package .. '.UI_' .. view):OnConstruct(self.contentPane)
     self:LoadComponent()
     self:CheckBindCloseBtn()
     self:RegisterGlobalEvent()
     self.uiConfig = uiConfig
+    loggZSXError("走全了")
 end
 
 function UIWindow:LoadComponent()
@@ -73,6 +73,7 @@ end
 
 ---先destroy  再 onHide
 function UIWindow:Destroy()
+    loggZSXError("Destroy ", self.name)
     self:UnRegisterGlobalEvent()
     self:ReleaseUIObject()
     self:ReleasePackage()
@@ -102,8 +103,12 @@ function UIWindow:OnInit()
 end
 --C#
 function UIWindow:OnShown()
-
 end
+
+--function UIWindow:Show()
+--
+--end
+
 --C#  onRemovedFromStage 才触发
 function UIWindow:OnHide()
     self.isActive = false
@@ -113,6 +118,11 @@ function UIWindow:DoShowAnimation()
 end
 --C#
 function UIWindow:DoHideAnimation()
+end
+
+function UIWindow:OnInitData()
+    --self.contentPane:Show()
+    --GRoot.inst:ShowWindow(self);
 end
 
 return UIWindow

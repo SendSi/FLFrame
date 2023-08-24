@@ -31,11 +31,11 @@
   Width = "1280"
   Height = "720"
   Maximized = "true"
-  LastCodeFilename = "E:/gitHub/FLFrame/Assets/LuaScripts/Core/UIMgr.lua">
+  LastCodeFilename = "E:/gitHub/FLFrame/Assets/LuaScripts/Main.lua">
   <DockingControl>
     <DockingNode DockingDirection = "Horizontal">
       <DockingNode DockingDirection = "None">
-        <DockingBlock Width = "293" Height = "963" DocumentStyle = "false">
+        <DockingBlock Width = "294" Height = "963" DocumentStyle = "false">
           <DockingCard
             Text = "Project"
             Tag = ""
@@ -50,29 +50,29 @@
       </DockingNode>
       <DockingNode DockingDirection = "Vertical">
         <DockingNode DockingDirection = "None">
-          <DockingBlock Width = "1608" Height = "618" DocumentStyle = "true">
+          <DockingBlock Width = "1607" Height = "618" DocumentStyle = "true">
             <DockingCard
               Text = "UIMgr.lua"
               Tag = "E:/gitHub/FLFrame/Assets/LuaScripts/Core/UIMgr.lua"
-              ActivePage = "true"
-              ActivateTime = "444201348"
-              CaretLineIndex = "79"
-              CaretCodeCharIndex = "44"
+              ActivePage = "false"
+              ActivateTime = "448796581"
+              CaretLineIndex = "86"
+              CaretCodeCharIndex = "0"
               BaseX = "0"
               BaseY = "-1584"/>
             <DockingCard
               Text = "Main.lua"
               Tag = "E:/gitHub/FLFrame/Assets/LuaScripts/Main.lua"
-              ActivePage = "false"
-              ActivateTime = "442729627"
-              CaretLineIndex = "37"
-              CaretCodeCharIndex = "0"
+              ActivePage = "true"
+              ActivateTime = "453332247"
+              CaretLineIndex = "38"
+              CaretCodeCharIndex = "28"
               BaseX = "0"
               BaseY = "-558"/>
           </DockingBlock>
         </DockingNode>
         <DockingNode DockingDirection = "None">
-          <DockingBlock Width = "1608" Height = "338" DocumentStyle = "false">
+          <DockingBlock Width = "1607" Height = "338" DocumentStyle = "false">
             <DockingCard
               Text = "Output"
               Tag = ""

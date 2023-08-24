@@ -46,7 +46,7 @@ namespace FairyGUI
 
         public Window()
             : base()
-        {
+        {       
             _uiSources = new List<IUISource>();
             this.tabStopChildren = true;
             bringToFontOnClick = UIConfig.bringWindowToFrontOnClick;
@@ -54,7 +54,7 @@ namespace FairyGUI
             displayObject.onAddedToStage.Add(__addedToStage);
             displayObject.onRemovedFromStage.Add(__removeFromStage);
             displayObject.onTouchBegin.AddCapture(__touchBegin);
-
+            Debug.LogError("-------------起名字-stage--4");        
             this.gameObjectName = "Window";
             SetHome(GRoot.inst);
         }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
-
 namespace FairyGUI
 {
     /// <summary>
@@ -9,17 +8,11 @@ namespace FairyGUI
     /// </summary>
     public class GRoot : GComponent
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public static float contentScaleFactor
         {
             get { return UIContentScaler.scaleFactor; }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public static int contentScaleLevel
         {
             get { return UIContentScaler.scaleLevel; }
@@ -37,13 +30,17 @@ namespace FairyGUI
         public static GRoot inst
         {
             get
-            {
+            {             
                 if (_inst == null)
-                    Stage.Instantiate();
+                {
+                    Debug.LogError("-------------起名字-stage--3");
+                    Stage.Instantiate();       
+                }
 
                 return _inst;
             }
         }
+
 
         public GRoot()
         {
@@ -64,6 +61,8 @@ namespace FairyGUI
 
             Stage.inst.onTouchBegin.RemoveCapture(__stageTouchBegin);
             Stage.inst.onTouchEnd.RemoveCapture(__stageTouchEnd);
+            _inst = null;
+            Debug.LogError("GRoot dispose-----------------");
         }
 
         /// <summary>

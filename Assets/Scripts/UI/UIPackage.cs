@@ -369,7 +369,10 @@ namespace FairyGUI
             //Debug.LogError(loadFunc);
             pkg._loadAsyncFunc = loadFunc;
             if (!pkg.LoadPackage(buffer, assetNamePrefix))
+            { 
+                Debug.LogError("??null " + assetNamePrefix);
                 return null;
+            }
 
             _packageInstById[pkg.id] = pkg;
             _packageInstByName[pkg.name] = pkg;

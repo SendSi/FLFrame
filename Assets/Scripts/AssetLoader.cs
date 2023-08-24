@@ -49,13 +49,14 @@ public class AssetLoader : MonoBehaviour
             mIsLoadBundle = true;//
         }
     }
-
     public static AssetLoader Instance;
     void Awake()
     {
-        InitIsLoadBundle();
         Instance = this;
+        InitIsLoadBundle(); 
     }
+
+
 
 
     public void AddPackage(string package, Action<List<string>> load)
@@ -250,10 +251,9 @@ public class AssetLoader : MonoBehaviour
         }
     }
 
-
-
     public void InstantiateAsync(string addressName, Action<object> callback = null, AssetType assetType = AssetType.Prefab)
     {
+        //Debug.LogError(addressName);
         LoadAssetAsync(addressName, obj =>
         {
             object objResult = null;

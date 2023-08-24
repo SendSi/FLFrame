@@ -5,8 +5,6 @@ function UI_LoginMainView:OnConstruct(windowCom)
 	local tb = {
 	m_bg = windowCom:GetChild("bg"),
 	m_bg1 = windowCom:GetChild("bg1"),
-	m_accountInput = windowCom:GetChild("accountInput"),
-	m_n13 = windowCom:GetChild("n13"),
 	m_loginBtn = windowCom:GetChild("loginBtn"),
 	m_n15 = windowCom:GetChild("n15"),
 	m_icon_logo = windowCom:GetChild("icon_logo"),

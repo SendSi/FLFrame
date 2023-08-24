@@ -5,8 +5,6 @@
       <relation target="" sidePair="height-height,center-center"/>
     </loader>
     <image id="n4_lw9r" name="bg1" src="p78116" fileName="images/land_bg02.png" xy="228,439" size="878,57" group="n15_jhg1"/>
-    <text id="n5_lw9r" name="accountInput" xy="585,447" size="273,42" group="n15_jhg1" fontSize="24" color="#feff92" vAlign="middle" autoSize="none" strokeColor="#000000" shadowColor="#000000" shadowOffset="1,2" singleLine="true" text="" input="true" prompt="请输入帐号..."/>
-    <text id="n13_q5lj" name="n13" xy="461,451" pivot="0.5,0.5" size="124,34" group="n15_jhg1" fontSize="24" color="#ffffff" strokeColor="#000000" shadowColor="#000000" shadowOffset="1,2" singleLine="true" text="账号登录："/>
     <component id="n11_lw9r" name="loginBtn" src="p78115" fileName="components/button_game_start.xml" xy="490,535" group="n15_jhg1">
       <Button title="登录游戏" icon="ui://byy9k3gh7oizb" sound=""/>
     </component>
