@@ -19,7 +19,6 @@ function UIWindow:ctor(uiConfig)
     self:CheckBindCloseBtn()
     self:RegisterGlobalEvent()
     self.uiConfig = uiConfig
-    loggZSXError("走全了")
 end
 
 function UIWindow:LoadComponent()
@@ -99,10 +98,13 @@ end
 
 --C# 看源码
 function UIWindow:OnInit()
-
+    loggZSXError("OnInit")
+    self.contentPane.visible = true
 end
 --C#
 function UIWindow:OnShown()
+    loggZSXError("OnShown")
+    self.contentPane.visible = true
 end
 
 --function UIWindow:Show()

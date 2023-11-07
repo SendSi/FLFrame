@@ -86,7 +86,6 @@ namespace FairyGUI
         {
             if (_inst == null)
             {
-                Debug.LogError("-------------起名字-stage--2");
                 _inst = new Stage();
                 GRoot._inst = new GRoot();
                 GRoot._inst.ApplyContentScaleFactor();
@@ -197,7 +196,6 @@ namespace FairyGUI
             StageEngine engine = GameObject.FindObjectOfType<StageEngine>();
             if (engine != null)
                 UnityEngine.Object.Destroy(engine.gameObject);
-            Debug.LogError("-------------起名字-stage--1");
             this.gameObject.name = "Stage";
             this.gameObject.layer = LayerMask.NameToLayer(StageCamera.LayerName);
             this.gameObject.AddComponent<StageEngine>();

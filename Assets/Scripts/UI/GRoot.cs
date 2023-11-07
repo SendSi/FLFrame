@@ -33,8 +33,7 @@ namespace FairyGUI
             {             
                 if (_inst == null)
                 {
-                    Debug.LogError("-------------起名字-stage--3");
-                    Stage.Instantiate();       
+                                    Stage.Instantiate();       
                 }
 
                 return _inst;

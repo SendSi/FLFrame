@@ -1,8 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-
 public enum AssetType
 {
     None = 0,
@@ -16,6 +11,8 @@ public enum AssetType
     TextAsset,
     //×ÖÌå
     Font,
+    //FGUI ÓÐÒÀÀµµÄ
+    FGUI,
 }
 
 public class AssetObject:ICache

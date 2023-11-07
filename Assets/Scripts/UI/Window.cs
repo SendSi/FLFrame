@@ -53,10 +53,10 @@ namespace FairyGUI
 
             displayObject.onAddedToStage.Add(__addedToStage);
             displayObject.onRemovedFromStage.Add(__removeFromStage);
-            displayObject.onTouchBegin.AddCapture(__touchBegin);
-            Debug.LogError("-------------起名字-stage--4");        
+            displayObject.onTouchBegin.AddCapture(__touchBegin);          
             this.gameObjectName = "Window";
             SetHome(GRoot.inst);
+            Debug.LogError("window-base");
         }
 
         /// <summary>
@@ -188,6 +188,7 @@ namespace FairyGUI
         /// </summary>
         public void Show()
         {
+            Debug.LogError("Show");
             GRoot.inst.ShowWindow(this);
         }
 
@@ -205,6 +206,7 @@ namespace FairyGUI
         /// </summary>
         public void Hide()
         {
+            Debug.LogError("hide");
             if (this.isShowing)
                 DoHideAnimation();
         }

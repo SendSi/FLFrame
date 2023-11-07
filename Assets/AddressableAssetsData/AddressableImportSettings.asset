@@ -55,3 +55,13 @@ MonoBehaviour:
     LabelMode: 0
     simplified: 0
     addressReplacement: Font/${asset}
+  - path: Assets/_Res/Shaders/(?<asset>.*)\.(shadervariants|shader|cginc)
+    matchType: 1
+    groupName: Shader
+    groupTemplate: {fileID: 11400000, guid: ba2399b419a054546adf6b9f9fdf508c, type: 2}
+    groupTemplateApplicationMode: 1
+    labelRefs: []
+    dynamicLabels: []
+    LabelMode: 0
+    simplified: 0
+    addressReplacement: Shaders/${asset}

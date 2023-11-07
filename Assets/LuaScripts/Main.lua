@@ -28,6 +28,8 @@ function Main()
     local UpdateBeat = UpdateBeat
     UpdateBeat:Add(Update)
 
+    --ShaderManager.GetInstance():Init("Shaders/FairyGUI-Image")
+
     require("Core.InitRequire")
 end
 

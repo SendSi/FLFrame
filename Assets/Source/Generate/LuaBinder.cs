@@ -14,7 +14,9 @@ public static class LuaBinder
 		AssetLoaderWrap.Register(L);
 		TestLoaderWrap.Register(L);
 		EmojiAtlasWrap.Register(L);
+		ShaderManagerWrap.Register(L);
 		LuaProfilerWrap.Register(L);
+		Singleton_ShaderManagerWrap.Register(L);
 		L.BeginModule("LuaInterface");
 		LuaInterface_LuaInjectionStationWrap.Register(L);
 		LuaInterface_InjectTypeWrap.Register(L);

@@ -240,7 +240,7 @@ public class AssetLoader : MonoBehaviour
             {
                 var depPackageName = names[i];// 依赖包
                 UIPackage.AddPackage(editorPath + depPackageName);
-                Debug.Log("--------" + depPackageName);
+                Debug.LogError("--------" + depPackageName);
                 if (i + 1 == num)
                     load.Invoke(names);
             }

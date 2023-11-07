@@ -52,7 +52,7 @@ end
 function UIMgr:InstanceWindow(uiConfig, callBack)
     local package = uiConfig.packageName
     local className = uiConfig.className
-    self:LoadPackage(package, function()
+    self:LoadPackage(className, package, function()
         local uiWin = require(className).New(uiConfig)--UIWindow.lua
         uiWin:Show()
         mUIWindows[className] = uiWin
@@ -70,10 +70,9 @@ end
 local g_PackageReference = {}
 local DestroyMethod = FairyGUI.DestroyMethod
 
-function UIMgr:LoadPackage(packageName, callback)
+function UIMgr:LoadPackage(className,packageName, callback)
     local function __LoadFromAddressable(name, extension, type, item)
         local atlasAddressableName = "UI/" .. name
-        loggZSXError("LoadPackage_2_", atlasAddressableName)
         AssetLoader.Instance:InstantiateAsync(atlasAddressableName, function(assetObject)
             item.owner:SetItemAsset(item, assetObject, DestroyMethod.None)
         end, AssetType.None)
@@ -81,18 +80,43 @@ function UIMgr:LoadPackage(packageName, callback)
     local loadResourceAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
 
     local UI_PackageName = "UI/" .. packageName
-    loggZSXError("LoadPackage_1_", UI_PackageName)
 
     AssetLoader.Instance:InstantiateAsync(UI_PackageName, function(assetObject)
         if not assetObject then
-            error("打开UI：", UI_PackageName, "_失败")
+            loggZSXError("打开UI：", UI_PackageName, "_失败")
         end
         UIPackage.AddPackage(assetObject.bytes, packageName, loadResourceAsync)
-
         if callback then
-            callback()
+            callback(assetObject.bytes)
         end
     end, AssetType.TextAsset)
+end
+
+
+--加载对应包体以及依赖
+function UIMgr:LoadPackageWithDependencies(className, packageName, callback)
+    self:LoadPackage(className, packageName, function(package)
+        local dependencies = package.dependencies        --加载依赖资源包
+        local num = dependencies:Length()
+        local currentNum = num
+        if num > 0 then
+            for i = 1, num do
+                local dependentPackageName = dependencies[i - 1]:get_Item("name")
+                self:LoadPackage(className, dependentPackageName, function(assetObject1)
+                    currentNum = currentNum - 1
+                    if currentNum <= 0 then
+                        if callback then
+                            callback()
+                        end
+                    end
+                end)
+            end
+        else
+            if callback then
+                callback()
+            end
+        end
+    end)
 end
 
 function UIMgr:RegisterFont(fontName, callback)

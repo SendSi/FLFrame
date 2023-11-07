@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Shader
+  m_EditorClassIdentifier: 
+  m_GroupName: Shader
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 561cc0b56c991f74fbac2f5bde87ac9a
+  m_SerializeEntries:
+  - m_GUID: cd79153f88fa7334ea6c5564c053bdca
+    m_Address: Shaders/FairyGUI-BMFont
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 263c97191482b3649ac7bf0810cc4f77
+    m_Address: Shaders/FairyGUI-Image
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8526777372c6fef4f8162b3a7901dcb0
+    m_Address: Shaders/FairyGUI-Text
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 257cd25159e21924f8a0a15f9d4ecf77
+    m_Address: Shaders/Particle_Additive
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5518b9d65c659ca4a88757985c14a70d
+    m_Address: Shaders/Particle_FXMain
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f83d3bb1d90aaf54d8aed0783317662f
+    m_Address: Shaders/AddOn/FairyGUI-BlurFilter
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7f1982874cfeecd4696139b602f60be7, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3de6dfcaa1c7a3849b577e0a1fa724a9, type: 2}
+    - {fileID: 11400000, guid: 0263f51f9ce3a564299ad4083376f666, type: 2}
