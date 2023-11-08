@@ -1,5 +1,5 @@
 # FLFrame
-搭toLua+FairyGUI Unity版本2022.1.6f1
+搭toLua+FairyGUI+addressable Unity版本2022.1.6f1
 
 菜单栏Tools/BundleEditor/Using ***
 ```
