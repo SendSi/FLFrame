@@ -14,6 +14,6 @@
     <loader id="n17_b9bj" name="icon_logo" xy="281,73" pivot="0.5,0.5" size="768,279" url="ui://byy9k3ghv4de32" align="center" vAlign="middle">
       <relation target="" sidePair="center-center,middle-middle"/>
     </loader>
-    <image id="n20_oiu9" name="n20" src="mpc836" fileName="images/btn_bg_service.png" pkg="7925ofva" xy="125,291"/>
+    <image id="n20_oiu9" name="commonImg" src="mpc836" fileName="images/btn_bg_service.png" pkg="7925ofva" xy="125,291"/>
   </displayList>
 </component>

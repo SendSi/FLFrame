@@ -3,6 +3,7 @@
   <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
   <displayList>
     <image id="n0_p781" name="n0" src="7oizb" fileName="images/btn_land.png" xy="0,0"/>
+    <text id="n1_cajh" name="n1" xy="32,8" size="285,62" fontSize="40" color="#ff0000" align="center" vAlign="middle" autoSize="none" text="登录5A"/>
   </displayList>
   <Button downEffect="scale" downEffectValue=".95"/>
 </component>
