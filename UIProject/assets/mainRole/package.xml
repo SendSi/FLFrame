@@ -16,7 +16,6 @@
     <image id="nqnq9cji" name="league_see.png" path="/images/" exported="true"/>
     <image id="pm2o9cjl" name="body.png" path="/images/" exported="true"/>
     <component id="z3y8hz9cz9" name="LookRoleView.xml" path="/panels/" exported="true"/>
-    <component id="z3y8hz9czf" name="resourceBtn.xml" path="/components/" exported="true"/>
     <component id="g38xhz9czg" name="headItem.xml" path="/components/" exported="true"/>
     <component id="dnyfhz9czi" name="MainRoleOtherInfoView.xml" path="/panels/" exported="true"/>
     <component id="dnyfhz9czj" name="RoleMainModifyNameView.xml" path="/panels/" exported="true"/>

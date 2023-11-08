@@ -5,7 +5,6 @@ function UI_main_chat_item2:OnConstruct(windowCom)
 	local tb = {
 	m_channel = windowCom:GetController("channel"),
 	m_title_name = windowCom:GetChild("title_name"),
-	m_title_content = windowCom:GetChild("title_content"),
 	m_bg_1 = windowCom:GetChild("bg_1"),
 	m_title_1 = windowCom:GetChild("title_1"),
 	m_1 = windowCom:GetChild("1"),
@@ -21,6 +20,9 @@ function UI_main_chat_item2:OnConstruct(windowCom)
 	m_bg_5 = windowCom:GetChild("bg_5"),
 	m_title_5 = windowCom:GetChild("title_5"),
 	m_5 = windowCom:GetChild("5"),
+	m_bg_6 = windowCom:GetChild("bg_6"),
+	m_title_6 = windowCom:GetChild("title_6"),
+	m_6 = windowCom:GetChild("6"),
 	}
 	return tb
 end

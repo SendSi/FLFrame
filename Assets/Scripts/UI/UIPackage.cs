@@ -372,7 +372,7 @@ namespace FairyGUI
             pkg._loadAsyncFunc = loadFunc;
             if (!pkg.LoadPackage(buffer, assetNamePrefix))
             { 
-                Debug.LogError("??null " + assetNamePrefix);
+                Debug.LogError("别瞎依赖其他包哦(common,item)   " + assetNamePrefix);
                 return null;
             }
 
