@@ -248,7 +248,11 @@ function genCode(handler)
     --    end
     --end
     --
+	if not CS.System.IO.File.Exists(PluginPath .. "/GLabel.txt") then
+        return ;
+    end
     local gLabelTemplateTxt = CS.System.IO.File.ReadAllText(PluginPath .. "/GLabel.txt");
+
     for i = 0, classCnt - 1 do
         local classInfo = classes[i]
         if classInfo.superClassName == "CS.FairyGUI.GLabel" then
@@ -300,6 +304,7 @@ function genCode(handler)
         end
         writer:reset()
     end
+	
 
     --
     --    if (i > 0) then

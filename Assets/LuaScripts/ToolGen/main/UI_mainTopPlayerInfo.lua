@@ -3,11 +3,11 @@
 local UI_mainTopPlayerInfo = {};
 function UI_mainTopPlayerInfo:OnConstruct(windowCom)
 	local tb = {
-	m_fightPowerNum = windowCom:GetChild("fightPowerNum"),
+	m_HeadIconBtn = windowCom:GetChild("HeadIconBtn"),
 	m_actPbr = windowCom:GetChild("actPbr"),
+	m_fightPowerNum = windowCom:GetChild("fightPowerNum"),
 	m_nameLbl = windowCom:GetChild("nameLbl"),
 	m_lvLbl = windowCom:GetChild("lvLbl"),
-	m_HeadIconBtn = windowCom:GetChild("HeadIconBtn"),
 	}
 	return tb
 end
