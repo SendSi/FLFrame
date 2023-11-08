@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <packageDescription id="7925ofva">
   <resources>
-    <image id="mpc836" name="btn_bg_service.png" path="/images/" exported="true"/>
-    <image id="7oiza" name="btn_bg_sweep.png" path="/images/" exported="true"/>
-    <image id="c92h2e" name="com_bg_wall05.png" path="/images/" exported="true" scale="9grid" scale9grid="23,22,4,6"/>
+    <folder id="/images1/" name="images1" path="/" atlas="1"/>
+    <image id="mpc836" name="btn_bg_service.png" path="/images1/" exported="true"/>
+    <image id="7oiza" name="btn_bg_sweep.png" path="/images2/" exported="true"/>
     <font id="dsbj37" name="source_bold.ttf" path="/font/" exported="true" renderMode="" samplePointSize="16"/>
+    <folder id="/images2/" name="images2" path="/" atlas="2"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

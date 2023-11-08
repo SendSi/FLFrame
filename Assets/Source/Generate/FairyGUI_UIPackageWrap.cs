@@ -24,6 +24,7 @@ public class FairyGUI_UIPackageWrap
 		L.RegFunction("GetItemByURL", GetItemByURL);
 		L.RegFunction("NormalizeURL", NormalizeURL);
 		L.RegFunction("SetStringsSource", SetStringsSource);
+		L.RegFunction("GetDependenciesCount", GetDependenciesCount);
 		L.RegFunction("LoadAllAssets", LoadAllAssets);
 		L.RegFunction("UnloadAssets", UnloadAssets);
 		L.RegFunction("ReloadAssets", ReloadAssets);
@@ -511,6 +512,23 @@ public class FairyGUI_UIPackageWrap
 			FairyGUI.Utils.XML arg0 = (FairyGUI.Utils.XML)ToLua.CheckObject<FairyGUI.Utils.XML>(L, 1);
 			FairyGUI.UIPackage.SetStringsSource(arg0);
 			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int GetDependenciesCount(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			FairyGUI.UIPackage obj = (FairyGUI.UIPackage)ToLua.CheckObject<FairyGUI.UIPackage>(L, 1);
+			int o = obj.GetDependenciesCount();
+			LuaDLL.lua_pushinteger(L, o);
+			return 1;
 		}
 		catch (Exception e)
 		{

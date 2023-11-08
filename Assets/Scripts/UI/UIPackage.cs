@@ -671,6 +671,11 @@ namespace FairyGUI
             get { return _dependencies; }
         }
 
+        public int GetDependenciesCount()
+        {
+            return _dependencies.Length;
+        }
+
         bool LoadPackage(ByteBuffer buffer, string assetNamePrefix)
         {
             if (buffer.ReadUint() != 0x46475549)

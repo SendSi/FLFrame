@@ -32,13 +32,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 960781c1606126341a83464cb9a00a51
-    m_Address: UI/common_atlas0
+  - m_GUID: 03917132cfed0f9478b1e099760bddad
+    m_Address: Test/Cube
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 03917132cfed0f9478b1e099760bddad
-    m_Address: Test/Cube
+  - m_GUID: 782ab96b0080d1243a080452951da430
+    m_Address: UI/common_atlas1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f52d0dc4c019d6d4e9639c46b161d2e4
+    m_Address: UI/common_atlas2
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

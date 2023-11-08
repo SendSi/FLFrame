@@ -70,53 +70,46 @@ end
 local g_PackageReference = {}
 local DestroyMethod = FairyGUI.DestroyMethod
 
-function UIMgr:LoadPackage(packageName, callback)
-    local function __LoadFromAddressable(name, extension, type, item)
-        local atlasAAName = "UI/" .. name
-        logerror("加载atlasAAName:",atlasAAName)
+function UIMgr:LoadPackage(packageName, callBack)
+    local function __LoadFromAddressable(imgName, extension, type, item)
+        local atlasAAName = "UI/" .. imgName
         AssetLoader.Instance:InstantiateAsync(atlasAAName, function(assetObject)
             item.owner:SetItemAsset(item, assetObject, DestroyMethod.None)
-        end, AssetType.Texture)
+        end, AssetType.Texture)--图片
     end
-    local loadResourceAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
+    local loadResAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
 
-    local UI_PackageName = "UI/" .. packageName
-    AssetLoader.Instance:InstantiateAsync(UI_PackageName, function(assetObject)
+    local tPackageName = "UI/" .. packageName
+    AssetLoader.Instance:InstantiateAsync(tPackageName, function(assetObject)
         if not assetObject then
-            logerror("打开UI_失败：", UI_PackageName)
+            logerror("打开UI_失败：", tPackageName)
         end
-        UIPackage.AddPackage(assetObject.bytes, packageName, loadResourceAsync)
-        if callback then
-            callback()
+        local packageData = UIPackage.AddPackage(assetObject.bytes, packageName, loadResAsync)
+        local refCount = packageData:GetDependenciesCount()--依赖资源包的个数
+        if refCount > 0 then
+            self:Load_Dependent(packageData, refCount, callBack)
+        else
+            if callBack then
+                callBack()
+            end
         end
-    end, AssetType.TextAsset)
+    end, AssetType.TextAsset)--bytes文件
 end
 
-
---加载对应包体以及依赖
-function UIMgr:LoadPackageWithDependencies(className, packageName, callback)
-    self:LoadPackage(className, packageName, function(package)
-        local dependencies = package.dependencies        --加载依赖资源包
-        local num = dependencies:Length()
-        local currentNum = num
-        if num > 0 then
-            for i = 1, num do
-                local dependentPackageName = dependencies[i - 1]:get_Item("name")
-                self:LoadPackage(className, dependentPackageName, function(assetObject1)
-                    currentNum = currentNum - 1
-                    if currentNum <= 0 then
-                        if callback then
-                            callback()
-                        end
-                    end
-                end)
+--加载依赖
+function UIMgr:Load_Dependent(package, refCount, callBack)
+    local dependencies = package.dependencies        --加载依赖资源包
+    local enumerator = dependencies:GetEnumerator()
+    while enumerator:MoveNext() do
+        local current = enumerator.Current
+        local useOther = (current:get_Item("name"))
+        refCount = refCount - 1
+        self:LoadPackage(useOther, function(assetObject)
+            if refCount <= 0 and callBack then
+                callBack()
             end
-        else
-            if callback then
-                callback()
-            end
-        end
-    end)
+        end)
+    end
 end
 
 function UIMgr:RegisterFont(fontName, callback)
