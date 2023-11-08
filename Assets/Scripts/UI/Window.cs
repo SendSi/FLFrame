@@ -56,7 +56,6 @@ namespace FairyGUI
             displayObject.onTouchBegin.AddCapture(__touchBegin);          
             this.gameObjectName = "Window";
             SetHome(GRoot.inst);
-            Debug.LogError("window-base");
         }
 
         /// <summary>
@@ -188,7 +187,6 @@ namespace FairyGUI
         /// </summary>
         public void Show()
         {
-            Debug.LogError("Show");
             GRoot.inst.ShowWindow(this);
         }
 

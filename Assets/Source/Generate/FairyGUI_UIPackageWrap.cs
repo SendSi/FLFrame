@@ -31,6 +31,8 @@ public class FairyGUI_UIPackageWrap
 		L.RegFunction("GetItem", GetItem);
 		L.RegFunction("GetItemByName", GetItemByName);
 		L.RegFunction("SetItemAsset", SetItemAsset);
+		L.RegFunction("LoadPackage2", LoadPackage2);
+		L.RegFunction("UnloadPackage", UnloadPackage);
 		L.RegFunction("New", _CreateFairyGUI_UIPackage);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("unloadBundleByFGUI", get_unloadBundleByFGUI, set_unloadBundleByFGUI);
@@ -643,6 +645,53 @@ public class FairyGUI_UIPackageWrap
 			object arg1 = ToLua.ToVarObject(L, 3);
 			FairyGUI.DestroyMethod arg2 = (FairyGUI.DestroyMethod)ToLua.CheckObject(L, 4, typeof(FairyGUI.DestroyMethod));
 			obj.SetItemAsset(arg0, arg1, arg2);
+			return 0;
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int LoadPackage2(IntPtr L)
+	{
+		try
+		{
+			int count = LuaDLL.lua_gettop(L);
+
+			if (count == 1)
+			{
+				string arg0 = ToLua.CheckString(L, 1);
+				FairyGUI.UIPackage.LoadPackage2(arg0);
+				return 0;
+			}
+			else if (count == 2)
+			{
+				string arg0 = ToLua.CheckString(L, 1);
+				System.Action<FairyGUI.UIPackage> arg1 = (System.Action<FairyGUI.UIPackage>)ToLua.CheckDelegate<System.Action<FairyGUI.UIPackage>>(L, 2);
+				FairyGUI.UIPackage.LoadPackage2(arg0, arg1);
+				return 0;
+			}
+			else
+			{
+				return LuaDLL.luaL_throw(L, "invalid arguments to method: FairyGUI.UIPackage.LoadPackage2");
+			}
+		}
+		catch (Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int UnloadPackage(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 1);
+			string arg0 = ToLua.CheckString(L, 1);
+			FairyGUI.UIPackage.UnloadPackage(arg0);
 			return 0;
 		}
 		catch (Exception e)

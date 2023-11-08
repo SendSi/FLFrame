@@ -13,6 +13,7 @@ public class AssetTypeWrap
 		L.RegVar("SpriteAtlas", get_SpriteAtlas, null);
 		L.RegVar("TextAsset", get_TextAsset, null);
 		L.RegVar("Font", get_Font, null);
+		L.RegVar("FGUI", get_FGUI, null);
 		L.RegFunction("IntToEnum", IntToEnum);
 		L.EndEnum();
 		TypeTraits<AssetType>.Check = CheckType;
@@ -68,6 +69,13 @@ public class AssetTypeWrap
 	static int get_Font(IntPtr L)
 	{
 		ToLua.Push(L, AssetType.Font);
+		return 1;
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_FGUI(IntPtr L)
+	{
+		ToLua.Push(L, AssetType.FGUI);
 		return 1;
 	}
 

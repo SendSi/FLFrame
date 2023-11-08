@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using FairyGUI.Utils;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -1668,5 +1670,43 @@ namespace FairyGUI
             Debug.LogWarning("To enable DragonBones support, add script define symbol: FAIRYGUI_DRAGONBONES");
 #endif
         }
+
+        private static AsyncOperationHandle<GameObject> m_LoadOperation;
+        public static void LoadPackage2(string name, Action<UIPackage> completeCallback = null)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                completeCallback?.Invoke(null);
+                return;
+            }
+
+            // 使用Addressable加载Package资源
+            m_LoadOperation = Addressables.LoadAssetAsync<GameObject>(name);
+
+            m_LoadOperation.Completed += handle =>
+            {
+                if (handle.Status == AsyncOperationStatus.Succeeded)
+                {
+                    var obj = handle.Result;
+                    var pkg = obj.GetComponent<UIPackage>();
+                    completeCallback?.Invoke(pkg);
+                }
+                else
+                {
+                    completeCallback?.Invoke(null);
+                }
+            };
+        }
+        
+
+        public static void UnloadPackage(string name)
+        {
+            if (m_LoadOperation.IsValid() && m_LoadOperation.Result != null)
+            {
+                Addressables.Release(m_LoadOperation.Result);
+                m_LoadOperation = default(AsyncOperationHandle<GameObject>);
+            }
+        }
+
     }
 }

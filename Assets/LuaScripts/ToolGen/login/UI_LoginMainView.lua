@@ -8,7 +8,7 @@ function UI_LoginMainView:OnConstruct(windowCom)
 	m_loginBtn = windowCom:GetChild("loginBtn"),
 	m_n15 = windowCom:GetChild("n15"),
 	m_icon_logo = windowCom:GetChild("icon_logo"),
-	m_n20 = windowCom:GetChild("n20"),
+	m_commonImg = windowCom:GetChild("commonImg"),
 	}
 	return tb
 end

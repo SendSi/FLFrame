@@ -52,7 +52,7 @@ end
 function UIMgr:InstanceWindow(uiConfig, callBack)
     local package = uiConfig.packageName
     local className = uiConfig.className
-    self:LoadPackage(className, package, function()
+    self:LoadPackage(package, function()
         local uiWin = require(className).New(uiConfig)--UIWindow.lua
         uiWin:Show()
         mUIWindows[className] = uiWin
@@ -70,24 +70,24 @@ end
 local g_PackageReference = {}
 local DestroyMethod = FairyGUI.DestroyMethod
 
-function UIMgr:LoadPackage(className,packageName, callback)
+function UIMgr:LoadPackage(packageName, callback)
     local function __LoadFromAddressable(name, extension, type, item)
-        local atlasAddressableName = "UI/" .. name
-        AssetLoader.Instance:InstantiateAsync(atlasAddressableName, function(assetObject)
+        local atlasAAName = "UI/" .. name
+        logerror("加载atlasAAName:",atlasAAName)
+        AssetLoader.Instance:InstantiateAsync(atlasAAName, function(assetObject)
             item.owner:SetItemAsset(item, assetObject, DestroyMethod.None)
-        end, AssetType.None)
+        end, AssetType.Texture)
     end
     local loadResourceAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
 
     local UI_PackageName = "UI/" .. packageName
-
     AssetLoader.Instance:InstantiateAsync(UI_PackageName, function(assetObject)
         if not assetObject then
-            loggZSXError("打开UI：", UI_PackageName, "_失败")
+            logerror("打开UI_失败：", UI_PackageName)
         end
         UIPackage.AddPackage(assetObject.bytes, packageName, loadResourceAsync)
         if callback then
-            callback(assetObject.bytes)
+            callback()
         end
     end, AssetType.TextAsset)
 end
