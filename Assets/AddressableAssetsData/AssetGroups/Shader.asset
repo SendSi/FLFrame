@@ -32,16 +32,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 257cd25159e21924f8a0a15f9d4ecf77
-    m_Address: Shaders/Particle_Additive
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5518b9d65c659ca4a88757985c14a70d
-    m_Address: Shaders/Particle_FXMain
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f83d3bb1d90aaf54d8aed0783317662f
     m_Address: Shaders/AddOn/FairyGUI-BlurFilter
     m_ReadOnly: 0

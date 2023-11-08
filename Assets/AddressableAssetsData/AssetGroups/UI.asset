@@ -47,6 +47,76 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 249fc2703478d4348a5d8aea48aaf67f
+    m_Address: UI/main_atlas0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f559f649a5d228842a582cee6e5cf12d
+    m_Address: UI/main_atlas0_3
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aa8bea0941a6da43a48215fc644f56e
+    m_Address: UI/main_atlas1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45b2242e17ef04c4694f4dc223b98f1f
+    m_Address: UI/main_atlas0_2
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac7269b31190ad94d9ef31be45748bed
+    m_Address: UI/main_atlas0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6149db2cf596d84b882b706bd3b5ff9
+    m_Address: UI/main
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 25d34eae7af81444f8d1a2ca1c18d380
+    m_Address: UI/main_atlas10
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4820e2fd40ebca44a85116224208a67b
+    m_Address: UI/GMView
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14d9c3054b1e4e14aa56958bc5b55c84
+    m_Address: UI/mainRole
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a86bfff2fb2e03249a01c1a3f235790d
+    m_Address: UI/dialogTip_atlas0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c66f9cb95f4718a429d201b9d6922691
+    m_Address: UI/dialogTip
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97c257f689cb01c4bbb641f846fe45b6
+    m_Address: UI/mainRole_atlas0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 773bd0f9dbcb1cd4e8616016221a4f37
+    m_Address: UI/Emoji_atlas0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc4ecbb8b4996784d845a4045b8bb98e
+    m_Address: UI/Emoji
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7f1982874cfeecd4696139b602f60be7, type: 2}
   m_SchemaSet:

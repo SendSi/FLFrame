@@ -1,0 +1,53 @@
+--- This is an automatically generated class by FairyGUI. Please do not modify it. ---
+---@class UI_IntroduceView : CS.FairyGUI.GLabel
+local UI_IntroduceView = {};
+function UI_IntroduceView:OnConstruct(windowCom)
+	local tb = {
+	m_page = windowCom:GetController("page"),
+	m_state = windowCom:GetController("state"),
+	m_mask = windowCom:GetChild("mask"),
+	m_position = windowCom:GetChild("position"),
+	m_com_window = windowCom:GetChild("com_window"),
+	m_title = windowCom:GetChild("title"),
+	m_n65 = windowCom:GetChild("n65"),
+	m_n67 = windowCom:GetChild("n67"),
+	m_n69 = windowCom:GetChild("n69"),
+	m_n70 = windowCom:GetChild("n70"),
+	m_n71 = windowCom:GetChild("n71"),
+	m_lbl = windowCom:GetChild("lbl"),
+	m_n59 = windowCom:GetChild("n59"),
+	m_list = windowCom:GetChild("list"),
+	m_n60 = windowCom:GetChild("n60"),
+	m_icon_building = windowCom:GetChild("icon_building"),
+	m_n66 = windowCom:GetChild("n66"),
+	m_explainBtn = windowCom:GetChild("explainBtn"),
+	m_closeButton = windowCom:GetChild("closeButton"),
+	m_introduce = windowCom:GetChild("introduce"),
+	m_n27 = windowCom:GetChild("n27"),
+	m_title2 = windowCom:GetChild("title2"),
+	m_backBtn = windowCom:GetChild("backBtn"),
+	m_n61 = windowCom:GetChild("n61"),
+	m_lable_01 = windowCom:GetChild("lable_01"),
+	m_lable_02 = windowCom:GetChild("lable_02"),
+	m_lable_03 = windowCom:GetChild("lable_03"),
+	m_lable_04 = windowCom:GetChild("lable_04"),
+	m_lable_05 = windowCom:GetChild("lable_05"),
+	m_lable_06 = windowCom:GetChild("lable_06"),
+	m_list_level = windowCom:GetChild("list_level"),
+	m_levelup_information = windowCom:GetChild("levelup_information"),
+	m_com_window2 = windowCom:GetChild("com_window2"),
+	m_title3 = windowCom:GetChild("title3"),
+	m_n75 = windowCom:GetChild("n75"),
+	m_n78 = windowCom:GetChild("n78"),
+	m_icon_building2 = windowCom:GetChild("icon_building2"),
+	m_timerPbr = windowCom:GetChild("timerPbr"),
+	m_explainBtn2 = windowCom:GetChild("explainBtn2"),
+	m_n76 = windowCom:GetChild("n76"),
+	m_n77 = windowCom:GetChild("n77"),
+	m_time_list = windowCom:GetChild("time_list"),
+	m_closeButton2 = windowCom:GetChild("closeButton2"),
+	m_feature = windowCom:GetChild("feature"),
+	}
+	return tb
+end
+return UI_IntroduceView;

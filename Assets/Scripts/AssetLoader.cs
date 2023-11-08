@@ -2,17 +2,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Net;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.Networking;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceLocations;
-using UnityEngine.U2D;
-using static FairyGUI.UIPackage;
-using static Reporter;
-using static UnityEditor.AddressableAssets.Build.Layout.BuildLayout;
+
 
 public class AssetLoader : MonoBehaviour
 {

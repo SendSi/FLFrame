@@ -7,49 +7,49 @@ local uiConfig = {
         packageName = "Bag", --所在的包名
         viewName = "Main", --页面名
         sortingOrder = 10, ---默认都为10  才能 上下  插入
-        matchMode=0,
+        matchMode = 0,
     },
     BagWin = {
         className = "UI.Bag.BagWin",
         packageName = "Bag",
         viewName = "BagWin",
         sortingOrder = 10,
-        matchMode=0,--0 全屏 1 高度适配 2 宽度适配 （默认高度适配）
+        matchMode = 0, --0 全屏 1 高度适配 2 宽度适配 （默认高度适配）
     },
     BagMainView = {
         className = "UI.Bag.BagMainView", ---背包
         packageName = "bag",
         viewName = "BagMainView",
         sortingOrder = 10,
-        matchMode=0,--
+        matchMode = 0, --
     },
     EmojiMain = {
         className = "UI.Emoji.EmojiMain",
         packageName = "Emoji",
         viewName = "Main",
         sortingOrder = 10,
-        matchMode=0,
+        matchMode = 0,
     },
     LoginMainView = {
         className = "UI.Login.LoginMainView",
         packageName = "login",
         viewName = "LoginMainView",
         sortingOrder = 10,
-        matchMode=0,
+        matchMode = 0,
     },
     MainCenterView = {
         className = "UI.MainCenter.MainCenterView", --主页面
         packageName = "main",
         viewName = "MainCenterView",
         sortingOrder = 10,
-        matchMode=0,
+        matchMode = 0,
     },
     DialogTip2View = {
         className = "UI.DialogTip.DialogTip2View",
         packageName = "dialogTip",
         viewName = "DialogTip2View",
         sortingOrder = 11,
-        matchMode=0,
+        matchMode = 0,
     },
 
     RoleMainView = {
@@ -65,7 +65,7 @@ local uiConfig = {
         packageName = "dialogTip",
         viewName = "ToastTipView",
         sortingOrder = 20,
-        matchMode=0,
+        matchMode = 0,
     },
 
     GMView = {
@@ -73,30 +73,30 @@ local uiConfig = {
         packageName = "GMView",
         viewName = "GMView",
         sortingOrder = 1001,
-        matchMode=0,
+        matchMode = 0,
     },
 
     BagMainView = {
-    className = 'UI.league.BagMainView',
-     packageName = '07_***',
-     viewName = 'BagMainView',
-     sortingOrder = 10,
-     matchMode = 0,
-        },
+        className = 'UI.league.BagMainView',
+        packageName = '07_***',
+        viewName = 'BagMainView',
+        sortingOrder = 10,
+        matchMode = 0,
+    },
 
     MainModifyView = {
-className = 'UI.MainRole.MainModifyView',
- packageName = '07_***',
- viewName = 'MainModifyView',
- sortingOrder = 10,
- matchMode = 0,
-    },--
+        className = 'UI.MainRole.MainModifyView',
+        packageName = '07_***',
+        viewName = 'MainModifyView',
+        sortingOrder = 10,
+        matchMode = 0,
+    }, --
 
 
     ---全局设定
     GlobalSetting = {
-        ScreenWidth=1334,---UI设计时的  尺寸
-        ScreenHeight=750,
+        ScreenWidth = 1334, ---UI设计时的  尺寸
+        ScreenHeight = 750,
     }
 }
 
