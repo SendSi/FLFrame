@@ -6,7 +6,6 @@ local tipItemInterval = 0.25 -- 每条最小间隔时间
 local storyItemInterval = 0.25 -- 每条最小间隔时间
 local storyLastPlayTime = 0
 local lastPlayTime = 0
-local curDuration = 0
 local UnityEngineTime = UnityEngine.Time
 local tipPools = {}
 local storyPools = {}

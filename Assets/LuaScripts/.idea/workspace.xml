@@ -36,17 +36,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/Login/LoginMainView.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="252">
+              <caret line="12" column="35" selection-start-line="11" selection-end-line="12" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/MainRole/ProxyMainRoleModule.lua">
+        <entry file="file://$PROJECT_DIR$/UI/MainRole/MainModifyView.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="45" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="45" />
+            <state relative-caret-position="693">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
             </state>
           </provider>
         </entry>
@@ -54,16 +54,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/UIConfig.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1160">
+            <state relative-caret-position="1218">
               <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="357">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
@@ -72,8 +72,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/MainRole/RoleMainView.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
+            <state relative-caret-position="616">
+              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -81,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/UIMgr.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2560">
-              <caret line="128" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="400">
+              <caret line="85" column="75" lean-forward="true" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -90,7 +90,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainCenterView.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
+            <state relative-caret-position="294">
               <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
             </state>
           </provider>
@@ -100,7 +100,25 @@
         <entry file="file://$PROJECT_DIR$/UI/MainCenter/FunctionsEles.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
+              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UI/DialogTip/ProxyDialogTipModule.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="556">
+              <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UI/DialogTip/TipsManager.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -116,7 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>nce.Instan</find>
       <find>nce:Instantia</find>
       <find>UIPackage</find>
       <find>Destroy</find>
@@ -146,6 +163,7 @@
       <find>TipsManager</find>
       <find>OpenRoleMainView</find>
       <find>dialogTip</find>
+      <find>mPackages</find>
     </findStrings>
     <replaceStrings>
       <replace>BagWin</replace>
@@ -196,7 +214,6 @@
         <option value="$PROJECT_DIR$/UI/DialogTip/FloatTipView.lua" />
         <option value="$PROJECT_DIR$/UI/DialogTip/ProxyDialogTipModule.lua" />
         <option value="$PROJECT_DIR$/Core/Init.lua" />
-        <option value="$PROJECT_DIR$/UI/DialogTip/TipsManager.lua" />
         <option value="$PROJECT_DIR$/Utils/EmojiUtil.lua" />
         <option value="$PROJECT_DIR$/LuaHF.lua" />
         <option value="$PROJECT_DIR$/LuaHotForEditor.lua" />
@@ -223,11 +240,12 @@
         <option value="$PROJECT_DIR$/Core/UIWindow.lua" />
         <option value="$PROJECT_DIR$/Core/UIConfig.lua" />
         <option value="$PROJECT_DIR$/Main.lua" />
-        <option value="$PROJECT_DIR$/UI/Login/LoginMainView.lua" />
-        <option value="$PROJECT_DIR$/Core/UIMgr.lua" />
         <option value="$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua" />
         <option value="$PROJECT_DIR$/ToolGen/mainRole/RoleMainView.lua" />
+        <option value="$PROJECT_DIR$/UI/Login/LoginMainView.lua" />
         <option value="$PROJECT_DIR$/UI/MainRole/RoleMainView.lua" />
+        <option value="$PROJECT_DIR$/Core/UIMgr.lua" />
+        <option value="$PROJECT_DIR$/UI/DialogTip/TipsManager.lua" />
       </list>
     </option>
   </component>
@@ -249,7 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -271,19 +288,7 @@
             <path>
               <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="ToolGen" type="462c0819:PsiDirectoryNode" />
-              <item name="mainRole" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
@@ -291,21 +296,11 @@
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="MainCenter" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="MainRole" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
-              <item name="Utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -404,14 +399,15 @@
       <workItem from="1699356716068" duration="1139000" />
       <workItem from="1699433994442" duration="8034000" />
       <workItem from="1699457049871" duration="793000" />
+      <workItem from="1699588687622" duration="1637000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169083000" />
+    <option name="totallyTimeSpent" value="170720000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-331" width="1096" height="1936" extended-state="6" />
+    <frame x="1912" y="-3" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
@@ -420,7 +416,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.34593573" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.34562698" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.040511727" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -547,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/DialogTip/ProxyDialogTipModule.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UI/GM/GMView.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4600">
@@ -607,13 +596,6 @@
     <entry file="file://$PROJECT_DIR$/ToolGen/05_mainRole/RoleMainView.lua" />
     <entry file="file://$PROJECT_DIR$/UI/MainRole/LeagueMainView.lua" />
     <entry file="file://$PROJECT_DIR$/UI/MainRole/BagMainView.lua" />
-    <entry file="file://$PROJECT_DIR$/UI/MainRole/MainModifyView.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Utils/cFunction.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1700">
@@ -732,13 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/DialogTip/TipsManager.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -767,59 +742,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/Login/LoginMainView.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/MainRole/ProxyMainRoleModule.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/UIConfig.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1160">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ToolGen/mainRole/LookRoleView.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/UIMgr.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2560">
-          <caret line="128" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainCenterView.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/MainCenter/FunctionsEles.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="96" selection-start-line="19" selection-start-column="96" selection-end-line="19" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UI/MainRole/RoleMainView.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
         </state>
       </provider>
     </entry>
@@ -830,10 +756,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainRole/ProxyMainRoleModule.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/UIConfig.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1218">
+          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainCenterView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/Login/LoginMainView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="35" selection-start-line="11" selection-end-line="12" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainRole/MainModifyView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainRole/RoleMainView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="357">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/UIMgr.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="85" column="75" lean-forward="true" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainCenter/FunctionsEles.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/DialogTip/ProxyDialogTipModule.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/DialogTip/TipsManager.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
         </state>
       </provider>
     </entry>

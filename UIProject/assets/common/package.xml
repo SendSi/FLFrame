@@ -2,10 +2,13 @@
 <packageDescription id="7925ofva">
   <resources>
     <folder id="/images1/" name="images1" path="/" atlas="1"/>
+    <folder id="/images2/" name="images2" path="/" atlas="2"/>
     <image id="mpc836" name="btn_bg_service.png" path="/images1/" exported="true"/>
     <image id="7oiza" name="btn_bg_sweep.png" path="/images2/" exported="true"/>
     <font id="dsbj37" name="source_bold.ttf" path="/font/" exported="true" renderMode="" samplePointSize="16"/>
-    <folder id="/images2/" name="images2" path="/" atlas="2"/>
+    <component id="ig90hz9czq" name="comBtn1.xml" path="/components/" exported="true"/>
+    <component id="ig9038" name="comBtn2.xml" path="/components/" exported="true"/>
+    <image id="ig901ygcg9n" name="btn_bg.png" path="/images1/" scale="9grid" scale9grid="9,10,111,26"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

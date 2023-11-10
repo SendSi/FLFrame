@@ -67,13 +67,18 @@ function UIMgr:RemovePackage()
 end
 
 --用于缓存Package
-local g_PackageReference = {}
+local mPackages = {}
 local DestroyMethod = FairyGUI.DestroyMethod
 
 function UIMgr:LoadPackage(packageName, callBack)
+    if mPackages[packageName] then
+        callBack()
+        return
+    end
+
     local function __LoadFromAddressable(imgName, extension, type, item)
         local atlasAAName = "UI/" .. imgName
-        loggZSXError("atlasAAName ",atlasAAName)
+        loggZSXError("atlasAAName ", atlasAAName)
         AssetLoader.Instance:InstantiateAsync(atlasAAName, function(assetObject)
             item.owner:SetItemAsset(item, assetObject, DestroyMethod.None)
         end, AssetType.Texture)--图片
@@ -81,12 +86,12 @@ function UIMgr:LoadPackage(packageName, callBack)
     local loadResAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
 
     local tPackageName = "UI/" .. packageName
-    loggZSXError("LoadPackage  ",packageName)
+    loggZSXError("LoadPackage  ", packageName)
     AssetLoader.Instance:InstantiateAsync(tPackageName, function(assetObject)
         if not assetObject then
             logerror("打开UI_失败：", tPackageName)
         end
-        loggZSXError("aync ",packageName)
+        loggZSXError("aync ", packageName)
         local packageData = UIPackage.AddPackage(assetObject.bytes, packageName, loadResAsync)
         local refCount = packageData:GetDependenciesCount()--依赖资源包的个数
         if refCount > 0 then
@@ -96,6 +101,7 @@ function UIMgr:LoadPackage(packageName, callBack)
                 callBack()
             end
         end
+        mPackages[packageName]=true
     end, AssetType.TextAsset)--bytes文件
 end
 
@@ -107,7 +113,7 @@ function UIMgr:Load_Dependent(package, refCount, callBack)
         local current = enumerator.Current
         local useOther = (current:get_Item("name"))
         refCount = refCount - 1
-        self:LoadPackage(useOther, function(assetObject)
+        self:LoadPackage(useOther, function()
             if refCount <= 0 and callBack then
                 callBack()
             end
