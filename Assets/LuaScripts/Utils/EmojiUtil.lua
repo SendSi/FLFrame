@@ -5,30 +5,33 @@
 ---
 
 local EmojiUtil = {}
-local EmojiAtlas = EmojiAtlas--C#脚本
+local EmojiMgr = EmojiMgr--C#脚本
 local ItemTab = require("Tables.ItemConfig")
 
 
 --All atlas
-local mDefaultEmojies, mDefaultEmojiAtlas
+local mEmojiDic, mEmojiIsLoaded
 
---txt.emojies=EmojiUtil:InitEmoji--      emojies是Dictionary<uint, Emoji>类型.lua没有uint类型
-function EmojiUtil:InitEmoji()
-    if not mDefaultEmojiAtlas  then
-        mDefaultEmojiAtlas = EmojiAtlas.New("Emoji", ".*")
-        mDefaultEmojies = mDefaultEmojiAtlas.Emojies
+--txt.emojies=EmojiUtil:Init--      mEmojiDic是Dictionary<uint, Emoji>类型.lua没有uint类型
+function EmojiUtil:Init()
+    if not mEmojiIsLoaded then
+        loggZSXError("TTT")
+        EmojiMgr.GetInstance():Init("Emoji", ".*")
+        mEmojiDic = EmojiMgr.GetInstance():GetEmojiDic()
+        mEmojiIsLoaded =true
     end
-    return mDefaultEmojies
+    return mEmojiDic
 end
 
 
 --获得图标
 function EmojiUtil:GetEmoji(str)
-    if mDefaultEmojiAtlas == nil then
-        mDefaultEmojiAtlas = EmojiAtlas.New("09_Emoji", ".*")
-        mDefaultEmojies = mDefaultEmojiAtlas.Emojies
+    if not mEmojiIsLoaded then
+        EmojiMgr.GetInstance():Init("Emoji", ".*")
+        mEmojiDic = EmojiMgr.GetInstance():GetEmojiDic()
+        mEmojiIsLoaded =true
     end
-    return mDefaultEmojiAtlas:GetEmoji(str)
+    return mEmojiIsLoaded:GetEmoji(str)
 end
 
 ----以后统一用这种

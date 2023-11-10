@@ -15,6 +15,7 @@ local mDefaultEmojies, mDefaultEmojiAtlas
 --txt.emojies=EmojiUtil:InitEmoji--      emojies是Dictionary<uint, Emoji>类型.lua没有uint类型
 function EmojiUtil:InitEmoji()
     if mDefaultEmojiAtlas == nil then
+	        loggZSXError("TTT11111")
         mDefaultEmojiAtlas = EmojiAtlas.New("09_Emoji", ".*")
         mDefaultEmojies = mDefaultEmojiAtlas.Emojies
     end

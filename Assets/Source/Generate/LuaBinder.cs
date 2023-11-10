@@ -13,7 +13,8 @@ public static class LuaBinder
 		AssetTypeWrap.Register(L);
 		AssetLoaderWrap.Register(L);
 		TestLoaderWrap.Register(L);
-		EmojiAtlasWrap.Register(L);
+		EmojiMgrWrap.Register(L);
+		TestClassWrap.Register(L);
 		ShaderManagerWrap.Register(L);
 		LuaProfilerWrap.Register(L);
 		Singleton_ShaderManagerWrap.Register(L);
