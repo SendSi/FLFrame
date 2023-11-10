@@ -42,11 +42,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f52d0dc4c019d6d4e9639c46b161d2e4
-    m_Address: UI/common_atlas2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ac7269b31190ad94d9ef31be45748bed
     m_Address: UI/main_atlas0
     m_ReadOnly: 0

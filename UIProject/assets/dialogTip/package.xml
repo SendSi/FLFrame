@@ -31,6 +31,7 @@
     <image id="ml181ygcfn6" name="7.png" path="/cityupgrade/" exported="true"/>
     <image id="ml181ygcfn7" name="8.png" path="/cityupgrade/" exported="true"/>
     <image id="ml181ygcfn8" name="9.png" path="/cityupgrade/" exported="true"/>
+    <component id="w6lt1ygcfn9" name="ToastItem.xml" path="/components/" exported="true"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

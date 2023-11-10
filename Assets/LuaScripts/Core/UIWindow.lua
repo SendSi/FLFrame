@@ -80,7 +80,6 @@ end
 
 --移除本包
 function UIWindow:ReleasePackage()
-    loggZSXError("移除")
     if self.uiConfig then
         local package = self.uiConfig.packageName
         DataCacheMgr:TryRemovePackage(package)
@@ -98,12 +97,10 @@ end
 
 --C# 看源码
 function UIWindow:OnInit()
-    loggZSXError("OnInit")
     self.contentPane.visible = true
 end
 --C#
 function UIWindow:OnShown()
-    loggZSXError("OnShown")
     self.contentPane.visible = true
 end
 

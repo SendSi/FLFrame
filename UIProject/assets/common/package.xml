@@ -2,13 +2,22 @@
 <packageDescription id="7925ofva">
   <resources>
     <folder id="/images1/" name="images1" path="/" atlas="1"/>
-    <folder id="/images2/" name="images2" path="/" atlas="2"/>
     <image id="mpc836" name="btn_bg_service.png" path="/images1/" exported="true"/>
-    <image id="7oiza" name="btn_bg_sweep.png" path="/images2/" exported="true"/>
+    <image id="7oiza" name="btn_bg_sweep.png" path="/images1/" exported="true"/>
     <font id="dsbj37" name="source_bold.ttf" path="/font/" exported="true" renderMode="" samplePointSize="16"/>
-    <component id="ig90hz9czq" name="comBtn1.xml" path="/components/" exported="true"/>
-    <component id="ig9038" name="comBtn2.xml" path="/components/" exported="true"/>
-    <image id="ig901ygcg9n" name="btn_bg.png" path="/images1/" scale="9grid" scale9grid="9,10,111,26"/>
+    <component id="ig90hz9czq" name="comBtn_IconTxt.xml" path="/components/" exported="true"/>
+    <component id="ig9038" name="comBtn_Icon.xml" path="/components/" exported="true"/>
+    <image id="ig901ygcg9n" name="btn_bg.png" path="/images1/" exported="true" scale="9grid" scale9grid="9,10,111,26"/>
+    <image id="w6lt1ygcg9o" name="bg_chat_09.png" path="/images1/" exported="true" scale="9grid" scale9grid="220,12,53,14"/>
+    <image id="w6lt1ygcg9p" name="com_arms_icon01.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9q" name="com_bg_popup04.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9r" name="com_bg_tips05.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9s" name="com_btn_plus001.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9t" name="com_btn_reduce001.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9u" name="com_check01.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9v" name="com_check02.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9w" name="com_btn_bg0001.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9x" name="small_btn026.png" path="/images1/" exported="true"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

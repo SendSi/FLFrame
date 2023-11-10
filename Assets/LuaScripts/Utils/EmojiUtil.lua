@@ -6,7 +6,7 @@
 
 local EmojiUtil = {}
 local EmojiAtlas = EmojiAtlas--C#脚本
-local ItemTab=require("Tables.ItemConfig")
+local ItemTab = require("Tables.ItemConfig")
 
 
 --All atlas
@@ -14,8 +14,8 @@ local mDefaultEmojies, mDefaultEmojiAtlas
 
 --txt.emojies=EmojiUtil:InitEmoji--      emojies是Dictionary<uint, Emoji>类型.lua没有uint类型
 function EmojiUtil:InitEmoji()
-    if mDefaultEmojiAtlas == nil then
-        mDefaultEmojiAtlas = EmojiAtlas.New("09_Emoji", ".*")
+    if not mDefaultEmojiAtlas  then
+        mDefaultEmojiAtlas = EmojiAtlas.New("Emoji", ".*")
         mDefaultEmojies = mDefaultEmojiAtlas.Emojies
     end
     return mDefaultEmojies
@@ -31,7 +31,6 @@ function EmojiUtil:GetEmoji(str)
     return mDefaultEmojiAtlas:GetEmoji(str)
 end
 
-
 ----以后统一用这种
 local mItemEmojiNumberDics = {}
 function EmojiUtil:GetItemEmojiNumber(itemId, itemNum)
@@ -43,6 +42,5 @@ function EmojiUtil:GetItemEmojiNumber(itemId, itemNum)
     end
     return mItemEmojiNumberDics[itemId][itemNum]
 end
-
 
 return EmojiUtil

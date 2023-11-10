@@ -34,10 +34,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/Login/LoginMainView.lua">
+        <entry file="file://$PROJECT_DIR$/Core/UIWindow.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="35" selection-start-line="11" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="1785">
+              <caret line="85" column="7" lean-forward="true" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -52,46 +52,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Core/UIConfig.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1218">
-              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/MainRole/RoleMainView.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Core/UIMgr.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="85" column="75" lean-forward="true" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainCenterView.lua">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            <state relative-caret-position="504">
+              <caret line="91" column="46" lean-forward="true" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -100,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/UI/MainCenter/FunctionsEles.lua">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="380">
-              <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+              <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -114,11 +78,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UI/DialogTip/TipsManager.lua">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+            <state relative-caret-position="168">
+              <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UI/DialogTip/ToastTipView.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="303">
+              <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Utils/EmojiUtil.lua">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -142,7 +124,6 @@
       <find>TryAddPackage</find>
       <find>TryRemovePackage</find>
       <find>Font</find>
-      <find>loggZSXError</find>
       <find>BindRegisterEvent</find>
       <find>contentPane</find>
       <find>Show</find>
@@ -164,6 +145,7 @@
       <find>OpenRoleMainView</find>
       <find>dialogTip</find>
       <find>mPackages</find>
+      <find>loggZSXError</find>
     </findStrings>
     <replaceStrings>
       <replace>BagWin</replace>
@@ -214,7 +196,6 @@
         <option value="$PROJECT_DIR$/UI/DialogTip/FloatTipView.lua" />
         <option value="$PROJECT_DIR$/UI/DialogTip/ProxyDialogTipModule.lua" />
         <option value="$PROJECT_DIR$/Core/Init.lua" />
-        <option value="$PROJECT_DIR$/Utils/EmojiUtil.lua" />
         <option value="$PROJECT_DIR$/LuaHF.lua" />
         <option value="$PROJECT_DIR$/LuaHotForEditor.lua" />
         <option value="$PROJECT_DIR$/UI/Bag/ProxyBagModule.lua" />
@@ -237,15 +218,16 @@
         <option value="$PROJECT_DIR$/UI/Login/ProxyLoginModule.lua" />
         <option value="$PROJECT_DIR$/Core/InitRequire.lua" />
         <option value="$PROJECT_DIR$/Core/FairyGUI.lua" />
-        <option value="$PROJECT_DIR$/Core/UIWindow.lua" />
         <option value="$PROJECT_DIR$/Core/UIConfig.lua" />
         <option value="$PROJECT_DIR$/Main.lua" />
         <option value="$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua" />
         <option value="$PROJECT_DIR$/ToolGen/mainRole/RoleMainView.lua" />
         <option value="$PROJECT_DIR$/UI/Login/LoginMainView.lua" />
         <option value="$PROJECT_DIR$/UI/MainRole/RoleMainView.lua" />
-        <option value="$PROJECT_DIR$/Core/UIMgr.lua" />
         <option value="$PROJECT_DIR$/UI/DialogTip/TipsManager.lua" />
+        <option value="$PROJECT_DIR$/Core/UIMgr.lua" />
+        <option value="$PROJECT_DIR$/Core/UIWindow.lua" />
+        <option value="$PROJECT_DIR$/Utils/EmojiUtil.lua" />
       </list>
     </option>
   </component>
@@ -257,9 +239,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="1912" />
-    <option name="y" value="-331" />
-    <option name="width" value="1096" />
-    <option name="height" value="1936" />
+    <option name="y" value="-3" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -294,6 +276,12 @@
               <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
               <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="DialogTip" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="MainCenter" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -306,7 +294,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1699457823297" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1699598030750" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -399,12 +387,12 @@
       <workItem from="1699356716068" duration="1139000" />
       <workItem from="1699433994442" duration="8034000" />
       <workItem from="1699457049871" duration="793000" />
-      <workItem from="1699588687622" duration="1637000" />
+      <workItem from="1699588687622" duration="3685000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170720000" />
+    <option name="totallyTimeSpent" value="172768000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-3" width="1936" height="1096" extended-state="6" />
@@ -528,14 +516,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UI/DialogTip/ToastTipView.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/LuaHF.lua" />
     <entry file="file://$PROJECT_DIR$/UI/DialogTip/DialogTip2View.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
@@ -676,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Core/UIWindow.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Core/AppConfig.lua">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -784,13 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/MainRole/MainModifyView.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UI/MainRole/RoleMainView.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
@@ -798,24 +764,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Core/UIMgr.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="85" column="75" lean-forward="true" selection-start-line="85" selection-start-column="75" selection-end-line="85" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UI/MainCenter/FunctionsEles.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
-          <caret line="19" column="56" lean-forward="true" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -828,8 +780,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UI/DialogTip/TipsManager.lua">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="13" column="46" lean-forward="true" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+        <state relative-caret-position="168">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/DialogTip/ToastTipView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="56" column="47" selection-start-line="56" selection-start-column="47" selection-end-line="56" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/UIMgr.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="91" column="46" lean-forward="true" selection-start-line="91" selection-start-column="46" selection-end-line="91" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Core/UIWindow.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1785">
+          <caret line="85" column="7" lean-forward="true" selection-start-line="85" selection-start-column="7" selection-end-line="85" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainCenter/MainTopPlayerInfo.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UI/MainRole/MainModifyView.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Utils/EmojiUtil.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
         </state>
       </provider>
     </entry>
