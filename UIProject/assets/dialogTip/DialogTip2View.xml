@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" extention="Label" initName="frame">
   <displayList>
-    <text id="n11_t0n1" name="titleTxt" xy="736,229" pivot="0.5,0.5" size="72,46" group="n14_t0n1" font="ui://2r331opvno3vhz9d63" fontSize="34" color="#ffffff" strokeColor="#322b64" strokeSize="2" shadowColor="#322b64" shadowOffset="2,3" singleLine="true" autoClearText="true" text="提示"/>
-    <component id="n6_m79t" name="contentTxt" src="tbod38" fileName="components/contentTxt.xml" xy="477,315" size="590,181" group="n14_t0n1"/>
-    <component id="n15_zn8h" name="btnRight" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="502,510" group="n14_t0n1"/>
-    <component id="n16_zn8h" name="btnLeft" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="793,501" group="n14_t0n1"/>
-    <group id="n14_t0n1" name="win" xy="477,229" size="590,342" advanced="true">
+    <image id="n17_zn8h" name="n17" src="w6lt1ygcg9q" fileName="images1/com_bg_popup04.png" pkg="7925ofva" xy="195,92" size="973,604" group="n14_t0n1"/>
+    <text id="n11_t0n1" name="titleTxt" xy="606,170" pivot="0.5,0.5" size="126,80" group="n14_t0n1" fontSize="61" color="#33ff00" align="center" vAlign="middle" singleLine="true" autoClearText="true" text="提示"/>
+    <component id="n6_m79t" name="contentTxt" src="tbod38" fileName="components/contentTxt.xml" xy="313,321" size="730,181" group="n14_t0n1"/>
+    <component id="n15_zn8h" name="btnRight" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="427,524" size="263,61" group="n14_t0n1"/>
+    <component id="n16_zn8h" name="btnLeft" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="796,524" size="263,61" group="n14_t0n1"/>
+    <component id="n18_zn8h" name="closeButton" src="ig9038" fileName="components/comBtn_Icon.xml" pkg="7925ofva" xy="1067,45" size="141,121" group="n14_t0n1">
+      <Button icon="ui://7925ofvaw6lt1ygcg9x"/>
+    </component>
+    <group id="n14_t0n1" name="win" xy="195,45" size="1013,651" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

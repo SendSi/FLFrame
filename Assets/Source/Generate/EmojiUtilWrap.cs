@@ -2,21 +2,21 @@
 using System;
 using LuaInterface;
 
-public class EmojiAtlasWrap
+public class EmojiUtilWrap
 {
 	public static void Register(LuaState L)
 	{
-		L.BeginClass(typeof(EmojiAtlas), typeof(System.Object));
+		L.BeginClass(typeof(EmojiUtil), typeof(System.Object));
 		L.RegFunction("GetEmoji", GetEmoji);
 		L.RegFunction("Parse", Parse);
-		L.RegFunction("New", _CreateEmojiAtlas);
+		L.RegFunction("New", _CreateEmojiUtil);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("Emojies", get_Emojies, null);
 		L.EndClass();
 	}
 
 	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
-	static int _CreateEmojiAtlas(IntPtr L)
+	static int _CreateEmojiUtil(IntPtr L)
 	{
 		try
 		{
@@ -26,13 +26,13 @@ public class EmojiAtlasWrap
 			{
 				string arg0 = ToLua.CheckString(L, 1);
 				string arg1 = ToLua.CheckString(L, 2);
-				EmojiAtlas obj = new EmojiAtlas(arg0, arg1);
+				EmojiUtil obj = new EmojiUtil(arg0, arg1);
 				ToLua.PushObject(L, obj);
 				return 1;
 			}
 			else
 			{
-				return LuaDLL.luaL_throw(L, "invalid arguments to ctor method: EmojiAtlas.New");
+				return LuaDLL.luaL_throw(L, "invalid arguments to ctor method: EmojiUtil.New");
 			}
 		}
 		catch (Exception e)
@@ -47,7 +47,7 @@ public class EmojiAtlasWrap
 		try
 		{
 			ToLua.CheckArgsCount(L, 2);
-			EmojiAtlas obj = (EmojiAtlas)ToLua.CheckObject<EmojiAtlas>(L, 1);
+			EmojiUtil obj = (EmojiUtil)ToLua.CheckObject<EmojiUtil>(L, 1);
 			string arg0 = ToLua.CheckString(L, 2);
 			string o = obj.GetEmoji(arg0);
 			LuaDLL.lua_pushstring(L, o);
@@ -65,7 +65,7 @@ public class EmojiAtlasWrap
 		try
 		{
 			ToLua.CheckArgsCount(L, 2);
-			EmojiAtlas obj = (EmojiAtlas)ToLua.CheckObject<EmojiAtlas>(L, 1);
+			EmojiUtil obj = (EmojiUtil)ToLua.CheckObject<EmojiUtil>(L, 1);
 			string arg0 = ToLua.CheckString(L, 2);
 			string o = obj.Parse(arg0);
 			LuaDLL.lua_pushstring(L, o);
@@ -85,7 +85,7 @@ public class EmojiAtlasWrap
 		try
 		{
 			o = ToLua.ToObject(L, 1);
-			EmojiAtlas obj = (EmojiAtlas)o;
+			EmojiUtil obj = (EmojiUtil)o;
 			System.Collections.Generic.Dictionary<uint,FairyGUI.Emoji> ret = obj.Emojies;
 			ToLua.PushSealed(L, ret);
 			return 1;

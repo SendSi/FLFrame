@@ -1,18 +1,19 @@
+﻿using FairyGUI;
 using FairyGUI.Utils;
-using FairyGUI;
-using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
-public class EmojiMgr 
+public class EmojiUtil
 {
     public Dictionary<uint, Emoji> Emojies { get; private set; }
     private Dictionary<string, uint> emojiName2Index;
-    public EmojiMgr(string packageName, string pattern)
+
+    public EmojiUtil(string pkgName, string pattern)
     {
         Emojies = new Dictionary<uint, Emoji>();
         emojiName2Index = new Dictionary<string, uint>();
 
-        UIPackage pkg = UIPackage.GetByName(packageName);
+        UIPackage pkg = UIPackage.GetByName(pkgName);
         List<PackageItem> items = pkg.GetItems();
         Regex regex = new Regex(pattern);
 
@@ -25,25 +26,21 @@ public class EmojiMgr
                 continue;
             emojiName2Index.Add(pkgItem.name, index);
 
-            string url = UIPackage.GetItemURL(packageName, pkgItem.name);
+            string url = UIPackage.GetItemURL(pkgName, pkgItem.name);
             Emojies.Add(index, new Emoji(url));
             index++;
-        }
-    }
-
-
-    public Dictionary<uint, Emoji> GetEmojiDic()
-    {
-        return Emojies;
+        }      
     }
 
     public string GetEmoji(string iconName)
     {
         if (emojiName2Index.TryGetValue(iconName, out uint index))
         {
-            string t = char.ConvertFromUtf32((int)index);
-            return UBBParser.inst.Parse(t);
+            string trs = char.ConvertFromUtf32((int)index);
+            var valus= UBBParser.inst.Parse(trs);
+            return valus;
         }
+      
         return null;
     }
 

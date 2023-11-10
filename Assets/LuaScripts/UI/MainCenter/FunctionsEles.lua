@@ -20,11 +20,11 @@ local mTitleClick = {
         require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT")
     end,
     ["英雄"] = function()
-        local Emo=require("Utils.EmojiUtil")
-        local con=Emo:GetItemEmojiNumber(1,100)
-        local content = "我是图形文字 emoji"..con.." 啥的"
+        local EmojiUtils = require("Utils.EmojiUtils")
+        local con = EmojiUtils:GetItemEmojiNumber(1, 100)
+        local content = "我是图形文字 emoji呀,图标*文字" .. con .. " 的内容哦"
         require("UI.DialogTip.ProxyDialogTipModule"):OpenDialogTip2View("头部",
-                content, nil, nil, nil, function ()
+                content, nil, nil, nil, function()
                     loggZSXError("rightAct")
                 end)
     end,

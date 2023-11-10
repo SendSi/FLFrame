@@ -10,7 +10,7 @@
     <image id="ig901ygcg9n" name="btn_bg.png" path="/images1/" exported="true" scale="9grid" scale9grid="9,10,111,26"/>
     <image id="w6lt1ygcg9o" name="bg_chat_09.png" path="/images1/" exported="true" scale="9grid" scale9grid="220,12,53,14"/>
     <image id="w6lt1ygcg9p" name="com_arms_icon01.png" path="/images1/" exported="true"/>
-    <image id="w6lt1ygcg9q" name="com_bg_popup04.png" path="/images1/" exported="true"/>
+    <image id="w6lt1ygcg9q" name="com_bg_popup04.png" path="/images1/" exported="true" scale="9grid" scale9grid="201,178,20,34"/>
     <image id="w6lt1ygcg9r" name="com_bg_tips05.png" path="/images1/" exported="true"/>
     <image id="w6lt1ygcg9s" name="com_btn_plus001.png" path="/images1/" exported="true"/>
     <image id="w6lt1ygcg9t" name="com_btn_reduce001.png" path="/images1/" exported="true"/>

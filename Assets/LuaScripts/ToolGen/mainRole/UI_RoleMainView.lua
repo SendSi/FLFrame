@@ -3,6 +3,7 @@
 local UI_RoleMainView = {};
 function UI_RoleMainView:OnConstruct(windowCom)
 	local tb = {
+	m_n61 = windowCom:GetChild("n61"),
 	m_closeButton = windowCom:GetChild("closeButton"),
 	m_n7 = windowCom:GetChild("n7"),
 	m_txtRoleName = windowCom:GetChild("txtRoleName"),

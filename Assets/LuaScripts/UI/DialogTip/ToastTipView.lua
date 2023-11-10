@@ -54,7 +54,7 @@ function toastItem:ctor(contentPane)
     self.contentPane.touchable = false
     contentPane.visible = true
     self.comps = require('ToolGen.dialogTip.UI_ToastItem'):OnConstruct(contentPane)
-    local Emoji = require("Utils.EmojiUtil"):Init()
+    local Emoji = require("Utils.EmojiUtils"):Init()
     self.comps.m_titleTxt.emojies = Emoji
 end
 
