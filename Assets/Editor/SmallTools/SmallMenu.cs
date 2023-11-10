@@ -41,7 +41,7 @@ public class SmallMenu : EditorWindow
         EditorWindow.GetWindow(typeof(TextureEditor),false,"贴图"); //>(false,"",true);
     }
 
-    [MenuItem("Tools/小工具/Editor下更Lua _F6")]
+    [MenuItem("Tools/小工具/Editor下更Lua")]
     public static void ShowLua()
     {
         EditorWindow.GetWindow(typeof(RefreshLuaScripts), false, "Editor下更Lua", true);

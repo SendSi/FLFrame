@@ -2,6 +2,7 @@
 using FairyGUI.Utils;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class EmojiAtlas
 {
@@ -30,6 +31,7 @@ public class EmojiAtlas
             Emojies.Add(index, new Emoji(url));
             index++;
         }
+        Debug.LogError("EmojiAtlas new了");
     }
 
     public string GetEmoji(string iconName)
@@ -37,8 +39,11 @@ public class EmojiAtlas
         if (emojiName2Index.TryGetValue(iconName, out uint index))
         {
             string t = char.ConvertFromUtf32((int)index);
-            return UBBParser.inst.Parse(t);
+            var cont= UBBParser.inst.Parse(t);
+            Debug.LogError("GetEmoji "+cont);
+            return cont;
         }
+        Debug.LogError("GetEmoji null=" + iconName);
         return null;
     }
 

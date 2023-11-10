@@ -1,4 +1,6 @@
 require("Core.UIMgr"):RegisterFont("source_bold",function ()
+    require("Core.UIMgr"):LoadPackage("Emoji")
+
     require("UI.Login.ProxyLoginModule"):OpenLoginMain()
 end)
 

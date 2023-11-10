@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" extention="Label" initName="frame">
   <displayList>
-    <text id="n11_t0n1" name="titleTxt" xy="736,267" pivot="0.5,0.5" size="72,46" group="n14_t0n1" font="ui://2r331opvno3vhz9d63" fontSize="34" color="#ffffff" strokeColor="#322b64" strokeSize="2" shadowColor="#322b64" shadowOffset="2,3" singleLine="true" autoClearText="true" text="提示"/>
-    <component id="n6_m79t" name="contentTxt" src="tbod38" fileName="components/contentTxt.xml" xy="477,353" size="590,181" group="n14_t0n1"/>
-    <group id="n14_t0n1" name="win" xy="477,267" size="590,267" advanced="true">
+    <text id="n11_t0n1" name="titleTxt" xy="736,229" pivot="0.5,0.5" size="72,46" group="n14_t0n1" font="ui://2r331opvno3vhz9d63" fontSize="34" color="#ffffff" strokeColor="#322b64" strokeSize="2" shadowColor="#322b64" shadowOffset="2,3" singleLine="true" autoClearText="true" text="提示"/>
+    <component id="n6_m79t" name="contentTxt" src="tbod38" fileName="components/contentTxt.xml" xy="477,315" size="590,181" group="n14_t0n1"/>
+    <component id="n15_zn8h" name="btnRight" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="502,510" group="n14_t0n1"/>
+    <component id="n16_zn8h" name="btnLeft" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="793,501" group="n14_t0n1"/>
+    <group id="n14_t0n1" name="win" xy="477,229" size="590,342" advanced="true">
       <relation target="" sidePair="center-center,middle-middle"/>
     </group>
   </displayList>

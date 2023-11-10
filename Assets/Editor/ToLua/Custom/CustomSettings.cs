@@ -110,7 +110,7 @@ public static class CustomSettings
         _GT(typeof(UIObjectFactory)),
         _GT(typeof(AssetLoader)),
         _GT(typeof(TestLoader)),
-        _GT(typeof(EmojiMgr)),
+        _GT(typeof(EmojiAtlas)),
         _GT(typeof(TestClass)),
         _GT(typeof(TextAsset)),
         _GT(typeof(LuaPerfect.ObjectRef)),

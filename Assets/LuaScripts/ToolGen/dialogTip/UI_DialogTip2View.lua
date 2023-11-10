@@ -5,6 +5,8 @@ function UI_DialogTip2View:OnConstruct(windowCom)
 	local tb = {
 	m_titleTxt = windowCom:GetChild("titleTxt"),
 	m_contentTxt = windowCom:GetChild("contentTxt"),
+	m_btnRight = windowCom:GetChild("btnRight"),
+	m_btnLeft = windowCom:GetChild("btnLeft"),
 	m_win = windowCom:GetChild("win"),
 	}
 	return tb
