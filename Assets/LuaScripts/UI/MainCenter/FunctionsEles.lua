@@ -5,6 +5,12 @@
 ---
 
 local FunctionsEles = {}
+local tValue = 100000
+local function tmpValue()
+    tValue=tValue+1
+    return tValue
+end
+local EmojiUtils = require("Utils.EmojiUtils")
 
 local mTitleClick = {
     ["部队"] = function()
@@ -17,10 +23,13 @@ local mTitleClick = {
         require("UI.Bag.ProxyBagModule"):OpenBagMainView()
     end,
     ["联盟"] = function()
-        require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT")
+        local con = EmojiUtils:GetItemEmojiNumber(1, 100)
+        require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("我是飘字啦~可以是emoji文字哦_" .. tmpValue())
+
+        require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("我是飘字啦~"..con)
     end,
     ["英雄"] = function()
-        local EmojiUtils = require("Utils.EmojiUtils")
+
         local con = EmojiUtils:GetItemEmojiNumber(1, 100)
         local content = "我是图形文字 emoji呀,图标*文字" .. con .. " 的内容哦"
         require("UI.DialogTip.ProxyDialogTipModule"):OpenDialogTip2View("头部",

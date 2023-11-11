@@ -54,7 +54,7 @@ function toastItem:ctor(contentPane)
     self.contentPane.touchable = false
     contentPane.visible = true
     self.comps = require('ToolGen.dialogTip.UI_ToastItem'):OnConstruct(contentPane)
-    local Emoji = require("Utils.EmojiUtils"):Init()
+    local Emoji = require("Utils.EmojiUtils"):InitEmoji()
     self.comps.m_titleTxt.emojies = Emoji
 end
 
@@ -80,7 +80,7 @@ function toastItem:ResetPos()
 end
 
 function toastItem:MoveAnimation()
-    self.tween = self.contentPane:TweenMoveY(self.contentPane.y - 40, 0.2)
+    self.tween = self.contentPane:TweenMoveY(self.contentPane.y - 58, 0.2)
 end
 
 
