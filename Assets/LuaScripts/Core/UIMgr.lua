@@ -46,8 +46,6 @@ function UIMgr:GetWindowIsActive(uiConfig)
     return false
 end
 
-
-
 --实例化窗口
 function UIMgr:InstanceWindow(uiConfig, callBack)
     local package = uiConfig.packageName

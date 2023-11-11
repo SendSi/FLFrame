@@ -2,7 +2,7 @@ local UIWindow = fgui.window_class()
 local UIPackage = FairyGUI.UIPackage
 local DataCacheMgr = require("Core.DataCacheMgr")
 local GlobalEvent = require("Core.GlobalEvent")
---local UIHelper = require("Core.UIHelper")
+local table = table
 
 function UIWindow:ctor(uiConfig)
     local view = uiConfig.viewName
@@ -72,7 +72,6 @@ end
 
 ---先destroy  再 onHide
 function UIWindow:Destroy()
-    loggZSXError("Destroy ", self.name)
     self:UnRegisterGlobalEvent()
     self:ReleaseUIObject()
     self:ReleasePackage()
@@ -105,7 +104,6 @@ function UIWindow:OnShown()
 end
 
 --function UIWindow:Show()
---
 --end
 
 --C#  onRemovedFromStage 才触发
@@ -120,8 +118,6 @@ function UIWindow:DoHideAnimation()
 end
 
 function UIWindow:OnInitData()
-    --self.contentPane:Show()
-    --GRoot.inst:ShowWindow(self);
 end
 
 return UIWindow
