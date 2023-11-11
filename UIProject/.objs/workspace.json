@@ -3,6 +3,9 @@
   "libview.iconScale": 0,
   "doc.openedDocs": [
     "ui://2r331opveh3a1ygcfjr",
+    "ui://byy9k3gh7oize",
+    "ui://byy9k3ghq8mhz",
+    "ui://66sh7tc6j3xs9p7",
     "ui://2r331opvprcz1qp8vfc",
     "ui://2r331opvb6o0cho",
     "ui://2r331opvozu2hz9d48",
@@ -10,16 +13,20 @@
     "ui://2r331opvg38x1ygcfh4",
     "ui://2r331opv8lkd1ygcfm3",
     "ui://2r331opvya6w1ygcg9p",
-    "ui://2r331opvvntm1qp8ve3",
-    "ui://byy9k3ghlw9r7"
+    "ui://2r331opvvntm1qp8ve3"
   ],
   "libview.syncEditor": 0,
   "auxline1": true,
   "canvasColor": 10066329,
   "auxline2": true,
-  "doc.activeDoc": "ui://byy9k3ghlw9r7",
+  "doc.activeDoc": "ui://66sh7tc6j3xs9p7",
   "libview.twoColumn": true,
-  "libview.expandedNodes": [],
+  "libview.expandedNodes": [
+    "byy9k3gh",
+    "/",
+    "66sh7tc6",
+    "/"
+  ],
   "snapToGrid": true,
   "backgroundColor": 6710886,
   "libview.currentGroup": "",

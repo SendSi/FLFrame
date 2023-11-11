@@ -13,9 +13,11 @@ function UI_LookRoleView:OnConstruct(windowCom)
 	m_playerIcon = windowCom:GetChild("playerIcon"),
 	m_n21 = windowCom:GetChild("n21"),
 	m_n32 = windowCom:GetChild("n32"),
+	m_n35 = windowCom:GetChild("n35"),
+	m_n37 = windowCom:GetChild("n37"),
+	m_n38 = windowCom:GetChild("n38"),
 	m_nameTitle = windowCom:GetChild("nameTitle"),
 	m_name = windowCom:GetChild("name"),
-	m_chatBtn = windowCom:GetChild("chatBtn"),
 	m_leagueTitle = windowCom:GetChild("leagueTitle"),
 	m_leagueName = windowCom:GetChild("leagueName"),
 	m_capacityTitle = windowCom:GetChild("capacityTitle"),
@@ -27,9 +29,6 @@ function UI_LookRoleView:OnConstruct(windowCom)
 	m_friendBtn = windowCom:GetChild("friendBtn"),
 	m_delBtn = windowCom:GetChild("delBtn"),
 	m_n31 = windowCom:GetChild("n31"),
-	m_n35 = windowCom:GetChild("n35"),
-	m_n37 = windowCom:GetChild("n37"),
-	m_n38 = windowCom:GetChild("n38"),
 	m_n20 = windowCom:GetChild("n20"),
 	}
 	return tb

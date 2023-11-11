@@ -8,7 +8,7 @@
       <Button title="更多信息"/>
     </component>
     <image id="n62_dnyf" name="n62" src="bumchz9d7s" fileName="images/images_new/windowBg_new/negative_bg06.png" pkg="2r331opv" xy="224,171" size="884,78" group="n49_k6s7"/>
-    <list id="n63_dnyf" name="item" xy="224,276" size="884,391" group="n49_k6s7" overflow="scroll" defaultItem="ui://2r331opvk6s79ciy" autoClearItems="true" treeView="true" indent="15" clickToExpand="1">
+    <list id="n63_dnyf" name="item" xy="224,276" size="884,391" group="n49_k6s7" selectionMode="multipleSingleClick" overflow="scroll" defaultItem="ui://2r331opvk6s79ciy" autoClearItems="true" treeView="true" indent="15" clickToExpand="1">
       <item url="ui://2r331opvvlhb1ygcfh0" level="0"/>
       <item level="1"/>
       <item level="1"/>

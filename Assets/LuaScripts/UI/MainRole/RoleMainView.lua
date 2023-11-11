@@ -12,7 +12,7 @@ local EventName = require("Core.EventName")
 function RoleMainView:LoadComponent()
     self.uiComs = require('ToolGen.mainRole.UI_RoleMainView'):OnConstruct(self.contentPane)
 
-    self.uiComs.m_closeButton.onClick:Add(function()
+    self.uiComs.m_frame:GetChild("closeButton").onClick:Add(function()
         require('UI.MainRole.ProxyMainRoleModule'):CloseRoleMainView()
     end)
 
