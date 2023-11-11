@@ -5,7 +5,7 @@ function UI_button_game_start:OnConstruct(windowCom)
 	local tb = {
 	m_button = windowCom:GetController("button"),
 	m_n0 = windowCom:GetChild("n0"),
-	m_n1 = windowCom:GetChild("n1"),
+	m_title = windowCom:GetChild("title"),
 	}
 	return tb
 end

@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1334,750" overflow="hidden" extention="Label" initName="frame">
+<component size="1334,750" extention="Label" initName="frame" designImageOffsetX="-165" designImageAlpha="29" designImageLayer="1">
+  <controller name="popup" pages="0,clothes,2,notice" selected="0"/>
   <displayList>
-    <loader id="n16_g6y7" name="bg" xy="-170,0" size="1675,750" url="ui://2r331opvc92hhz9cuk" fill="scaleFree">
-      <relation target="" sidePair="height-height,center-center"/>
+    <loader id="n25_p781" name="bg" xy="-170,0" size="1670,750" url="ui://2r331opvfk801ygcgqs" fill="scaleFree">
+      <relation target="" sidePair="width-width,height-height"/>
     </loader>
-    <image id="n4_lw9r" name="bg1" src="p78116" fileName="images/land_bg02.png" xy="228,439" size="878,57" group="n15_jhg1"/>
-    <component id="n11_lw9r" name="loginBtn" src="p78115" fileName="components/button_game_start.xml" xy="490,535" group="n15_jhg1">
-      <Button title="登录游戏" icon="ui://byy9k3gh7oizb" sound=""/>
+    <loader id="n35_njj7" name="view" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <component id="n12_7oiz" name="noticeBtn" src="7oizh" fileName="components/interactive.xml" xy="16,52" size="98,98" group="n22_qbmb">
+      <Button title="公告" icon="ui://byy9k3gh7oiz9"/>
     </component>
-    <group id="n15_jhg1" name="n15" xy="228,439" size="878,174" advanced="true">
-      <relation target="" sidePair="center-center,middle-middle"/>
+    <component id="n9_7oiz" name="accountBtn" src="7oizh" fileName="components/interactive.xml" xy="16,152" size="98,98" group="n22_qbmb">
+      <Button title="账号" icon="ui://byy9k3gh7oiz7"/>
+    </component>
+    <component id="n11_7oiz" name="sanningBtn" src="7oizh" fileName="components/interactive.xml" xy="16,252" size="98,98" group="n22_qbmb">
+      <Button title="协议" icon="ui://byy9k3gh7oiza"/>
+    </component>
+    <component id="n32_mpc8" name="serviceBtn" src="7oizh" fileName="components/interactive.xml" xy="16,352" size="98,98" group="n22_qbmb">
+      <Button title="客服" icon="ui://byy9k3ghmpc836"/>
+    </component>
+    <group id="n22_qbmb" name="n22" xy="16,52" size="98,398" advanced="true">
+      <relation target="" sidePair="left-left"/>
     </group>
-    <loader id="n17_b9bj" name="icon_logo" xy="281,73" pivot="0.5,0.5" size="768,279" url="ui://byy9k3ghv4de32" align="center" vAlign="middle">
-      <relation target="" sidePair="center-center,middle-middle"/>
-    </loader>
-    <image id="n20_oiu9" name="commonImg" src="mpc836" fileName="images1/btn_bg_service.png" pkg="2r331opv" xy="113,291"/>
-    <image id="n21_tji6" name="commonImg2" src="7oiza" fileName="images2/btn_bg_sweep.png" pkg="2r331opv" xy="112,409"/>
+    <text id="n37_qg41" name="title_04" xy="16,13" size="108,29" font="ui://2r331opvno3vhz9d63" fontSize="20" color="#ffffff" ubb="true" strokeColor="#000000" shadowColor="#000000" shadowOffset="0,1" text="当前版本V1">
+      <relation target="" sidePair="left-left"/>
+    </text>
+    <component id="n38_qg41" name="ageBtn" src="7oizh" fileName="components/interactive.xml" xy="1226,602" size="98,108">
+      <relation target="" sidePair="right-right"/>
+      <Button title=" " icon="ui://byy9k3ghqg415p"/>
+    </component>
+    <component id="n8_7oiz" name="loginBtn" src="p78115" fileName="components/button_game_start.xml" xy="490,517" group="n21_gaz3">
+      <Button title="开始游戏" titleColor="#ffffff" icon="ui://byy9k3gh7oizb" sound="ui://2r331opvu9ouhn" volume="50"/>
+    </component>
+    <component id="n20_q8mh" name="showDetailBtn" src="q8mhz" fileName="components/clothes_btn_02.xml" xy="418,443" group="n21_gaz3">
+      <Button sound="ui://2r331opvu9ouh4"/>
+    </component>
+    <group id="n21_gaz3" name="n21" xy="418,443" size="501,152" advanced="true">
+      <relation target="" sidePair="center-center"/>
+    </group>
+    <text id="n36_qg41" name="title_03" xy="247,632" pivot="0.5,0.5" size="840,46" font="ui://2r331opvno3vhz9d63" fontSize="16" color="#ffffff" align="center" ubb="true" autoSize="height" strokeColor="#333333" shadowColor="#333333" shadowOffset="0,1" text="感谢您使用本游戏，我们非常重视您的个人信息和隐私保 护。为了更好地保障您的个人权益,在您使用本游戏的服务 前，请务必《用户服务协议》及《用户隐私协议》的各条款。如果您同意并接受，若不同意，请退出游戏。">
+      <relation target="" sidePair="center-center"/>
+    </text>
+    <component id="n34_ib2q" name="btnTestLog" src="sfia1ygcfhf" fileName="components/components_new/com_btn_null.xml" pkg="2r331opv" xy="1004,-1" size="316,242">
+      <relation target="" sidePair="right-right,top-top"/>
+    </component>
+    <text id="n39_116rd" name="publication" xy="287,685" size="759,52" font="ui://2r331opvno3vhz9d63" fontSize="16" color="#ffffff" align="center" ubb="true" autoSize="none" strokeColor="#000000" shadowColor="#000000" shadowOffset="0,1" text="出版单位：河北冠林数字出版有限公司  运营单位：广州市漫灵软件有限公司&#xA;新广出审[2017]8853号   ISBN 978-7-498-01811-3">
+      <relation target="" sidePair="center-center"/>
+    </text>
   </displayList>
 </component>

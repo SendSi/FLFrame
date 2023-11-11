@@ -3,13 +3,22 @@
 local UI_LoginMainView = {};
 function UI_LoginMainView:OnConstruct(windowCom)
 	local tb = {
+	m_popup = windowCom:GetController("popup"),
 	m_bg = windowCom:GetChild("bg"),
-	m_bg1 = windowCom:GetChild("bg1"),
+	m_view = windowCom:GetChild("view"),
+	m_noticeBtn = windowCom:GetChild("noticeBtn"),
+	m_accountBtn = windowCom:GetChild("accountBtn"),
+	m_sanningBtn = windowCom:GetChild("sanningBtn"),
+	m_serviceBtn = windowCom:GetChild("serviceBtn"),
+	m_n22 = windowCom:GetChild("n22"),
+	m_title_04 = windowCom:GetChild("title_04"),
+	m_ageBtn = windowCom:GetChild("ageBtn"),
 	m_loginBtn = windowCom:GetChild("loginBtn"),
-	m_n15 = windowCom:GetChild("n15"),
-	m_icon_logo = windowCom:GetChild("icon_logo"),
-	m_commonImg = windowCom:GetChild("commonImg"),
-	m_commonImg2 = windowCom:GetChild("commonImg2"),
+	m_showDetailBtn = windowCom:GetChild("showDetailBtn"),
+	m_n21 = windowCom:GetChild("n21"),
+	m_title_03 = windowCom:GetChild("title_03"),
+	m_btnTestLog = windowCom:GetChild("btnTestLog"),
+	m_publication = windowCom:GetChild("publication"),
 	}
 	return tb
 end
