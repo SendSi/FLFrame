@@ -1,6 +1,4 @@
-﻿using LuaInterface;
-using UnityEditor;
-using UnityEditor.SceneManagement;
+﻿using UnityEditor;
 using UnityEngine;
 #region << 脚 本 注 释 >>
 //作  用:    
@@ -46,8 +44,7 @@ public class PlaySideButton
 
 
     static void OnRightToolbarGUI()
-    {
-        
+    {        
         if (GUILayout.Button("提交_*_推送", GUILayout.Width(80), GUILayout.Height(21)))
         {
             if (Application.isPlaying)
@@ -64,8 +61,6 @@ public class PlaySideButton
             string projectRootPath = System.IO.Path.GetDirectoryName(Application.dataPath);
             GitHelper.StartGitProc(cmd, projectRootPath);///Application.dataPath);
         }
-
-
 
         //if (GUILayout.Button(buildBtn, EditorStyles.toolbarButton, GUILayout.MaxWidth(115), GUILayout.Height(EditorGUIUtility.singleLineHeight)))
         //{

@@ -80,6 +80,8 @@
     <component id="9cw11ygcftg" name="DialogPreView.xml" path="/settlementNew/" exported="true"/>
     <image id="sxlp1ygcg9n" name="main_bg04.png" path="/" favorite="true" scale="9grid" scale9grid="8,8,5,4"/>
     <component id="t6g91ygcfhs" name="RechargeBtn.xml" path="/"/>
+    <component id="tixj1ygcg9o" name="ToastItem.xml" path="/components/" exported="true"/>
+    <component id="tixj1ygcg9p" name="ToastTipView.xml" path="/" exported="true"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>
