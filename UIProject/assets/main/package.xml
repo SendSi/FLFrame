@@ -580,7 +580,6 @@
     <image id="t6g91ygcfho" name="mainhud_progress06.png" path="/images4/"/>
     <image id="t6g91ygcfhp" name="mainhud_progress07.png" path="/images4/" scale="9grid" scale9grid="154,8,2,3"/>
     <component id="t6g91ygcfhq" name="eject_currency.xml" path="/components/"/>
-    <component id="t6g91ygcfhs" name="RechargeBtn.xml" path="/components/"/>
     <component id="l21a1ygcfht" name="main_taskitem_list.xml" path="/components/"/>
     <component id="suuv1ygcfhu" name="barTweenHalfAlpha.xml" path="/components/"/>
     <component id="ctld1ygcfhv" name="ChiefPbr_new.xml" path="/components/"/>

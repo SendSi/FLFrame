@@ -4,9 +4,11 @@ local UI_posItem = {};
 function UI_posItem:OnConstruct(windowCom)
 	local tb = {
 	m_button = windowCom:GetController("button"),
+	m_state = windowCom:GetController("state"),
+	m_line = windowCom:GetChild("line"),
 	m_title = windowCom:GetChild("title"),
 	m_name = windowCom:GetChild("name"),
-	m_line = windowCom:GetChild("line"),
+	m_n24 = windowCom:GetChild("n24"),
 	}
 	return tb
 end

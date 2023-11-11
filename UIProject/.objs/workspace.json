@@ -6,6 +6,7 @@
     "ui://byy9k3gh7oize",
     "ui://byy9k3ghq8mhz",
     "ui://66sh7tc6j3xs9p7",
+    "ui://2r331opvgqih1ygcfgk",
     "ui://2r331opvprcz1qp8vfc",
     "ui://2r331opvb6o0cho",
     "ui://2r331opvozu2hz9d48",
@@ -22,6 +23,8 @@
   "doc.activeDoc": "ui://66sh7tc6j3xs9p7",
   "libview.twoColumn": true,
   "libview.expandedNodes": [
+    "2r331opv",
+    "/",
     "byy9k3gh",
     "/",
     "66sh7tc6",

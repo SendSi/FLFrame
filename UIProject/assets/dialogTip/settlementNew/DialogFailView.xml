@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" extention="Label" initName="frame" designImageLayer="1">
+  <controller name="bottomCtrl" pages="0,,1," selected="0">
+    <remark page="0" value="文字"/>
+    <remark page="1" value="按钮"/>
+  </controller>
+  <displayList>
+    <component id="n108_fawx" name="mask" src="itz029" fileName="panel/com_mask.xml" pkg="2r331opv" xy="-165,-2" size="1665,756">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n115_fawx" name="btnNext" src="arx1z9cjj" fileName="components/components_new/com_btn_closeBlank.xml" pkg="2r331opv" xy="0,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n109_fawx" name="showTopTitle" src="osur1ygcfn3" fileName="components/components_new/showTopTitle.xml" pkg="2r331opv" xy="309,-27">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Button icon="ui://2r331opv10473hz9cyn"/>
+    </component>
+    <image id="n111_fawx" name="window" src="10473hz9cyf" fileName="images/images_new/settlement2/settlement_bg03.png" pkg="2r331opv" xy="0,272" pivot="0.5,0.5" size="1334,333" group="n125_fawx" alpha="0.8"/>
+    <list id="n141_ya6w" name="strongList" xy="221,342" pivot="0.5,0.5" size="891,200" group="n125_fawx" layout="row" overflow="scroll" scroll="horizontal" colGap="178" defaultItem="ui://2r331opvya6w1ygcg9p" align="center">
+      <item title="英雄" icon="ui://4ni413lalumy1qp8vdc"/>
+      <item title="部队" icon="ui://4ni413lalumy1qp8vda"/>
+    </list>
+    <group id="n125_fawx" name="panel" xy="0,272" size="1334,333" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+    <text id="n124_fawx" name="tips1" xy="573,690" size="188,34" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#ffffff" align="center" vAlign="middle" strokeColor="#322b64" strokeSize="2" shadowColor="#322b64" shadowOffset="0,2" text="-  点击空白关闭  -">
+      <gearDisplay controller="bottomCtrl" pages="0"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </text>
+    <image id="n139_ya6w" name="n139" src="itz02a" fileName="images/images_new/com_bg_mask.png" pkg="2r331opv" xy="0,0" size="1334,750">
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <component id="n143_kxkw" name="rightQuitBtn" src="c4umz9cnc" fileName="components/components_new/com_btn_001.xml" pkg="2r331opv" xy="772,784" size="202,78" group="n145_kxkw">
+      <Button title="退出" titleFontSize="30"/>
+    </component>
+    <component id="n144_kxkw" name="leftBackBtn" src="c4umz9cnc" fileName="components/components_new/com_btn_001.xml" pkg="2r331opv" xy="359,784" size="202,78" group="n145_kxkw">
+      <Button title="返回关卡" titleFontSize="30"/>
+    </component>
+    <group id="n145_kxkw" name="btn" xy="359,784" size="615,78" advanced="true">
+      <gearDisplay controller="bottomCtrl" pages="1"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Alpha" target="n109_fawx" value="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" value="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="1" duration="6"/>
+    <item time="0" type="Size" target="n111_fawx" value="1334,26"/>
+    <item time="0" type="Visible" target="n108_fawx" value="true"/>
+    <item time="0" type="Visible" target="n108_fawx" value="false"/>
+    <item time="0" type="Visible" target="n111_fawx" value="false"/>
+    <item time="0" type="Visible" target="n141_ya6w" value="false"/>
+    <item time="0" type="XY" target="n109_fawx" value="309,175"/>
+    <item time="0" type="XY" target="n124_fawx" value="573,762"/>
+    <item time="6" type="Visible" target="n108_fawx" value="true"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="0" duration="5"/>
+    <item time="17" type="Alpha" target="n109_fawx" tween="true" startValue="0" endValue="1" duration="5"/>
+    <item time="44" type="XY" target="n109_fawx" tween="true" startValue="309,175" endValue="309,-30" duration="6"/>
+    <item time="51" type="Size" target="n111_fawx" tween="true" startValue="1334,26" endValue="1334,333" duration="3"/>
+    <item time="51" type="Visible" target="n111_fawx" value="true"/>
+    <item time="54" type="Visible" target="n111_fawx" value="true"/>
+    <item time="55" type="Visible" target="n141_ya6w" value="true"/>
+    <item time="58" type="XY" target="n124_fawx" tween="true" startValue="573,762" endValue="573,690" duration="5"/>
+  </transition>
+  <transition name="t1">
+    <item time="0" type="Alpha" target="n109_fawx" value="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="0" duration="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="0" duration="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="0" duration="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="0" duration="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="0" duration="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="0" endValue="1" duration="0"/>
+    <item time="0" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="6"/>
+    <item time="0" type="Size" target="n111_fawx" value="1334,26"/>
+    <item time="0" type="Visible" target="n108_fawx" value="false"/>
+    <item time="0" type="Visible" target="n111_fawx" value="false"/>
+    <item time="0" type="Visible" target="n141_ya6w" value="false"/>
+    <item time="0" type="XY" target="n109_fawx" value="309,175"/>
+    <item time="0" type="XY" target="n145_kxkw" value="359,762"/>
+    <item time="6" type="Visible" target="n108_fawx" value="true"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="1" duration="0"/>
+    <item time="12" type="Alpha" target="n139_ya6w" tween="true" startValue="1" endValue="0" duration="5"/>
+    <item time="17" type="Alpha" target="n109_fawx" tween="true" startValue="0" endValue="1" duration="5"/>
+    <item time="17" type="Alpha" target="n139_ya6w" value="0"/>
+    <item time="44" type="XY" target="n109_fawx" tween="true" startValue="309,175" endValue="307.75,-30" duration="6"/>
+    <item time="51" type="Size" target="n111_fawx" tween="true" startValue="1334,26" endValue="1334,333" duration="3"/>
+    <item time="51" type="Visible" target="n111_fawx" value="true"/>
+    <item time="54" type="Visible" target="n111_fawx" value="true"/>
+    <item time="55" type="Visible" target="n141_ya6w" value="true"/>
+    <item time="58" type="XY" target="n145_kxkw" tween="true" startValue="359,762" endValue="359,633" duration="5"/>
+  </transition>
+</component>

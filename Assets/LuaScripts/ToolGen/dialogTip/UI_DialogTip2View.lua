@@ -3,12 +3,15 @@
 local UI_DialogTip2View = {};
 function UI_DialogTip2View:OnConstruct(windowCom)
 	local tb = {
-	m_n17 = windowCom:GetChild("n17"),
+	m_state = windowCom:GetController("state"),
+	m_mask = windowCom:GetChild("mask"),
+	m_bg = windowCom:GetChild("bg"),
 	m_titleTxt = windowCom:GetChild("titleTxt"),
 	m_contentTxt = windowCom:GetChild("contentTxt"),
-	m_btnRight = windowCom:GetChild("btnRight"),
 	m_btnLeft = windowCom:GetChild("btnLeft"),
+	m_btnRight = windowCom:GetChild("btnRight"),
 	m_closeButton = windowCom:GetChild("closeButton"),
+	m_contentTitle = windowCom:GetChild("contentTitle"),
 	m_win = windowCom:GetChild("win"),
 	}
 	return tb
