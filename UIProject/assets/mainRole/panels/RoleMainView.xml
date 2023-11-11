@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" extention="Label" initName="frame" designImageAlpha="36">
   <displayList>
-    <image id="n61_zn8h" name="n61" src="w6lt1ygcg9q" fileName="images1/com_bg_popup04.png" pkg="7925ofva" xy="98,61" size="1165,604" group="n25_j3xs"/>
-    <component id="n3_j3xs" name="closeButton" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="7925ofva" xy="134,103" group="n25_j3xs">
+    <image id="n61_zn8h" name="n61" src="w6lt1ygcg9q" fileName="images1/com_bg_popup04.png" pkg="2r331opv" xy="98,61" size="1165,604" group="n25_j3xs"/>
+    <component id="n3_j3xs" name="closeButton" src="ig90hz9czq" fileName="components/comBtn_IconTxt.xml" pkg="2r331opv" xy="134,103" group="n25_j3xs">
       <Button title="关闭"/>
     </component>
     <image id="n7_j3xs" name="n7" src="j3xs9pa" fileName="images/role_bg.png" xy="254,169" group="n25_j3xs"/>

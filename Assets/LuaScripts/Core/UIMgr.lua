@@ -71,6 +71,7 @@ local DestroyMethod = FairyGUI.DestroyMethod
 function UIMgr:LoadPackage(pkgName, callBack)
     if mPackages[pkgName] then
         callBack()
+        callBack=false
         return
     end
     loggZSXError("pkgName   ", pkgName)
@@ -97,6 +98,7 @@ function UIMgr:LoadPackage(pkgName, callBack)
         else
             if callBack then
                 callBack()
+                callBack=false
             end
         end
         mPackages[pkgName]=true

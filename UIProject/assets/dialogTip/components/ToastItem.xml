@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="209,55">
   <displayList>
-    <image id="n3_q1qg" name="bg" src="w6lt1ygcg9o" fileName="images1/bg_chat_09.png" pkg="7925ofva" xy="-35,-4" pivot="0.5,0.5" size="277,66" group="n4_q1qg">
+    <image id="n3_q1qg" name="bg" src="w6lt1ygcg9o" fileName="images1/bg_chat_09.png" pkg="2r331opv" xy="-35,-4" pivot="0.5,0.5" size="277,66" group="n4_q1qg">
       <relation target="n0_q1qg" sidePair="center-center,rightext-right,topext-top,bottomext-bottom,leftext-left"/>
     </image>
     <richtext id="n0_q1qg" name="titleTxt" xy="32,6" size="145,45" group="n4_q1qg" fontSize="33" color="#ffffff" align="center" ubb="true" vars="true" autoClearText="true" text="提示语&lt;img src=&apos;ui://Emoji/item_1&apos;&gt;">
