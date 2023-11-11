@@ -1,15 +1,9 @@
 local UIMgr = {}
 
-local AssetLoaderInstance = AssetLoader.Instance
-local UIConfig = require("Core.UIConfig")
-local AppConfig = require("Core.AppConfig")
-local DataCacheMgr = require("Core.DataCacheMgr")
+local AssetLoader = AssetLoader
 local mUIWindows = {}--win页面
-local FGUIGRoot = FairyGUI.GRoot
-local screenH = UnityEngine.Screen.height
-FGUIGRoot.inst:SetContentScaleFactor(UIConfig.GlobalSetting.ScreenWidth, UIConfig.GlobalSetting.ScreenHeight)
-local UIHelper=require("Core.UIHelper")
-
+local AssetType = AssetType
+local UIPackage = FairyGUI.UIPackage
 
 function UIMgr:OpenWindow(uiConfig, callBack)
     local className = uiConfig.className
@@ -52,14 +46,12 @@ function UIMgr:GetWindowIsActive(uiConfig)
     return false
 end
 
-
-
 --实例化窗口
 function UIMgr:InstanceWindow(uiConfig, callBack)
     local package = uiConfig.packageName
     local className = uiConfig.className
-    DataCacheMgr:TryAddPackage(package, function()
-        local uiWin = require(className).New(uiConfig)
+    self:LoadPackage(package, function()
+        local uiWin = require(className).New(uiConfig)--UIWindow.lua
         uiWin:Show()
         mUIWindows[className] = uiWin
         if callBack then
@@ -70,6 +62,73 @@ end
 
 function UIMgr:RemovePackage()
 
+end
+
+--用于缓存Package
+local mPackages = {}
+local DestroyMethod = FairyGUI.DestroyMethod
+
+function UIMgr:LoadPackage(pkgName, callBack)
+    if mPackages[pkgName] then
+        callBack()
+        callBack=false
+        return
+    end
+    loggZSXError("pkgName   ", pkgName)
+
+    local function __LoadFromAddressable(imgName, extension, type, item)
+        local atlasAAName = "UI/" .. imgName
+        AssetLoader.Instance:InstantiateAsync(atlasAAName, function(assetObject)
+            item.owner:SetItemAsset(item, assetObject, DestroyMethod.None)
+        end, AssetType.Texture)--图片
+    end
+    local loadResAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
+
+    local tPackageName = "UI/" .. pkgName
+    --loggZSXError("LoadPackage  ", packageName)
+    AssetLoader.Instance:InstantiateAsync(tPackageName, function(assetObject)
+        if not assetObject then
+            logerror("打开UI_失败：", tPackageName)
+        end
+        --loggZSXError("aync ", packageName)
+        local packageData = UIPackage.AddPackage(assetObject.bytes, pkgName, loadResAsync)
+        local refCount = packageData:GetDependenciesCount()--依赖资源包的个数
+        if refCount > 0 then
+            self:Load_Dependent(packageData, refCount, callBack)
+        else
+            if callBack then
+                callBack()
+                callBack=false
+            end
+        end
+        mPackages[pkgName]=true
+    end, AssetType.TextAsset)--bytes文件
+end
+
+--加载依赖
+function UIMgr:Load_Dependent(package, refCount, callBack)
+    local dependencies = package.dependencies        --加载依赖资源包
+    local enumerator = dependencies:GetEnumerator()
+    while enumerator:MoveNext() do
+        local current = enumerator.Current
+        local useOther = (current:get_Item("name"))
+        refCount = refCount - 1
+        self:LoadPackage(useOther, function()
+            if refCount <= 0 and callBack then
+                callBack()
+            end
+        end)
+    end
+end
+
+function UIMgr:RegisterFont(fontName, callback)
+    AssetLoader.Instance:InstantiateAsync("Font/" .. fontName, function(assetObject)
+        local dynamicFont = FairyGUI.DynamicFont.New(fontName, assetObject)
+        FairyGUI.FontManager.RegisterFont(dynamicFont)
+        if (callback) then
+            callback(dynamicFont.name)
+        end
+    end, AssetType.Font)
 end
 
 return UIMgr

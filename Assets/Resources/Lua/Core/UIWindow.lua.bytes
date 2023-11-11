@@ -2,18 +2,19 @@ local UIWindow = fgui.window_class()
 local UIPackage = FairyGUI.UIPackage
 local DataCacheMgr = require("Core.DataCacheMgr")
 local GlobalEvent = require("Core.GlobalEvent")
-local UIHelper=require("Core.UIHelper")
+local table = table
 
 function UIWindow:ctor(uiConfig)
     local view = uiConfig.viewName
     local package = uiConfig.packageName
     self.contentPane = UIPackage.CreateObject(package, view)
-    UIHelper:MakeObjectFullScreen(self.contentPane,uiConfig.matchMode)
+    --UIHelper:MakeObjectFullScreen(self.contentPane, uiConfig.matchMode)
     self.sortingOrder = uiConfig.sortingOrder or 0
 
     self.isActive = true --页面 是否在 打开中
     self.name = package .. "_" .. view
     self:Center()
+    self.uiComs = require('ToolGen.' .. package .. '.UI_' .. view):OnConstruct(self.contentPane)
     self:LoadComponent()
     self:CheckBindCloseBtn()
     self:RegisterGlobalEvent()
@@ -69,7 +70,7 @@ function UIWindow:UnRegisterGlobalEvent()
     self.registerGlobalList = false
 end
 
----先distroy  再 onHide
+---先destroy  再 onHide
 function UIWindow:Destroy()
     self:UnRegisterGlobalEvent()
     self:ReleaseUIObject()
@@ -95,24 +96,28 @@ end
 
 --C# 看源码
 function UIWindow:OnInit()
-    loginfo('Window-OnInit')
+    self.contentPane.visible = true
 end
 --C#
 function UIWindow:OnShown()
-    loginfo('Window-onShown')
+    self.contentPane.visible = true
 end
+
+--function UIWindow:Show()
+--end
+
 --C#  onRemovedFromStage 才触发
 function UIWindow:OnHide()
     self.isActive = false
-    loginfo('Window-OnHide')
 end
 --C#
 function UIWindow:DoShowAnimation()
-    loginfo('Window-DoShowAnimation')
 end
 --C#
 function UIWindow:DoHideAnimation()
-    loginfo('Window-DoHideAnimation')
+end
+
+function UIWindow:OnInitData()
 end
 
 return UIWindow

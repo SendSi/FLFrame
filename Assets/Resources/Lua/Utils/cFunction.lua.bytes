@@ -75,7 +75,7 @@ function ValueClickSendSCParams(values)
     local code = "local data = " .. strValues[2] .. " return data"
     local luaStr2Tab = loadstring(code)
     if luaStr2Tab then
-        local data=luaStr2Tab()
+        local data = luaStr2Tab()
         local EventManager = require('Event.EventManager')
         EventManager.Dispatch(GLOBAL_EVENT_ON_NET_DATA, msgId, data, "")
     else
@@ -112,20 +112,26 @@ function ShowAccountInfo()
 end
 
 -----------------------------------------------上面的代码基本不用改的啦------------------------------------------------------------------
-function SingleClickButton1()
+function SingleClickButton0()
     loginfo("测试0")
 end
 
 function SingleClickButton1()
+    local mDefaultEmojiAtlas = EmojiAtlas.New("Emoji", ".*")
+    loggZSXError(mDefaultEmojiAtlas)
     loginfo("测试1")
 end
 
 function SingleClickButton2()
     loginfo("测试2")
+    local test = TestClass.New("a", "_b")
+    loggZSXError(test)
 end
 
 function SingleClickButton3()
     loginfo("测试3")
+    local test = EmojiMgr.New("Emoji", ".*")
+    loggZSXError(test)
 end
 
 function SingleClickButton4()

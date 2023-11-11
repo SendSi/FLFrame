@@ -92,3 +92,4 @@ public class LuaMgr : LuaClient
 3.飘字Toast
 4.view代码生成
 ```
+出exe前要先 Lua/CopyLua files to Resoureces

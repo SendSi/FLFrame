@@ -17,13 +17,8 @@ MonoBehaviour:
     m_SerializedData: []
   m_GUID: 561cc0b56c991f74fbac2f5bde87ac9a
   m_SerializeEntries:
-  - m_GUID: cd79153f88fa7334ea6c5564c053bdca
-    m_Address: Shaders/FairyGUI-BMFont
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 263c97191482b3649ac7bf0810cc4f77
-    m_Address: Shaders/FairyGUI-Image
+  - m_GUID: f83d3bb1d90aaf54d8aed0783317662f
+    m_Address: Shaders/AddOn/FairyGUI-BlurFilter
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -32,8 +27,13 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f83d3bb1d90aaf54d8aed0783317662f
-    m_Address: Shaders/AddOn/FairyGUI-BlurFilter
+  - m_GUID: 263c97191482b3649ac7bf0810cc4f77
+    m_Address: Shaders/FairyGUI-Image
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd79153f88fa7334ea6c5564c053bdca
+    m_Address: Shaders/FairyGUI-BMFont
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
