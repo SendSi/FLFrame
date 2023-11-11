@@ -77,8 +77,8 @@ local uiConfig = {
     },
 
     BagMainView = {
-        className = 'UI.league.BagMainView',
-        packageName = '07_***',
+        className = 'UI.Bag.BagMainView',
+        packageName = 'bag',
         viewName = 'BagMainView',
         sortingOrder = 10,
         matchMode = 0,

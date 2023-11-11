@@ -87,6 +87,16 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6d4a4bdcfcda84a4ba09a2129bedbda8
+    m_Address: UI/bag
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19f3c61a2b401e84b811f0d27dc3be45
+    m_Address: UI/bag_atlas0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7f1982874cfeecd4696139b602f60be7, type: 2}
   m_SchemaSet:

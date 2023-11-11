@@ -18,6 +18,7 @@
     <image id="w6lt1ygcg9v" name="com_check02.png" path="/images1/" exported="true"/>
     <image id="w6lt1ygcg9w" name="com_btn_bg0001.png" path="/images1/" exported="true"/>
     <image id="w6lt1ygcg9x" name="small_btn026.png" path="/images1/" exported="true"/>
+    <component id="nqbv1ygcg9y" name="comBtn_tab.xml" path="/components/" exported="true"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>
