@@ -68,29 +68,29 @@ end
 local mPackages = {}
 local DestroyMethod = FairyGUI.DestroyMethod
 
-function UIMgr:LoadPackage(packageName, callBack)
-    if mPackages[packageName] then
+function UIMgr:LoadPackage(pkgName, callBack)
+    if mPackages[pkgName] then
         callBack()
         return
     end
+    loggZSXError("pkgName   ", pkgName)
 
     local function __LoadFromAddressable(imgName, extension, type, item)
         local atlasAAName = "UI/" .. imgName
-        --loggZSXError("atlasAAName ", atlasAAName)
         AssetLoader.Instance:InstantiateAsync(atlasAAName, function(assetObject)
             item.owner:SetItemAsset(item, assetObject, DestroyMethod.None)
         end, AssetType.Texture)--图片
     end
     local loadResAsync = UIPackage.LoadResourceAsync(__LoadFromAddressable)
 
-    local tPackageName = "UI/" .. packageName
+    local tPackageName = "UI/" .. pkgName
     --loggZSXError("LoadPackage  ", packageName)
     AssetLoader.Instance:InstantiateAsync(tPackageName, function(assetObject)
         if not assetObject then
             logerror("打开UI_失败：", tPackageName)
         end
         --loggZSXError("aync ", packageName)
-        local packageData = UIPackage.AddPackage(assetObject.bytes, packageName, loadResAsync)
+        local packageData = UIPackage.AddPackage(assetObject.bytes, pkgName, loadResAsync)
         local refCount = packageData:GetDependenciesCount()--依赖资源包的个数
         if refCount > 0 then
             self:Load_Dependent(packageData, refCount, callBack)
@@ -99,7 +99,7 @@ function UIMgr:LoadPackage(packageName, callBack)
                 callBack()
             end
         end
-        mPackages[packageName]=true
+        mPackages[pkgName]=true
     end, AssetType.TextAsset)--bytes文件
 end
 

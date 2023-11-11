@@ -141,10 +141,6 @@
     <image id="shxmhz9co6" name="main_bg.png" path="/images/map/" scale="9grid" scale9grid="6,6,12,12"/>
     <image id="shxmhz9co9" name="mainhud_btn08.png" path="/images/main/"/>
     <component id="qxvehz9coc" name="cityManageInnerItem.xml" path="/components/"/>
-    <image id="oepthz9cp1" name="main_bar04.png" path="/images/team/" scale="9grid" scale9grid="11,0,22,4"/>
-    <image id="oepthz9cp2" name="main_bar01.png" path="/images/team/" scale="9grid" scale9grid="20,0,6,5"/>
-    <image id="oepthz9cp3" name="main_bar02.png" path="/images/team/" scale="9grid" scale9grid="13,0,16,4"/>
-    <image id="oepthz9cp4" name="main_bar03.png" path="/images/team/" scale="9grid" scale9grid="11,0,22,4"/>
     <component id="oepthz9cp5" name="main_teamPbr.xml" path="/components/"/>
     <image id="oepthz9cp9" name="main_state04.png" path="/images/team/"/>
     <image id="oepthz9cpa" name="main_state01.png" path="/images/team/"/>
@@ -235,7 +231,6 @@
     <component id="qdf6hz9cub" name="buildingBtn.xml" path="/components/"/>
     <component id="qdf6hz9cuc" name="buildingBtn2.xml" path="/components/"/>
     <image id="qdf6hz9cud" name="building_bg_bubble02.png" path="/images/buliding/" scale="9grid" scale9grid="10,15,25,8"/>
-    <image id="qdf6hz9cue" name="building_bg_bubble01.png" path="/images/buliding/"/>
     <component id="qdf6hz9cuh" name="buildingPbr.xml" path="/components/"/>
     <component id="c1q9hz9cun" name="cityManageItem3.xml" path="/components/"/>
     <component id="c1q9hz9cur" name="warningPbr.xml" path="/components/"/>
@@ -720,7 +715,6 @@
     <image id="ta121ygcfmq" name="main_btn_icon32.png" path="/images/btn_icon/"/>
     <image id="f7na1ygcfms" name="com_bg_cityskinicon3.png" path="/images/cityskin/"/>
     <image id="f7na1ygcfmt" name="com_bg_cityskinicon4.png" path="/images/cityskin/"/>
-    <image id="t1vs1ygcfmu" name="bubbling_11.png" path="/images/buliding/"/>
     <image id="p5sz1ygcfn2" name="main_btn_barrier.png" path="/images/main/"/>
     <component id="p5sz1ygcfn3" name="plot_task.xml" path="/components/"/>
     <component id="p5sz1ygcfn5" name="plot_btn1.xml" path="/components/"/>
@@ -754,7 +748,6 @@
     <image id="eh1f1ygcg8f" name="morale_pbr.png" path="/images/morale/"/>
     <component id="n4pu1ygcg8i" name="build_moraleSdr.xml" path="/components/"/>
     <component id="m3dm1ygcg8j" name="main_buff_item2.xml" path="/components/"/>
-    <image id="mlhy1ygcg8k" name="bubble_bg.png" path="/images/buliding/"/>
     <component id="uf4p1ygcg8l" name="moraleItem1.xml" path="/components/"/>
     <component id="pvy91ygcg8n" name="buildingGrid1.xml" path="/components/"/>
     <image id="yt2t1ygcg8p" name="mainhud_btn_icon013.png" path="/images4/" scale="9grid" scale9grid="0,16,568,9"/>
@@ -765,7 +758,6 @@
     <image id="dkpj1ygcg90" name="team_state10.png" path="/images/team/"/>
     <image id="ukvb1ygcg92" name="mainhud_progress011.png" path="/images4/"/>
     <image id="ukvb1ygcg93" name="mainhud_progress012.png" path="/images4/" scale="9grid" scale9grid="11,12,8,6"/>
-    <image id="ukvb1ygcg94" name="mainhud_progress013.png" path="/images4/"/>
     <image id="exg51ygcg96" name="bubble_14.png" path="/images/buliding/"/>
     <image id="exg51ygcg97" name="bubble_15.png" path="/images/buliding/"/>
     <image id="m5yh1ygcg9a" name="fighting_restrain.png" path="/images/explore01/" atlas="1"/>
@@ -778,6 +770,12 @@
     <image id="nybb1ygcg9k" name="main_btn_icon36.png" path="/images/btn_icon/"/>
     <component id="zcpe1ygcg9l" name="bubbling02_old.xml" path="/components/"/>
     <component id="gj4q1ygcg9m" name="topShowPos.xml" path="/panel/"/>
+    <component id="oepthz9cp8" name="main_teamStae.xml" path="/components/" exported="true"/>
+    <component id="g9nyhz9cu0" name="generalIcon.xml" path="/components/" exported="true" favorite="true"/>
+    <component id="hxd7hz9d7l" name="generalIcon01.xml" path="/components/" exported="true" favorite="true"/>
+    <component id="qy501qp8vdt" name="generalIcon1.xml" path="/components/" exported="true"/>
+    <component id="dmmmhz9d2y" name="generalIcon3.xml" path="/components/" exported="true"/>
+    <component id="xyhchz9cv9" name="generalIconBtn.xml" path="/components/" exported="true"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

@@ -8,10 +8,10 @@
     <remark page="4" value="白"/>
   </controller>
   <displayList>
-    <image id="n0_oept" name="n0" src="oepthz9cp2" fileName="images/team/main_bar01.png" xy="-1,-1" size="50,6">
+    <image id="n0_oept" name="n0" src="oepthz9cp2" fileName="images/team/main_bar01.png" xy="-1,-1" size="50,6" pkg="2r331opv">
       <relation target="" sidePair="width-width,height-height"/>
     </image>
-    <image id="n4_d5sh" name="bar" src="oepthz9cp3" fileName="images/team/main_bar02.png" xy="0,0" size="48,4" color="#00ff00">
+    <image id="n4_d5sh" name="bar" src="oepthz9cp3" fileName="images/team/main_bar02.png" xy="0,0" size="48,4" color="#00ff00" pkg="2r331opv">
       <gearColor controller="state" pages="0,5,1,2,6" values="#00ff00|#ffff00|#ff0000|#24adff|#ffffff"/>
       <relation target="" sidePair="width-width,height-height"/>
     </image>

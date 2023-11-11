@@ -19,7 +19,7 @@
     <image id="n12_m25n" name="n12" src="u6yzhz9cpx" fileName="images/images_new/com_icon_lock.png" pkg="2r331opv" xy="42,32" size="38,50" aspect="true" alpha="0.6">
       <gearDisplay controller="state" pages="4"/>
     </image>
-    <component id="n15_hs5t" name="stateCom" src="oepthz9cp8" fileName="components/general_new/main_teamStae.xml" pkg="2r331opv" xy="71,68">
+    <component id="n15_hs5t" name="stateCom" src="oepthz9cp8" fileName="components/general_new/main_teamStae.xml" xy="71,68">
       <gearDisplay controller="state" pages="0,1,2,3"/>
     </component>
   </displayList>
