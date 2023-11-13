@@ -43,14 +43,14 @@ function FunctionsEles:Init(rootUI)
     if rootUI then
         self.uiComs = require('ToolGen.main.UI_functionsEles'):OnConstruct(rootUI.m_functionsEles)
 
-        self.uiComs.m_btnList.onClickItem:Add(function(context)
+        self.uiComs.m_btnFuncList.onClickItem:Add(function(context)
             local fun = mTitleClick[context.data.title]
             if fun then
                 fun()
             end
         end)
 
-        self.uiComs.m_cutBtn.onClick:Add(function()
+        self.uiComs.m_switchBtn.onClick:Add(function()
             logerror("212")
         end)
     end
