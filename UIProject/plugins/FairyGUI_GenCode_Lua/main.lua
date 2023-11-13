@@ -264,8 +264,9 @@ function genCode(handler)
             for j = 0, memberCnt - 1 do
                 local memberInfo = members[j]
                 if string.find(memberInfo.name, "Btn") then
-                    _uiEvents = _uiEvents .. ("--   --self.uiComs." .. memberInfo.varName .. ".onClick:Add(function()self:OnClick" .. memberInfo.name .. "()end)\n");
-                    _uiEventMethods = _uiEventMethods .. ("--   --function " .. classInfo.resName .. ":OnClick" .. memberInfo.name .. "()end\n");
+					local tName=memberInfo.name:gsub("^%l", string.upper)
+                    _uiEvents = _uiEvents .. ("--   --self.uiComs." .. memberInfo.varName .. ".onClick:Add(function()self:OnClick" .. tName .. "()end)\n");
+                    _uiEventMethods = _uiEventMethods .. ("--   --function " .. classInfo.resName .. ":OnClick" .. tName .. "()end\n");
                 elseif string.find(memberInfo.name, "Ctrl") then
                     _uiEvents = _uiEvents .. ("--   --self.uiComs." .. memberInfo.varName .. ".onChanged:Add(function()self:OnChanged" .. memberInfo.name .. "()end)\n");
                     _uiEventMethods = _uiEventMethods .. ("--   --function " .. classInfo.resName .. ":OnChanged" .. memberInfo.name .. "()end\n");

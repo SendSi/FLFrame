@@ -5,10 +5,10 @@
 --]]
 --[[
 local EventManager = require('Event.EventManager')
-local GameEvent = require('Event.GameEvent')
-function $uiResName:BindGlobalEvent()
+local EventName = require("Core.EventName")
+function $uiResName:AddBindGlobalEvent()
    return{
-     {GameEvent.cFunctionTest,function()end,999},
+     {GameEvent.Test,function()end,999},
     }
 end
 --]]
@@ -22,10 +22,7 @@ end
 $uiEventMethods
 function $uiResName:SetData(pDto)
 end
-function $uiResName:RefreshViewAll()
-end
-function $uiResName:OnNetMessage(msgID, data)
-end
+
 function $uiResName:OnShown()
     UIView.OnShown(self)
 end
@@ -35,21 +32,18 @@ end
 return $uiResName
 
 	$uiResName = {
-        [CLASS_NAME] = '$uiPackageName.$uiResName',
-        [PAKAGE_NAME] = '$uiResName',
-        [PANEL_NAME] = '$uiPackageName',
-        [PARET_LAYER] = UI_LAYER_MAIN,
-        [SORTING_ORDER] = 1,
+        className = 'UI.$uiPackageName.$uiResName',      
+        packageName = '$uiPackageName',
+		viewName = '$uiResName',
+        matchMode = 0,
+        sortingOrder = 10,
    },
 
-function Proxy$uiPackageNameModule:Open$uiResName()
-    UIManager.OpenWindow(CustomUIConfig.$uiResName)
-end
-function Proxy$uiPackageNameModule:Close$uiResName()
-    UIManager.CloseWindow(CustomUIConfig.$uiResName, true)
-end
 function Proxy$uiPackageNameModule:Open$uiResNameData(data)
-    UIManager.OpenWindow(CustomUIConfig.$uiResName, function(code, view)
+    UIManager.OpenWindow(UIConfig.$uiResName, function(code, view)
         view:SetData(data)
     end)
+end
+function Proxy$uiPackageNameModule:Close$uiResName()
+    UIManager.CloseWindow(UIConfig.$uiResName, true)
 end

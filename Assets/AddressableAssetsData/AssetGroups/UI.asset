@@ -18,32 +18,32 @@ MonoBehaviour:
   m_GUID: 695bd1ec65b45744d883ecc4002c0337
   m_SerializeEntries:
   - m_GUID: b6149db2cf596d84b882b706bd3b5ff9
-    m_Address: UI/main
+    m_Address: UI/Main
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ac7269b31190ad94d9ef31be45748bed
-    m_Address: UI/main_atlas0
+    m_Address: UI/Main_atlas0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 14d9c3054b1e4e14aa56958bc5b55c84
-    m_Address: UI/mainRole
+    m_Address: UI/MainRole
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 97c257f689cb01c4bbb641f846fe45b6
-    m_Address: UI/mainRole_atlas0
+    m_Address: UI/MainRole_atlas0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b6abeccb52d98f04bb3c0ff5cdc6a109
-    m_Address: UI/login
+    m_Address: UI/Login
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4cd271c1a9ab42f44b26c7a7722b0556
-    m_Address: UI/login_atlas0
+    m_Address: UI/Login_atlas0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -63,92 +63,22 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c66f9cb95f4718a429d201b9d6922691
-    m_Address: UI/dialogTip
+    m_Address: UI/DialogTip
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a86bfff2fb2e03249a01c1a3f235790d
-    m_Address: UI/dialogTip_atlas0
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e16c7fd9be0b27a42bd1812964bf919f
-    m_Address: UI/common
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 782ab96b0080d1243a080452951da430
-    m_Address: UI/common_atlas1
+    m_Address: UI/DialogTip_atlas0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6d4a4bdcfcda84a4ba09a2129bedbda8
-    m_Address: UI/bag
+    m_Address: UI/Bag
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 19f3c61a2b401e84b811f0d27dc3be45
-    m_Address: UI/bag_atlas0
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5953cb6b61cab4847a0566fdb6fb8ee6
-    m_Address: UI/09_Emoji
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: eec12e45f600ee1428da89c5f2e93d3e
-    m_Address: UI/09_Emoji_atlas0
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 857f3adba2b9a0e40b8989e68bd06c78
-    m_Address: UI/07_DialogTip
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: cff715934ed3b5c439bf8e94976e92ae
-    m_Address: UI/07_DialogTip_atlas0
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 31d92901cb619474da90340e7d667cca
-    m_Address: UI/05_main
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 690333a464c247047b8c338bf01df1e5
-    m_Address: UI/05_main_atlas_kyni1ygcg8y
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7389a93174d95b643a511bc114cf2fd5
-    m_Address: UI/05_main_atlas10
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 03d58ea9bbe524b4493618d9177bf789
-    m_Address: UI/05_main_atlas1
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6e4a0c6a34edfb74dad474a90f96c792
-    m_Address: UI/05_main_atlas0_3
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6dbb2f316d9d173419ca850166bf28f3
-    m_Address: UI/05_main_atlas0_2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c92b613d806ad6645bdb9c20d7fbb79b
-    m_Address: UI/05_main_atlas0_1
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 869286a0536c43a49bfbf692a0dcffba
-    m_Address: UI/05_main_atlas0
+    m_Address: UI/Bag_atlas0
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

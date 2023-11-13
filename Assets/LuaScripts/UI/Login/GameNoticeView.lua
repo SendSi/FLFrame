@@ -1,0 +1,50 @@
+----- This is an automatically generated class by FairyGUI. Please do not modify it. ---
+----[[
+--@Description: Login.GameNoticeView 工具生成的.匹配标签(窗口).自行copy字符串到文件中去
+--@Author:
+--@Date: Created in
+----]]
+----[[
+--local EventManager = require('Event.EventManager')
+--local EventName = require("Core.EventName")
+--function GameNoticeView:AddBindGlobalEvent()
+--   return{
+--     {GameEvent.Test,function()end,999},
+--    }
+--end
+----]]
+--local UIView = require('UI.UIView')
+--local GameNoticeView = fgui.window_class(UIView)
+--function GameNoticeView:OnLoadFinished()
+----    --self.uiComs = require('UI.Packages.Login.UI_GameNoticeView'):OnConstruct(self.contentPane)--self.uiComs在UIWindow.lua已有定义
+----   --元素事件上,匹配元素名字 *Btn,*Ctrl,*List
+--end
+--
+--
+--function GameNoticeView:SetData(pDto)
+--end
+--
+--function GameNoticeView:OnShown()
+--    UIView.OnShown(self)
+--end
+--function GameNoticeView:OnHide()
+--    UIView.OnHide(self)
+--end
+--return GameNoticeView
+--
+--	GameNoticeView = {
+--        className = 'UI.Login.GameNoticeView',
+--        packageName = 'Login',
+--		viewName = 'GameNoticeView',
+--        matchMode = 0,
+--        sortingOrder = 10,
+--   },
+--
+--function ProxyLoginModule:OpenGameNoticeViewData(data)
+--    UIManager.OpenWindow(UIConfig.GameNoticeView, function(code, view)
+--        view:SetData(data)
+--    end)
+--end
+--function ProxyLoginModule:CloseGameNoticeView()
+--    UIManager.CloseWindow(UIConfig.GameNoticeView, true)
+--end

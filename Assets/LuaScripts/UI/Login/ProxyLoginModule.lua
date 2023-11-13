@@ -20,4 +20,17 @@ end
     end)
 end]]
 
+
+
+
+function ProxyLoginModule:OpenServerListDetailViewData(data)
+UIManager.OpenWindow(UIConfig.ServerListDetailView, function(code, view)
+view:SetData(data)
+end)
+end
+function ProxyLoginModule:CloseServerListDetailView()
+UIManager.CloseWindow(UIConfig.ServerListDetailView, true)
+end
+
+
 return ProxyLoginModule

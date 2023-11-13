@@ -4,11 +4,19 @@
 local uiConfig = {
     LoginMainView = {
         className = "UI.Login.LoginMainView",
-        packageName = "login",
+        packageName = "Login",
         viewName = "LoginMainView",
         sortingOrder = 10,
         matchMode = 0,
     },
+    ServerListDetailView = {
+        className = 'UI.Login.ServerListDetailView',
+        packageName = 'Login',
+        viewName = 'ServerListDetailView',
+        matchMode = 0,
+        sortingOrder = 10,
+    },
+
     EmojiMain = {
         className = "UI.Emoji.EmojiMain",
         packageName = "Emoji",
@@ -18,35 +26,35 @@ local uiConfig = {
     },
     MainCenterView = {
         className = "UI.MainCenter.MainCenterView", --主页面
-        packageName = "main",
+        packageName = "Main",
         viewName = "MainCenterView",
         sortingOrder = 10,
         matchMode = 0,
     },
     DialogTip2View = {
         className = "UI.DialogTip.DialogTip2View",
-        packageName = "dialogTip",
+        packageName = "DialogTip",
         viewName = "DialogTip2View",
         sortingOrder = 11,
         matchMode = 0,
     },
     RoleMainView = {
         className = 'UI.MainRole.RoleMainView',
-        packageName = 'mainRole',
+        packageName = 'MainRole',
         viewName = 'RoleMainView',
         sortingOrder = 10,
         matchMode = 0,
     },
     MainModifyView = {
         className = 'UI.MainRole.MainModifyView',
-        packageName = "mainRole",
+        packageName = "MainRole",
         viewName = 'MainModifyView',
         sortingOrder = 10,
         matchMode = 0,
     },
     ToastTipView = {
         className = "UI.DialogTip.ToastTipView", --飘字.吐司
-        packageName = "dialogTip",
+        packageName = "DialogTip",
         viewName = "ToastTipView",
         sortingOrder = 20,
         matchMode = 0,
@@ -60,7 +68,7 @@ local uiConfig = {
     },
     BagMainView = {
         className = 'UI.Bag.BagMainView',
-        packageName = 'bag',
+        packageName = 'Bag',
         viewName = 'BagMainView',
         sortingOrder = 10,
         matchMode = 0,

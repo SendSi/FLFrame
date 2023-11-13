@@ -8,7 +8,7 @@ local toastItem
 --local ScreenWidth=UnityEngine.Screen.width*0.5
 
 function ToastTipView:LoadComponent()
-    self.uiComs = require('ToolGen.dialogTip.UI_ToastTipView'):OnConstruct(self.contentPane)
+    --self.uiComs = require('ToolGen.dialogTip.UI_ToastTipView'):OnConstruct(self.contentPane)
 end
 
 function ToastTipView:SetData(tipTxt, arg)
@@ -26,7 +26,7 @@ function ToastTipView:GetOrCreateTipItem(tipTxt)
         item = self.tipItemPool[poolCount]
         table.remove(self.tipItemPool, poolCount)
     else
-        local obj = UIPackage.CreateObject("dialogTip", "ToastItem")
+        local obj = UIPackage.CreateObject("DialogTip", "ToastItem")
         item = toastItem.new(obj)
         self.contentPane:AddChild(obj)
     end
@@ -53,7 +53,7 @@ function toastItem:ctor(contentPane)
     self.contentPane = contentPane
     self.contentPane.touchable = false
     contentPane.visible = true
-    self.comps = require('ToolGen.dialogTip.UI_ToastItem'):OnConstruct(contentPane)
+    self.comps = require('ToolGen.DialogTip.UI_ToastItem'):OnConstruct(contentPane)
     local Emoji = require("Utils.EmojiUtils"):InitEmoji()
     self.comps.m_titleTxt.emojies = Emoji
 end

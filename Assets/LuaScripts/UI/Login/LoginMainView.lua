@@ -7,7 +7,43 @@ function LoginMainView:LoadComponent()
         require("UI.MainCenter.ProxyMainCenterModule"):OpenMainCenter()
         self:CloseWindow()
     end)
-    self:Show()
+
+    self.uiComs.m_noticeBtn.onClick:Add(function()
+        self:OnClickNoticeBtn()
+    end)
+    self.uiComs.m_accountBtn.onClick:Add(function()
+        self:OnClickAccountBtn()
+    end)
+    self.uiComs.m_sanningBtn.onClick:Add(function()
+        self:OnClickSanningBtn()
+    end)
+    self.uiComs.m_serviceBtn.onClick:Add(function()
+        self:OnClickServiceBtn()
+    end)
+    self.uiComs.m_ageBtn.onClick:Add(function()
+        self:OnClickAgeBtn()
+    end)
+    self.uiComs.m_loginBtn.onClick:Add(function()
+        self:OnClickLoginBtn()
+    end)
+    self.uiComs.m_showDetailBtn.onClick:Add(function()
+        self:OnClickShowDetailBtn()
+    end)
+end
+
+function LoginMainView:OnClickNoticeBtn()
+end
+function LoginMainView:OnClickAccountBtn()
+end
+function LoginMainView:OnClickSanningBtn()
+end
+function LoginMainView:OnClickServiceBtn()
+end
+function LoginMainView:OnClickAgeBtn()
+end
+function LoginMainView:OnClickLoginBtn()
+end
+function LoginMainView:OnClickShowDetailBtn()
 end
 
 function LoginMainView:SetData(str)
@@ -21,6 +57,5 @@ end
 function LoginMainView:OnShown()
     UIWindow.OnShown(self)
 end
-
 
 return LoginMainView
