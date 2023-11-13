@@ -2,17 +2,34 @@
   "libview.firstColumnWidth": 398,
   "libview.iconScale": 0,
   "doc.openedDocs": [
-    "ui://byy9k3gh7oize"
+    "ui://byy9k3gh7oize",
+    "ui://byy9k3gh7oizi",
+    "ui://2r331opvizxehz9d74",
+    "ui://byy9k3ghqg411ygcg9q",
+    "ui://byy9k3ghv4de34",
+    "ui://2r331opvitz029",
+    "ui://4ni413lalumy1qp8vd6",
+    "ui://4ni413lacv8s1qp8vdw",
+    "ui://4ni413lale3m1qp8vhq",
+    "ui://21uyefv8h7e50"
   ],
   "libview.syncEditor": 0,
   "auxline1": true,
   "canvasColor": 10066329,
   "auxline2": true,
-  "doc.activeDoc": "ui://byy9k3gh7oize",
+  "doc.activeDoc": "ui://21uyefv8h7e50",
   "libview.twoColumn": true,
   "libview.expandedNodes": [
+    "21uyefv8",
+    "/",
+    "21uyefv8",
+    "/components/",
     "byy9k3gh",
-    "/"
+    "/",
+    "4ni413la",
+    "/",
+    "4ni413la",
+    "/panel/"
   ],
   "snapToGrid": true,
   "backgroundColor": 6710886,

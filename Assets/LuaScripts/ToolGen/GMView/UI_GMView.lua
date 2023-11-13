@@ -1,22 +1,22 @@
 --- This is an automatically generated class by FairyGUI. Please do not modify it. ---
----@class UI_GMView : CS.FairyGUI.GComponent
-local UI_GMView = {};
-function UI_GMView:OnConstruct(windowCom)
+---@class UI_gmView : CS.FairyGUI.GComponent
+local UI_gmView = {};
+function UI_gmView:OnConstruct(windowCom)
 	local tb = {
-	m_ctrl = windowCom:GetController("ctrl"),
-	m_bg = windowCom:GetChild("bg"),
-	m_list_1 = windowCom:GetChild("list_1"),
-	m_list_2 = windowCom:GetChild("list_2"),
-	m_list_3 = windowCom:GetChild("list_3"),
+	m_c1 = windowCom:GetController("c1"),
+	m_n11 = windowCom:GetChild("n11"),
+	m_typeList = windowCom:GetChild("typeList"),
+	m_centerList = windowCom:GetChild("centerList"),
+	m_oldReList = windowCom:GetChild("oldReList"),
+	m_inputBg = windowCom:GetChild("inputBg"),
 	m_input = windowCom:GetChild("input"),
-	m_inputTxt = windowCom:GetChild("inputTxt"),
-	m_closeButton = windowCom:GetChild("closeButton"),
-	m_win = windowCom:GetChild("win"),
-	m_rightBtn = windowCom:GetChild("rightBtn"),
+	m_closeBtn = windowCom:GetChild("closeBtn"),
+	m_descTxt = windowCom:GetChild("descTxt"),
+	m_n12 = windowCom:GetChild("n12"),
+	m_leftRightBtn = windowCom:GetChild("leftRightBtn"),
 	m_sendBtn = windowCom:GetChild("sendBtn"),
-	m_sendCloseBtn = windowCom:GetChild("sendCloseBtn"),
-	m_tipToggleTxt = windowCom:GetChild("tipToggleTxt"),
+	m_checkCloseBtn = windowCom:GetChild("checkCloseBtn"),
 	}
 	return tb
 end
-return UI_GMView;
+return UI_gmView;

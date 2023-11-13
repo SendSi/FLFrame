@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" opaque="false">
-  <controller name="ctrl" pages="0,,1," selected="0">
-    <remark page="0" value="列表正常"/>
-  </controller>
+  <controller name="c1" pages="0,,1," selected="0"/>
   <displayList>
-    <graph id="n11_h7e5" name="bg" xy="0,0" size="1334,750" group="n12_cu6w" type="rect" lineSize="0" fillColor="#ff003958">
+    <graph id="n11_h7e5" name="n11" xy="0,0" size="1334,750" group="n12_cu6w" type="rect" lineSize="0" fillColor="#ff003958">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <list id="n0_h7e5" name="list_1" xy="56,29" size="256,618" group="n12_cu6w" overflow="scroll" defaultItem="ui://21uyefv8e3cq8">
+    <list id="n0_h7e5" name="typeList" xy="12,75" size="248,527" group="n12_cu6w" overflow="scroll" defaultItem="ui://21uyefv8e3cq8">
       <relation target="" sidePair="rightext-right%,bottomext-bottom,leftext-left%"/>
       <item/>
       <item/>
@@ -28,7 +26,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n2_h7e5" name="list_2" xy="325,29" size="475,618" group="n12_cu6w" overflow="scroll" lineGap="5" defaultItem="ui://21uyefv8h7e53">
+    <list id="n2_h7e5" name="centerList" xy="267,75" size="473,527" group="n12_cu6w" overflow="scroll" lineGap="5" defaultItem="ui://21uyefv8h7e53">
       <relation target="" sidePair="rightext-right%,bottomext-bottom,leftext-left%"/>
       <item/>
       <item/>
@@ -42,7 +40,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n3_h7e5" name="list_3" xy="804,29" size="450,618" group="n12_cu6w" overflow="scroll" margin="0,0,10,10" lineGap="5" defaultItem="ui://21uyefv8h7e54">
+    <list id="n3_h7e5" name="oldReList" xy="747,75" size="573,527" group="n12_cu6w" overflow="scroll" margin="0,0,10,10" lineGap="5" defaultItem="ui://21uyefv8h7e54">
       <relation target="" sidePair="rightext-right%,bottomext-bottom,leftext-left%"/>
       <item/>
       <item/>
@@ -52,32 +50,33 @@
       <item/>
       <item/>
     </list>
-    <graph id="n22_ef5q" name="input" xy="79,655" size="938,72" group="n12_cu6w" type="rect">
+    <graph id="n6_h7e5" name="inputBg" xy="15,647" size="1147,72" group="n12_cu6w" type="rect">
       <relation target="" sidePair="bottom-bottom,rightext-right"/>
     </graph>
-    <text id="n5_h7e5" name="inputTxt" xy="79,655" size="938,72" group="n12_cu6w" fontSize="26" color="#ff0000" vAlign="middle" ubb="true" autoSize="none" singleLine="true" text="gm gm gm gm " input="true" prompt="输入内容">
+    <text id="n5_h7e5" name="input" xy="13,645" size="1145,72" restrictSize="600,0,0,0" group="n12_cu6w" fontSize="35" vAlign="middle" ubb="true" autoSize="shrink" singleLine="true" autoClearText="true" text="gm gm gm " input="true">
       <relation target="" sidePair="bottom-bottom,rightext-right"/>
     </text>
-    <component id="n10_h7e5" name="closeButton" src="d9gi23" fileName="components/components_new/com_btn_close3.xml" pkg="2r331opv" xy="1262,0" size="72,72" group="n12_cu6w" aspect="true">
+    <component id="n10_h7e5" name="closeBtn" src="ovmzchq" fileName="components/closeBtn.xml" xy="1262,0" size="72,72" group="n12_cu6w" aspect="true">
       <relation target="" sidePair="right-right,top-top"/>
+      <Button title="X" titleFontSize="60"/>
     </component>
-    <group id="n12_cu6w" name="win" xy="0,0" size="1334,750" advanced="true">
-      <gearXY controller="ctrl" pages="0,1" values="0,0,0,-0.001|-1383,0,-1.037,0" tween="true" positionsInPercent="true"/>
+    <text id="n21_he9p" name="descTxt" xy="16,602" size="1300,36" group="n12_cu6w" fontSize="24" color="#ff0000" ubb="true" autoSize="none" autoClearText="true" text="league_1(1为要创建联盟,0不创) guide_1(1为要发请求所有指引,0不发) general_200(200为武将等级,若30为30级)">
+      <relation target="" sidePair="bottom-bottom,rightext-right"/>
+    </text>
+    <group id="n12_cu6w" name="n12" xy="0,0" size="1334,750" advanced="true">
+      <gearXY controller="c1" pages="0,1" values="0,0,0,-0.001|-1383,0,-1.037,0" tween="true" positionsInPercent="true"/>
       <relation target="" sidePair="left-left%,top-top%"/>
     </group>
-    <component id="n15_cu6w" name="rightBtn" src="cu6w7" fileName="components/switchBtn.xml" xy="1243,253">
+    <component id="n15_cu6w" name="leftRightBtn" src="cu6w7" fileName="components/switch.xml" xy="684,5" size="99,59">
       <relation target="" sidePair="top-top%,rightext-right%,leftext-left%"/>
-      <Button controller="ctrl" page="1"/>
+      <Button controller="c1" page="1"/>
     </component>
-    <component id="n9_h7e5" name="sendBtn" src="ef5qchq" fileName="components/GmSend.xml" xy="1026,658">
-      <relation target="" sidePair="right-right%,bottom-bottom%"/>
-      <Button title="发送" titleColor="#66ff00" titleFontSize="32"/>
+    <component id="n9_h7e5" name="sendBtn" src="h7e55" fileName="components/btn.xml" xy="1167,650" size="140,72">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <component id="n16_e3cq" name="sendCloseBtn" src="c1q9hz9cug" fileName="components/components_new/com_btn_check4.xml" pkg="2r331opv" xy="1205,649">
-      <relation target="" sidePair="right-right%,bottom-bottom%"/>
+    <component id="n16_e3cq" name="checkCloseBtn" src="ovmzchr" fileName="components/com_toggleBtn_1.xml" xy="82,12">
+      <relation target="" sidePair="left-left"/>
+      <Button title="发送后关闭GM页面" titleColor="#00ff00"/>
     </component>
-    <text id="n17_e3cq" name="tipToggleTxt" xy="1167,701" pivot="0.5,0.5" size="104,29" font="ui://2r331opvno3vhz9d63" fontSize="20" color="#ff0000" text="发送后关闭">
-      <relation target="" sidePair="right-right%,bottom-bottom%"/>
-    </text>
   </displayList>
 </component>
