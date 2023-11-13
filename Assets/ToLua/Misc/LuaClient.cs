@@ -62,7 +62,7 @@ public class LuaClient : MonoBehaviour
 #if UNITY_STANDALONE_OSX || UNITY_EDITOR_OSX
         luaState.OpenLibs(LuaDLL.luaopen_bit);
 #endif
-
+        OpenCJson();
         if (LuaConst.openLuaSocket)
         {
             OpenLuaSocket();            
