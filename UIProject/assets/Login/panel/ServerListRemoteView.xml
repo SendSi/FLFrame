@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1334,750" extention="Label" designImageOffsetX="-311" designImageOffsetY="-139" designImageLayer="1">
+  <displayList>
+    <component id="n27_i1n0" name="mask" src="itz029" fileName="panel/com_mask.xml" pkg="2r331opv" xy="-165,0">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
+    <component id="n3_xoe1" name="n3" src="hdmy1iy5b95" fileName="components/components_new/Popup_bg2.xml" pkg="2r331opv" xy="267,151" size="800,460" group="n19_xoe1"/>
+    <text id="n6_xoe1" name="titleTxt" xy="464,163" pivot="0.5,0.5" size="406,46" group="n19_xoe1" font="ui://2r331opvno3vhz9d63" fontSize="34" color="#ffffff" align="center" autoSize="none" strokeColor="#322b63" strokeSize="2" shadowColor="#322b63" shadowOffset="3,3" text="用户协议与隐私政策"/>
+    <component id="n17_xoe1" name="yesButton" src="c4umz9cnc" fileName="components/components_new/com_btn_001.xml" pkg="2r331opv" xy="586,512" group="n19_xoe1">
+      <Button title="确定" titleFontSize="28"/>
+    </component>
+    <graph id="n29_qg41" name="n29" xy="341,240" size="652,212" group="n19_xoe1" alpha="0.1" type="rect" lineSize="0">
+      <relation target="n28_i1n0" sidePair="bottomext-bottom"/>
+    </graph>
+    <text id="n28_i1n0" name="coords" xy="350,248" size="634,194" group="n19_xoe1" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#97794f" ubb="true" autoSize="height" text="感谢您使用本游戏，我们非常重视您的个人信息和隐私保 护。为了更好地保障您的个人权益,在您使用本游戏的服务 前，请务必巴拉巴拉巴[color=#e77917]《用户服务协议》[/color]及[color=#e77917]《用户隐私协议》[/color]的各条款。如果您同意并接受巴拉巴拉，若不同意，请退出游戏。如果您同意并接受巴拉巴拉，若不同意，请退出游戏。如果您同意并接受巴拉巴拉，若不同意，请退出游戏。"/>
+    <component id="n26_i1n0" name="closeButton" src="d9gi23" fileName="components/components_new/com_btn_close3.xml" pkg="2r331opv" xy="969,138" group="n19_xoe1" scale="0.8,0.8"/>
+    <group id="n19_xoe1" name="view1" xy="267,138" size="800,473" advanced="true">
+      <relation target="" sidePair="center-center,middle-middle"/>
+    </group>
+  </displayList>
+</component>
