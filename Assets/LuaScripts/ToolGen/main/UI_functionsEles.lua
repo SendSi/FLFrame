@@ -3,12 +3,12 @@
 local UI_functionsEles = {};
 function UI_functionsEles:OnConstruct(windowCom)
 	local tb = {
-	m_swtich = windowCom:GetController("swtich"),
+	m_switchCtrl = windowCom:GetController("switchCtrl"),
 	m_n3 = windowCom:GetChild("n3"),
 	m_btnFuncList = windowCom:GetChild("btnFuncList"),
 	m_switchBtn = windowCom:GetChild("switchBtn"),
-	m_t0 = windowCom:GetTransition("t0"),
-	m_t1 = windowCom:GetTransition("t1"),
+	m_contractDT = windowCom:GetTransition("contractDT"),
+	m_expandDT = windowCom:GetTransition("expandDT"),
 	}
 	return tb
 end

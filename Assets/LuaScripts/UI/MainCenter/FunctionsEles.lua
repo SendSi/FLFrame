@@ -7,7 +7,7 @@
 local FunctionsEles = {}
 local tValue = 100000
 local function tmpValue()
-    tValue=tValue+1
+    tValue = tValue + 1
     return tValue
 end
 local EmojiUtils = require("Utils.EmojiUtils")
@@ -26,7 +26,7 @@ local mTitleClick = {
         local con = EmojiUtils:GetItemEmojiNumber(1, 100)
         require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("我是飘字啦~可以是emoji文字哦_" .. tmpValue())
 
-        require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("我是飘字啦~"..con)
+        require("UI.DialogTip.ProxyDialogTipModule"):AddToastTip("我是飘字啦~" .. con)
     end,
     ["英雄"] = function()
 
@@ -41,7 +41,7 @@ local mTitleClick = {
 
 function FunctionsEles:Init(rootUI)
     if rootUI then
-        self.uiComs = require('ToolGen.main.UI_functionsEles'):OnConstruct(rootUI.m_functionsEles)
+        self.uiComs = require('ToolGen.Main.UI_functionsEles'):OnConstruct(rootUI.m_functionsEles)
 
         self.uiComs.m_btnFuncList.onClickItem:Add(function(context)
             local fun = mTitleClick[context.data.title]
@@ -51,7 +51,8 @@ function FunctionsEles:Init(rootUI)
         end)
 
         self.uiComs.m_switchBtn.onClick:Add(function()
-            logerror("212")
+            local index = self.uiComs.m_switchCtrl.selectedIndex
+            logerror(index == 1 and "去收缩" or "去展开")
         end)
     end
 end
