@@ -16,6 +16,28 @@ local uiConfig = {
         matchMode = 0,
         sortingOrder = 10,
     },
+    GameAgeView = {
+        className = 'UI.Login.GameAgeView',
+        packageName = 'Login',
+        viewName = 'GameAgeView',
+        matchMode = 0,
+        sortingOrder = 10,
+    },
+    GameNoticeView = {
+        className = 'UI.Login.GameNoticeView',
+        packageName = 'Login',
+        viewName = 'GameNoticeView',
+        matchMode = 0,
+        sortingOrder = 10,
+    },
+    ServerListRemoteView = {
+        className = 'UI.Login.ServerListRemoteView',
+        packageName = 'Login',
+        viewName = 'ServerListRemoteView',
+        matchMode = 0,
+        sortingOrder = 10,
+    },
+
 
     EmojiMain = {
         className = "UI.Emoji.EmojiMain",

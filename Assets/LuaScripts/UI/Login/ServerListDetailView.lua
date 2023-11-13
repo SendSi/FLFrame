@@ -5,18 +5,18 @@
 @Date: Created in
 --]]
 --[[
-local EventManager = require('Event.EventManager')
+
 local EventName = require("Core.EventName")
 function ServerListDetailView:AddBindGlobalEvent()
    return{
-     {GameEvent.Test,function()end,999},
+     {EventName.Test,function()end,999},
     }
 end
 --]]
-local UIView = require('UI.UIView')
-local ServerListDetailView = fgui.window_class(UIView)
+local UIWindow = require('Core.UIWindow')
+local ServerListDetailView = fgui.window_class(UIWindow)
 function ServerListDetailView:OnLoadFinished()
---    --self.uiComs = require('UI.Packages.Login.UI_ServerListDetailView'):OnConstruct(self.contentPane)--self.uiComs在UIWindow.lua已有定义
+--    --self.uiComs = require('ToolGen.Login.UI_ServerListDetailView'):OnConstruct(self.contentPane)--self.uiComs在UIWindow.lua已有定义
 --   --元素事件上,匹配元素名字 *Btn,*Ctrl,*List
 end
 
@@ -25,10 +25,10 @@ function ServerListDetailView:SetData(pDto)
 end
 
 function ServerListDetailView:OnShown()
-    UIView.OnShown(self)
+    UIWindow.OnShown(self)
 end
 function ServerListDetailView:OnHide()
-    UIView.OnHide(self)
+    UIWindow.OnHide(self)
 end
 return ServerListDetailView
 

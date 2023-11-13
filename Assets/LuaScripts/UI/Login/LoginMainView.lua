@@ -1,5 +1,6 @@
 local UIWindow = require('Core.UIWindow')
 local LoginMainView = fgui.window_class(UIWindow)
+local ProxyLoginModule = require("UI.Login.ProxyLoginModule")
 
 function LoginMainView:LoadComponent()
     --self.uiComs = require('ToolGen.login.UI_LoginMainView'):OnConstruct(self.contentPane)
@@ -23,27 +24,29 @@ function LoginMainView:LoadComponent()
     self.uiComs.m_ageBtn.onClick:Add(function()
         self:OnClickAgeBtn()
     end)
-    self.uiComs.m_loginBtn.onClick:Add(function()
-        self:OnClickLoginBtn()
-    end)
+
     self.uiComs.m_showDetailBtn.onClick:Add(function()
         self:OnClickShowDetailBtn()
     end)
 end
 
 function LoginMainView:OnClickNoticeBtn()
+    ProxyLoginModule:OpenGameNoticeViewData()
 end
 function LoginMainView:OnClickAccountBtn()
 end
 function LoginMainView:OnClickSanningBtn()
+    ProxyLoginModule:OpenServerListRemoteViewData()
 end
 function LoginMainView:OnClickServiceBtn()
+
 end
 function LoginMainView:OnClickAgeBtn()
+    ProxyLoginModule:OpenGameAgeViewData()
 end
-function LoginMainView:OnClickLoginBtn()
-end
+
 function LoginMainView:OnClickShowDetailBtn()
+    ProxyLoginModule:OpenServerListDetailViewData()
 end
 
 function LoginMainView:SetData(str)

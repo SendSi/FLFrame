@@ -4,18 +4,18 @@
 @Date: Created in
 --]]
 --[[
-local EventManager = require('Event.EventManager')
+local GlobalEvent = require("Core.GlobalEvent")
 local EventName = require("Core.EventName")
 function $uiResName:AddBindGlobalEvent()
    return{
-     {GameEvent.Test,function()end,999},
+     {EventName.Test,function()end,999},
     }
 end
 --]]
-local UIView = require('UI.UIView')
-local $uiResName = fgui.window_class(UIView)
+local UIWindow = require('Core.UIWindow')
+local $uiResName = fgui.window_class(UIWindow)
 function $uiResName:OnLoadFinished()
---    --self.uiComs = require('UI.Packages.$uiPackageName.$className'):OnConstruct(self.contentPane)--self.uiComs在UIWindow.lua已有定义
+--    --self.uiComs = require('ToolGen.$uiPackageName.$className'):OnConstruct(self.contentPane)--self.uiComs在UIWindow.lua已有定义
 $uiEvents--   --元素事件上,匹配元素名字 *Btn,*Ctrl,*List
 end
 
@@ -24,10 +24,10 @@ function $uiResName:SetData(pDto)
 end
 
 function $uiResName:OnShown()
-    UIView.OnShown(self)
+    UIWindow.OnShown(self)
 end
 function $uiResName:OnHide()
-    UIView.OnHide(self)
+    UIWindow.OnHide(self)
 end
 return $uiResName
 
@@ -40,10 +40,10 @@ return $uiResName
    },
 
 function Proxy$uiPackageNameModule:Open$uiResNameData(data)
-    UIManager.OpenWindow(UIConfig.$uiResName, function(code, view)
-        view:SetData(data)
+    UIMgr:OpenWindow(UIConfig.$uiResName, function(uiWin)
+        uiWin:SetData(data)
     end)
 end
 function Proxy$uiPackageNameModule:Close$uiResName()
-    UIManager.CloseWindow(UIConfig.$uiResName, true)
+    UIMgr:CloseWindow(UIConfig.$uiResName, true)
 end
