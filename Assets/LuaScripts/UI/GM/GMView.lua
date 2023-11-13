@@ -130,7 +130,7 @@ function GMView:OnBtnClick(context)
     local text = config.tGmTxt
     self.uiComs.m_input.text = text
     self.uiComs.m_descTxt.text = config.tDesc
-    Stage.inst:SetFous(self.uiComs.m_input.displayObject)
+    Stage.inst:SetFocus(self.uiComs.m_input.displayObject)
     self.uiComs.m_input:SetSelection(string.len(text), 0)
 end
 
@@ -143,7 +143,7 @@ function GMView:OnRecordClick(context)
     local text = context.data.title
     self.uiComs.m_input.text = text
     self.uiComs.m_descTxt.text = ""
-    Stage.inst:SetFous(self.uiComs.m_input.displayObject)
+    Stage.inst:SetFocus(self.uiComs.m_input.displayObject)
     self.uiComs.m_input:SetSelection(string.len(text), 0)
 end
 

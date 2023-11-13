@@ -7,16 +7,17 @@ function ProtoGM:Init()
 end
 
 function ProtoGM:GmRequest(gmText)
-    local data = self.getData()
-    data.params = gmText
-    self.send(g_MsgID.GmRequest, data)
+    logerror("发送GM:",gmText)
+    --local data = self.getData()
+    --data.params = gmText
+    --self.send(g_MsgID.GmRequest, data)
 end
 
 function ProtoGM:GmRequest2( gmText )
-    local data = {
-        params = gmText
-    }
-    self.send(g_MsgID.GmRequest,data)
+    --local data = {
+    --    params = gmText
+    --}
+    --self.send(g_MsgID.GmRequest,data)
 end
 
 return ProtoGM
