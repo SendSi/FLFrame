@@ -187,36 +187,6 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5356fb1abffb19842bf07e6070bb0477
-    m_Address: UI/01_CommonPackage_atlas0_9
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9cb240896b326d54f81d204e17703539
-    m_Address: UI/01_CommonPackage_atlas0_8
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1ed457bca18288644ac1211d2b81f9b1
-    m_Address: UI/01_CommonPackage_atlas0_7
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 10d364182159bff4c891356140a3775e
-    m_Address: UI/01_CommonPackage_atlas0_6
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1f9202aab01d3c64aad9f0f1410c0691
-    m_Address: UI/01_CommonPackage_atlas0_5
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1fec9a8d1d37e234392bd64149eec369
-    m_Address: UI/01_CommonPackage_atlas0_4
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: b489912398964c84eae40f7fcffc8de7
     m_Address: UI/01_CommonPackage_atlas0_3
     m_ReadOnly: 0
@@ -224,46 +194,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6a04937bc36a3c5498ad69d5aab2c9df
     m_Address: UI/01_CommonPackage_atlas0_2
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 776ce47d08e2a36499edf40c8020dc76
-    m_Address: UI/01_CommonPackage_atlas0_17
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 368810499786dca47bf14c9c31ed7301
-    m_Address: UI/01_CommonPackage_atlas0_16
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: d3672ef94da76f648a6fe7c413570c74
-    m_Address: UI/01_CommonPackage_atlas0_15
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 61a9e2551cc65bd4a9e60678797d9cd4
-    m_Address: UI/01_CommonPackage_atlas0_14
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b2c9bed5208a24f42941852498f01bf6
-    m_Address: UI/01_CommonPackage_atlas0_13
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8ec41eacefbfb494d807717ca8cc01fc
-    m_Address: UI/01_CommonPackage_atlas0_12
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b8f26179261c08440b4aec9414141a93
-    m_Address: UI/01_CommonPackage_atlas0_11
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 34d89a81c8d22fd4caad14b6af80b58b
-    m_Address: UI/01_CommonPackage_atlas0_10
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

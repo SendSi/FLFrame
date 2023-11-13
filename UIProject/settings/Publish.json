@@ -21,7 +21,7 @@
   "branchProcessing": 1,
   "seperatedAtlasForBranch": false,
   "atlasSetting": {
-    "maxSize": 1024,
+    "maxSize": 2048,
     "paging": true,
     "sizeOption": "pot",
     "forceSquare": false,
