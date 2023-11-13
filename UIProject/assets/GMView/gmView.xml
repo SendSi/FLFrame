@@ -5,7 +5,7 @@
     <graph id="n11_h7e5" name="n11" xy="0,0" size="1334,750" group="n12_cu6w" type="rect" lineSize="0" fillColor="#ff003958">
       <relation target="" sidePair="width-width,height-height"/>
     </graph>
-    <list id="n0_h7e5" name="typeList" xy="12,75" size="248,527" group="n12_cu6w" overflow="scroll" defaultItem="ui://21uyefv8e3cq8">
+    <list id="n0_h7e5" name="typeList" xy="12,74" size="248,527" group="n12_cu6w" overflow="scroll" defaultItem="ui://21uyefv8e3cq8">
       <relation target="" sidePair="rightext-right%,bottomext-bottom,leftext-left%"/>
       <item/>
       <item/>
@@ -26,7 +26,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n2_h7e5" name="centerList" xy="267,75" size="473,527" group="n12_cu6w" overflow="scroll" lineGap="5" defaultItem="ui://21uyefv8h7e53">
+    <list id="n2_h7e5" name="centerList" xy="267,74" size="473,527" group="n12_cu6w" overflow="scroll" lineGap="5" defaultItem="ui://21uyefv8h7e53">
       <relation target="" sidePair="rightext-right%,bottomext-bottom,leftext-left%"/>
       <item/>
       <item/>
@@ -40,7 +40,7 @@
       <item/>
       <item/>
     </list>
-    <list id="n3_h7e5" name="oldReList" xy="747,75" size="573,527" group="n12_cu6w" overflow="scroll" margin="0,0,10,10" lineGap="5" defaultItem="ui://21uyefv8h7e54">
+    <list id="n3_h7e5" name="oldReList" xy="747,74" size="573,527" group="n12_cu6w" overflow="scroll" margin="0,0,10,10" lineGap="5" defaultItem="ui://21uyefv8h7e54">
       <relation target="" sidePair="rightext-right%,bottomext-bottom,leftext-left%"/>
       <item/>
       <item/>
@@ -50,17 +50,17 @@
       <item/>
       <item/>
     </list>
-    <graph id="n6_h7e5" name="inputBg" xy="15,647" size="1147,72" group="n12_cu6w" type="rect">
+    <graph id="n6_h7e5" name="inputBg" xy="15,646" size="1147,72" group="n12_cu6w" type="rect">
       <relation target="" sidePair="bottom-bottom,rightext-right"/>
     </graph>
-    <text id="n5_h7e5" name="input" xy="13,645" size="1145,72" restrictSize="600,0,0,0" group="n12_cu6w" fontSize="35" vAlign="middle" ubb="true" autoSize="shrink" singleLine="true" autoClearText="true" text="gm gm gm " input="true">
+    <text id="n5_h7e5" name="input" xy="13,644" size="1145,72" restrictSize="600,0,0,0" group="n12_cu6w" fontSize="35" vAlign="middle" ubb="true" autoSize="shrink" singleLine="true" autoClearText="true" text="gm gm gm " input="true">
       <relation target="" sidePair="bottom-bottom,rightext-right"/>
     </text>
-    <component id="n10_h7e5" name="closeBtn" src="ovmzchq" fileName="components/closeBtn.xml" xy="1262,0" size="72,72" group="n12_cu6w" aspect="true">
+    <component id="n10_h7e5" name="closeButton" src="ovmzchq" fileName="components/closeBtn.xml" xy="1262,0" size="72,72" group="n12_cu6w" aspect="true">
       <relation target="" sidePair="right-right,top-top"/>
       <Button title="X" titleFontSize="60"/>
     </component>
-    <text id="n21_he9p" name="descTxt" xy="16,602" size="1300,36" group="n12_cu6w" fontSize="24" color="#ff0000" ubb="true" autoSize="none" autoClearText="true" text="league_1(1为要创建联盟,0不创) guide_1(1为要发请求所有指引,0不发) general_200(200为武将等级,若30为30级)">
+    <text id="n21_he9p" name="descTxt" xy="16,601" size="1300,36" group="n12_cu6w" fontSize="24" color="#ff0000" ubb="true" autoSize="none" autoClearText="true" text="league_1(1为要创建联盟,0不创) guide_1(1为要发请求所有指引,0不发) general_200(200为武将等级,若30为30级)">
       <relation target="" sidePair="bottom-bottom,rightext-right"/>
     </text>
     <group id="n12_cu6w" name="n12" xy="0,0" size="1334,750" advanced="true">

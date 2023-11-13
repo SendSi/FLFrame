@@ -111,6 +111,7 @@ public static class CustomSettings
         _GT(typeof(AssetLoader)),
         _GT(typeof(TestLoader)),
         _GT(typeof(EmojiUtil)),
+        _GT(typeof(PlayerPrefsHelper)),
         _GT(typeof(TestClass)),
         _GT(typeof(TextAsset)),
         _GT(typeof(LuaPerfect.ObjectRef)),

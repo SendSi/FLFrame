@@ -10,7 +10,7 @@ function UI_gmView:OnConstruct(windowCom)
 	m_oldReList = windowCom:GetChild("oldReList"),
 	m_inputBg = windowCom:GetChild("inputBg"),
 	m_input = windowCom:GetChild("input"),
-	m_closeBtn = windowCom:GetChild("closeBtn"),
+	m_closeButton = windowCom:GetChild("closeButton"),
 	m_descTxt = windowCom:GetChild("descTxt"),
 	m_n12 = windowCom:GetChild("n12"),
 	m_leftRightBtn = windowCom:GetChild("leftRightBtn"),

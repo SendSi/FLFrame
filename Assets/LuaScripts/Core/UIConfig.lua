@@ -84,7 +84,7 @@ local uiConfig = {
     GMView = {
         className = "UI.GM.GMView",
         packageName = "GMView",
-        viewName = "GMView",
+        viewName = "gmView",
         sortingOrder = 1001,
         matchMode = 0,
     },

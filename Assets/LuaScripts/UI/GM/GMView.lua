@@ -7,7 +7,7 @@ local JsonHelper = require("Utils.JsonHelper")
 local KeyCode = UnityEngine.KeyCode
 local Stage = FairyGUI.Stage
 local mInstance = nil
-local PlayerPrefsHelper = ManlingGame.Framework.PlayerPrefsHelper
+local PlayerPrefsHelper = PlayerPrefsHelper
 
 function GMView.GetInstance()
     return mInstance
@@ -32,15 +32,10 @@ function GMView:OnHide()
 end
 
 local mCloseKeyValue = 0
-function GMView:OnLoadFinished()
+function GMView:LoadComponent()
     self.contentPane.fairyBatching=true
-
     self.uiComs.m_input.onKeyDown:Add(function(context)
         self:OnKeyCode(context)
-    end)
-
-    self.uiComs.m_closeBtn.onClick:Add(function()
-        self:CloseWindow()
     end)
 
     self.uiComs.m_typeList.itemRenderer = function(index, gObject)
@@ -86,6 +81,7 @@ function GMView:OnLoadFinished()
     end
 
     self.uiComs.m_typeList.numItems = tTypeCount
+    loggZSXError(tTypeCount)
     self.centerDtos = self.gmAllDatas[1]
     self.uiComs.m_centerList.numItems = #self.centerDtos
 

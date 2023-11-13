@@ -30,7 +30,7 @@ THE SOFTWARE.
 JSON 编码与解码
 
 ]]
-local cjson = require("")
+
 local JsonHelper = {}
 
 -- start --
@@ -74,8 +74,9 @@ echo(str) -- [null,null,2,null,3]
 
 ]]
 -- end --
-local DEBUG = require("AppConfig").DEBUG
+local DEBUG = require("Core.AppConfig").DEBUG
 function JsonHelper.Encode(value)
+    local cjson = require("cjson")
     local status, result = pcall(cjson.encode, value)
     if status then return result end
     if DEBUG then
@@ -133,6 +134,7 @@ dump(tb) --[ [
 -- end --
 
 function JsonHelper.Decode(text)
+    local cjson = require("cjson")
     local status, result = pcall(cjson.decode, text)
     if status then return result end
     if DEBUG then

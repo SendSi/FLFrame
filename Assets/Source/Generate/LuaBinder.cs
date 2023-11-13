@@ -14,6 +14,7 @@ public static class LuaBinder
 		AssetLoaderWrap.Register(L);
 		TestLoaderWrap.Register(L);
 		EmojiUtilWrap.Register(L);
+		PlayerPrefsHelperWrap.Register(L);
 		TestClassWrap.Register(L);
 		ShaderManagerWrap.Register(L);
 		LuaProfilerWrap.Register(L);
