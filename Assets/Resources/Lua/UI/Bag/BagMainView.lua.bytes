@@ -10,7 +10,7 @@ local GlobalEvent = require("Core.GlobalEvent")
 local EventName = require("Core.EventName")
 
 function BagMainView:LoadComponent()
-    self.uiComs = require('ToolGen.bag.UI_BagMainView'):OnConstruct(self.contentPane)
+    self.uiComs = require('ToolGen.Bag.UI_BagMainView'):OnConstruct(self.contentPane)
     self.uiComs.m_tab02.onClick:Add(function()
         GlobalEvent:Fire(EventName.BagUpdate, 1001,"999999")
     end)

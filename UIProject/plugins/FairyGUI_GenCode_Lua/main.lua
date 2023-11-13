@@ -155,15 +155,15 @@ function genCode(handler)
     local writer = LuaCodeWriter.new({ blockFromNewLine = false, usingTabs = true })
     for i = 0, classCnt - 1 do
         local classInfo = classes[i]
-        if classInfo.superClassName == "CS.FairyGUI.GLabel" then
-            fprint(classInfo.className)
-        end
+        --if classInfo.superClassName == "CS.FairyGUI.GLabel" then
+          --  fprint(classInfo.className)
+        --end
 
         local _classTemplateTxt = classTemplateTxt;
 
         local members = classInfo.members
         writer:reset()
-        fprint(classInfo.className .. "    " .. classInfo.superClassName)
+        --fprint(classInfo.className .. "    " .. classInfo.superClassName)
 
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$className", classInfo.className);
         _classTemplateTxt = string.gsub(_classTemplateTxt, "$superClassName", classInfo.superClassName);
@@ -297,7 +297,7 @@ function genCode(handler)
             end
             _classTemplateTxt = string.gsub(_classTemplateTxt, "$bindEventInstantiation", _bindEventInstatiation);
             --CS.System.IO.File.WriteAllText(handler.exportCodePath .. "/init.lua", _classTemplateTxt);
-            fprint(_classTemplateTxt)
+            --fprint(_classTemplateTxt)
             writer:writeln('%s', _classTemplateTxt);
 
             local name = string.gsub(exportCodePath .. '/' .. classInfo.className .. '.lua', "UI_", "");

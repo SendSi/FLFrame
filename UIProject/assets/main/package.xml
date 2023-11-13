@@ -48,7 +48,7 @@
     <component id="b6o0mo" name="main_right_function2.xml" path="/components/"/>
     <image id="xoe1mx" name="city_btn_collection.png" path="/images2/"/>
     <image id="xoe1my" name="city_btn_share.png" path="/images2/"/>
-    <component id="xoe1mz" name="functionsEles.xml" path="/components/"/>
+    <component id="xoe1mz" name="funcListEles.xml" path="/components/" exported="true"/>
     <component id="xoe1n0" name="main_taskitem.xml" path="/components/"/>
     <component id="xoe1n1" name="mask_btn_task.xml" path="/components/"/>
     <component id="xoe1n2" name="mainTopPlayerInfo.xml" path="/components/"/>

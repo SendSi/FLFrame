@@ -3,12 +3,13 @@
 local UI_MainCenterView = {};
 function UI_MainCenterView:OnConstruct(windowCom)
 	local tb = {
-	m_functionsEles = windowCom:GetChild("functionsEles"),
-	m_n55 = windowCom:GetChild("n55"),
+	m_cityStateCtrl = windowCom:GetController("cityStateCtrl"),
+	m_funcListEles = windowCom:GetChild("funcListEles"),
+	m_bottomBg = windowCom:GetChild("bottomBg"),
 	m_chatBtn = windowCom:GetChild("chatBtn"),
 	m_backBtn = windowCom:GetChild("backBtn"),
 	m_outBtn = windowCom:GetChild("outBtn"),
-	m_city_out = windowCom:GetChild("city_out"),
+	m_outInList = windowCom:GetChild("outInList"),
 	m_bottomEles = windowCom:GetChild("bottomEles"),
 	m_activityList = windowCom:GetChild("activityList"),
 	m_playerInfo = windowCom:GetChild("playerInfo"),

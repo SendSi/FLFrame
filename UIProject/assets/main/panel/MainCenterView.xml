@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1334,750" opaque="false" designImageAlpha="20" designImageLayer="1">
+  <controller name="cityStateCtrl" pages="0,,1," selected="1">
+    <remark page="0" value="城里"/>
+    <remark page="1" value="城外"/>
+  </controller>
   <displayList>
-    <component id="n101_xoe1" name="functionsEles" src="xoe1mz" fileName="components/components_new/main/functionsEles.xml" xy="744,644" group="n109_pwz3">
+    <component id="n101_xoe1" name="funcListEles" src="xoe1mz" fileName="components/funcListEles.xml" xy="744,644" group="n109_pwz3">
       <relation target="" sidePair="right-right,bottom-bottom"/>
     </component>
-    <image id="n55_b6o0" name="n55" src="yt2t1ygcg8p" fileName="images4/mainhud_btn_icon013.png" xy="0,677" size="568,73" group="n109_pwz3"/>
-    <component id="n56_b6o0" name="chatBtn" src="kah2a4" fileName="components/components_new/main/main_chat_item.xml" xy="86,683" size="388,68" group="n109_pwz3">
+    <image id="n55_b6o0" name="bottomBg" src="yt2t1ygcg8p" fileName="images4/mainhud_btn_icon013.png" xy="0,677" size="568,73" group="n109_pwz3"/>
+    <component id="n56_b6o0" name="chatBtn" src="kah2a4" fileName="components/main_chat_item(1).xml" xy="86,683" size="388,68" group="n109_pwz3">
       <relation target="n55_b6o0" sidePair="right-right"/>
     </component>
-    <component id="n119_j4kd" name="backBtn" src="j4kdhz9clt" fileName="components/components_new/main/main_btn_back.xml" xy="16,631" group="n109_pwz3">
+    <component id="n119_j4kd" name="backBtn" src="j4kdhz9clt" fileName="components/main_btn_back.xml" xy="16,631" group="n109_pwz3">
+      <gearDisplay controller="cityStateCtrl" pages="1"/>
       <Button icon="ui://4ni413lalumy1qp8vde"/>
     </component>
-    <component id="n123_shxm" name="outBtn" src="j4kdhz9clt" fileName="components/components_new/main/main_btn_back.xml" xy="16,631" group="n109_pwz3">
+    <component id="n123_shxm" name="outBtn" src="j4kdhz9clt" fileName="components/main_btn_back.xml" xy="16,631" group="n109_pwz3">
+      <gearDisplay controller="cityStateCtrl" pages="0"/>
       <Button title="Go out"/>
     </component>
-    <list id="n178_eh3a" name="city_out" xy="120,614" size="250,64" group="n109_pwz3" layout="row" scroll="horizontal" margin="0,0,14,0" colGap="13" defaultItem="ui://4ni413layya01qp8vcb" vAlign="middle" scrollItemToViewOnClick="false">
+    <list id="n178_eh3a" name="outInList" xy="120,614" size="250,64" group="n109_pwz3" layout="row" scroll="horizontal" margin="0,0,14,0" colGap="13" defaultItem="ui://4ni413layya01qp8vcb" vAlign="middle" scrollItemToViewOnClick="false">
       <relation target="" sidePair="left-left"/>
       <item title="采集" icon="ui://4ni413latauyhz9czs" name="search"/>
       <item title="探索" icon="ui://4ni413latauyhz9czt" name="explore"/>
@@ -27,15 +33,15 @@
       <item title="功能预告" icon="ui://2r331opvil9y1ygcfjg"/>
       <item icon="ui://2r331opvil9y1ygcfjh"/>
     </list>
-    <component id="n34_b6o0" name="playerInfo" src="xoe1n2" fileName="components/components_new/main/mainTopPlayerInfo.xml" xy="0,0" group="n132_lvwk">
+    <component id="n34_b6o0" name="playerInfo" src="xoe1n2" fileName="components/mainTopPlayerInfo.xml" xy="0,0" group="n132_lvwk">
       <relation target="" sidePair="rightext-right"/>
     </component>
     <component id="n120_m47y" name="coordItemBtn" src="gj4q1ygcg9m" fileName="panel/topShowPos.xml" xy="363,10" group="n132_lvwk"/>
     <group id="n132_lvwk" name="topEles" xy="0,0" size="1334,152" advanced="true"/>
-    <component id="n154_quts" name="rightTeam" src="cv8s1qp8vdw" fileName="components/components_new/main/main_team_right00.xml" xy="1113,138">
+    <component id="n154_quts" name="rightTeam" src="cv8s1qp8vdw" fileName="components/main_team_right00.xml" xy="1113,138">
       <relation target="" sidePair="middle-middle,right-right"/>
     </component>
-    <component id="n174_eh3a" name="leftTask" src="xoe1n0" fileName="components/components_new/main/main_taskitem.xml" xy="6,153" size="208,347" controller="hideOpen,0"/>
+    <component id="n174_eh3a" name="leftTask" src="xoe1n0" fileName="components/main_taskitem.xml" xy="6,153" size="208,347" controller="hideOpen,0"/>
   </displayList>
   <transition name="quit" options="2">
     <item time="0" type="Alpha" target="n101_xoe1" value="1"/>

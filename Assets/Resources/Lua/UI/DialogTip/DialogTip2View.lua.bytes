@@ -22,7 +22,7 @@ function DialogTip2View:AddBindGlobalEvent()
 end
 
 function DialogTip2View:LoadComponent()
-    self.uiComs = require('ToolGen.dialogTip.UI_DialogTip2View'):OnConstruct(self.contentPane)
+    --self.uiComs = require('ToolGen.dialogTip.UI_DialogTip2View'):OnConstruct(self.contentPane)
     self.m_contentTxt = self.uiComs.m_contentTxt:GetChild("contentTxt")
     self.m_contentTxt.UBBEnabled = true
     self.m_contentTxt.emojies = Emoji

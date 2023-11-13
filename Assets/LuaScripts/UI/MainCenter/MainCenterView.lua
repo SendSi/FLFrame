@@ -3,24 +3,47 @@
 --- Created by SendSi.
 --- DateTime: 2022/8/16 22:57
 ---
-
 local UIWindow = require('Core.UIWindow')
 local MainCenterView = fgui.window_class(UIWindow)
 local GlobalEvent = require("Core.GlobalEvent")
 local EventName = require("Core.EventName")
 
+local mSubComScriptList = {
+    "UI.MainCenter.FuncListEles",
+    "UI.MainCenter.MainTopPlayerInfo",
+    "UI.MainCenter.BottomEles_Left"
+}
+
 function MainCenterView:LoadComponent()
     --self.uiComs = require('ToolGen.main.UI_MainCenterView'):OnConstruct(self.contentPane)
 
-    require("UI.MainCenter.FunctionsEles"):Init(self.uiComs)
-    require("UI.MainCenter.MainTopPlayerInfo"):Init(self.uiComs)
+    self:InitLoadCom()
+end
+
+function MainCenterView:InitLoadCom()
+    self.subComs = {}
+    for i = 1, #mSubComScriptList do
+        local sub = require(mSubComScriptList[i])
+        sub:Init(self.uiComs)
+        self.subComs[i] = sub
+    end
+end
+
+function MainCenterView:DisposeSubCom()
+    if self.subComs then
+        for _, subView in pairs(self.subComs) do
+            if subView and subView.Dispose then
+                subView:Dispose()
+            end
+        end
+        self.subComs = nil
+    end
 end
 
 function MainCenterView:AddBindGlobalEvent()
     local eventData = {
         { EventName.BagUpdate, function(cfgId, strV)
-            loggZSXError(strV)
-            loggZSXError(cfgId)
+            loggZSXError("监听BagUpdate", cfgId, strV)
         end }
     }
     return eventData
@@ -39,6 +62,11 @@ end
 
 function MainCenterView:OnShown()
     UIWindow.OnShown(self)
+end
+
+function MainCenterView:Destroy()
+    self:DisposeSubCom()
+    UIWindow.Destroy(self)
 end
 
 return MainCenterView
