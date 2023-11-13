@@ -7,7 +7,7 @@
 local UIWindow = require('Core.UIWindow')
 local BagMainView = fgui.window_class(UIWindow)
 local GlobalEvent = require("Core.GlobalEvent")
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 
 function BagMainView:LoadComponent()
     self.uiComs = require('ToolGen.Bag.UI_BagMainView'):OnConstruct(self.contentPane)

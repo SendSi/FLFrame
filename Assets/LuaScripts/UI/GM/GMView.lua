@@ -200,7 +200,7 @@
 
 local UIWindow = require('Core.UIWindow')
 local GMView = fgui.window_class(UIWindow)
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 local GMConfig = require("UI.GM.GMConfig")
 local mTypeListDto
 local gmBtn1 = fgui.extension_class(FairyGUI.GButton)

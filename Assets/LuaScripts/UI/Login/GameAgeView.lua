@@ -16,7 +16,7 @@ function GameAgeView:OnLoadFinished()
 end
 
 
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 function GameAgeView:AddBindGlobalEvent()
     return{
         {EventName.Test,function()end,999},

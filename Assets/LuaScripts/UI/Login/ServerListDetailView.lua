@@ -6,7 +6,7 @@
 --]]
 --[[
 
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 function ServerListDetailView:AddBindGlobalEvent()
    return{
      {EventName.Test,function()end,999},

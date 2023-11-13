@@ -2,7 +2,7 @@ local UIWindow = require('Core.UIWindow')
 local DialogTip2View = fgui.window_class(UIWindow)--二次确认框.两个按钮的
 local Emoji = require("Utils.EmojiUtils"):InitEmoji()
 local GlobalEvent = require("Core.GlobalEvent")
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 
 function DialogTip2View:OnHide()
     UIWindow.OnHide(self)

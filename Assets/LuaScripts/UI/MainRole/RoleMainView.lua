@@ -7,7 +7,7 @@
 --
 local UIWindow = require('Core.UIWindow')
 local RoleMainView = fgui.window_class(UIWindow)
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 
 function RoleMainView:LoadComponent()
     --self.uiComs = require('ToolGen.MainRole.UI_RoleMainView'):OnConstruct(self.contentPane)

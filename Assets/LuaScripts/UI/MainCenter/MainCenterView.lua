@@ -6,7 +6,7 @@
 local UIWindow = require('Core.UIWindow')
 local MainCenterView = fgui.window_class(UIWindow)
 local GlobalEvent = require("Core.GlobalEvent")
-local EventName = require("Core.EventName")
+local EventName = require("Common.EventName")
 
 local mSubComScriptList = {
     "UI.MainCenter.FuncListEles",
@@ -17,10 +17,10 @@ local mSubComScriptList = {
 function MainCenterView:LoadComponent()
     --self.uiComs = require('ToolGen.main.UI_MainCenterView'):OnConstruct(self.contentPane)
 
-    self:InitLoadCom()
+    self:InitLoadSubCom()
 end
 
-function MainCenterView:InitLoadCom()
+function MainCenterView:InitLoadSubCom()
     self.subComs = {}
     for i = 1, #mSubComScriptList do
         local sub = require(mSubComScriptList[i])
