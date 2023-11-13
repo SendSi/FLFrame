@@ -1,4 +1,4 @@
---在UnityEditor下  按 ctrl+alt+shift+E                   可自动生成id
+--在UnityEditor下  按 ctrl+alt+shift+E                   可自动生成id  数字
 
 local EventName = {
     TestEvent = 10004,--测试事件

@@ -3,10 +3,9 @@
 local UI_main_team_right = {};
 function UI_main_team_right:OnConstruct(windowCom)
 	local tb = {
-	m_state = windowCom:GetController("state"),
-	m_tab = windowCom:GetController("tab"),
+	m_styleCtrl = windowCom:GetController("styleCtrl"),
 	m_bg = windowCom:GetChild("bg"),
-	m_list = windowCom:GetChild("list"),
+	m_teamList = windowCom:GetChild("teamList"),
 	m_tabBtn = windowCom:GetChild("tabBtn"),
 	m_teamNum = windowCom:GetChild("teamNum"),
 	}

@@ -38,7 +38,7 @@
     </component>
     <component id="n120_m47y" name="coordItemBtn" src="gj4q1ygcg9m" fileName="panel/topShowPos.xml" xy="363,10" group="n132_lvwk"/>
     <group id="n132_lvwk" name="topEles" xy="0,0" size="1334,152" advanced="true"/>
-    <component id="n154_quts" name="rightTeam" src="cv8s1qp8vdw" fileName="components/main_team_right00.xml" xy="1113,138">
+    <component id="n154_quts" name="rightTeam" src="le3m1qp8vhq" fileName="components/main_team_right.xml" xy="1113,138">
       <relation target="" sidePair="middle-middle,right-right"/>
     </component>
     <component id="n174_eh3a" name="leftTask" src="xoe1n0" fileName="components/main_taskitem.xml" xy="6,153" size="208,347" controller="hideOpen,0"/>
