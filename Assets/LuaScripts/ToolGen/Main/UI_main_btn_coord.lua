@@ -11,6 +11,7 @@ function UI_main_btn_coord:OnConstruct(windowCom)
 	m_n7 = windowCom:GetChild("n7"),
 	m_n10 = windowCom:GetChild("n10"),
 	m_btn = windowCom:GetChild("btn"),
+	m_n11 = windowCom:GetChild("n11"),
 	}
 	return tb
 end

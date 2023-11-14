@@ -10,7 +10,7 @@ local EventName = require("Common.EventName")
 
 local mSubComScriptList = {
     "UI.MainCenter.FuncListEles",
-    "UI.MainCenter.MainTopPlayerInfo",
+    "UI.MainCenter.TopEles",
     "UI.MainCenter.BottomEles_Left"
 }
 

@@ -51,7 +51,7 @@
     <component id="xoe1mz" name="funcListEles.xml" path="/components/" exported="true"/>
     <component id="xoe1n0" name="main_taskitem.xml" path="/components/"/>
     <component id="xoe1n1" name="mask_btn_task.xml" path="/components/"/>
-    <component id="xoe1n2" name="mainTopPlayerInfo.xml" path="/components/"/>
+    <component id="xoe1n2" name="TopEles.xml" path="/components/"/>
     <image id="xoe1n5" name="main_map.png" path="/images/map/"/>
     <image id="xoe1n6" name="spot01.png" path="/images2/"/>
     <image id="xoe1n7" name="spot02.png" path="/images2/"/>
@@ -775,6 +775,7 @@
     <component id="qy501qp8vdt" name="generalIcon1.xml" path="/components/" exported="true"/>
     <component id="dmmmhz9d2y" name="generalIcon3.xml" path="/components/" exported="true"/>
     <component id="xyhchz9cv9" name="generalIconBtn.xml" path="/components/" exported="true"/>
+    <component id="ijk71ygcg9n" name="playerIconBtn.xml" path="/components/"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

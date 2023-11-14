@@ -3,7 +3,7 @@
 local UI_com_btnHas = {};
 function UI_com_btnHas:OnConstruct(windowCom)
 	local tb = {
-	m_plus = windowCom:GetController("plus"),
+	m_addCtrl = windowCom:GetController("addCtrl"),
 	m_n0 = windowCom:GetChild("n0"),
 	m_icon = windowCom:GetChild("icon"),
 	m_hasNumTxt = windowCom:GetChild("hasNumTxt"),

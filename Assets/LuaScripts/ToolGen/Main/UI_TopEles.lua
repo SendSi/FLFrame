@@ -1,7 +1,7 @@
 --- This is an automatically generated class by FairyGUI. Please do not modify it. ---
----@class UI_mainTopPlayerInfo : CS.FairyGUI.GComponent
-local UI_mainTopPlayerInfo = {};
-function UI_mainTopPlayerInfo:OnConstruct(windowCom)
+---@class UI_TopEles : CS.FairyGUI.GComponent
+local UI_TopEles = {};
+function UI_TopEles:OnConstruct(windowCom)
 	local tb = {
 	m_mainPlayerBtn = windowCom:GetChild("mainPlayerBtn"),
 	m_actPbr = windowCom:GetChild("actPbr"),
@@ -14,4 +14,4 @@ function UI_mainTopPlayerInfo:OnConstruct(windowCom)
 	}
 	return tb
 end
-return UI_mainTopPlayerInfo;
+return UI_TopEles;

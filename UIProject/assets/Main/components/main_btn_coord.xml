@@ -8,7 +8,10 @@
     <text id="n6_m47y" name="n6" xy="44,4" size="22,24" font="ui://2r331opvno3vhz9d63" fontSize="16" color="#ffffff" autoSize="none" strokeColor="#000000" shadowColor="#000000" shadowOffset="1,2" text="X:"/>
     <text id="n7_m47y" name="n7" xy="106,4" size="21,24" font="ui://2r331opvno3vhz9d63" fontSize="16" color="#ffffff" autoSize="none" strokeColor="#000000" shadowColor="#000000" shadowOffset="1,2" text="Y:"/>
     <image id="n10_jxsz" name="n10" src="j4kdhz9clm" fileName="images/main/mainhud_bg08.png" xy="169,7" scale="0.72,0.72"/>
-    <component id="n9_m47y" name="btn" src="m47yhz9co5" fileName="components/components_new/main/main_btn_coord2.xml" xy="1,0" size="237,36"/>
+    <component id="n9_m47y" name="btn" src="m47yhz9co5" fileName="components/main_btn_coord2.xml" xy="1,0" size="237,36"/>
+    <loader id="n11_ijk7" name="n11" xy="0,-2" size="40,40" touchable="false" url="ui://4ni413laltnnhz9cw8" fill="scale">
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
   </displayList>
   <Button mode="Check"/>
 </component>
