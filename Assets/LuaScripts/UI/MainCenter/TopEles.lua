@@ -17,16 +17,14 @@ function TopEles:Init(rootUI)
         self.currencyList.itemRenderer = function(index, gObject)
             self:OnRendererCurrencyListCom(index, gObject)
         end
-        self.mListDto = { 1, 1, 1, 11, 1 }
+        self.currencyIds = { 1, 2, 3, 4, 5 }
         self.currencyList.numItems = 5
-
-
     end
 end
 
 function TopEles:OnRendererCurrencyListCom(index, gObject)
-    local dto = self.mListDto[index + 1]
-    gObject:SetData(dto)--Item_Currency**.lua
+    local dto = self.currencyIds[index + 1]
+    gObject:SetData(dto)--Item_Currency.lua
 end
 
 function TopEles:Dispose()

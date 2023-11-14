@@ -1,9 +1,9 @@
 local ItemConfig = {
-[1]={id=1,name="粮食",icon="ui://01_4_prop/item_1",smallIcon="item_1",iconDesecribe="通用资源，可在主城中生产或在玩法中获得",quality=2,drop=2,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=1,getWay="4;19",},
+[1]={id=1,name="粮食",icon="ui://01_4_prop/item_1",smallIcon="item_1",iconDesecribe="通用资源，可在主城中生产或在玩法中获得",quality=2,drop=2,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=1,getWay="4;19"},
 [2]={id=2,name="木材",icon="ui://01_4_prop/item_2",smallIcon="item_2",iconDesecribe="通用资源，可在主城中生产或在玩法中获得",quality=2,drop=3,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=2,getWay="4;19",},
 [3]={id=3,name="铁矿",icon="ui://01_4_prop/item_3",smallIcon="item_3",iconDesecribe="通用资源，可在主城中生产或在玩法中获得",quality=2,drop=4,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=3,getWay="4;19",},
 [4]={id=4,name="石料",icon="ui://01_4_prop/item_4",smallIcon="item_4",iconDesecribe="通用资源，可在主城中生产或在玩法中获得",quality=2,drop=1,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=4,getWay="4;19",},
-[5]={id=5,name="金币",icon="ui://01_4_prop/item_4",smallIcon="item_4",iconDesecribe="通用资源，来源于城内金矿、采集、市场和活动产出",quality=5,drop=5,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=5,getWay="4;19",},
+[5]={id=5,name="金币",icon="ui://01_4_prop/item_5",smallIcon="item_5",iconDesecribe="通用资源，来源于城内金矿、采集、市场和活动产出",quality=5,drop=5,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=5,getWay="4;19",showAdd=1},
 [6]={id=6,name="友情币",icon="ui://01_4_prop/item_5",smallIcon="item_5",iconDesecribe="好友互赠获得",quality=5,drop=1,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=6,getWay="0",},
 [7]={id=7,name="体力（弃用",icon="ui://01_4_prop/item_7",smallIcon="item_7",iconDesecribe="无",quality=5,drop=1,type=1,price="0",payment="13:10",useParm="0",maxNum=2000000000,bagType=1,number=7,getWay="0",},
 [8]={id=8,name="策略值",icon="ui://01_4_prop/item_8",smallIcon="item_8",iconDesecribe="无",quality=5,drop=1,type=1,price="0",payment="0",useParm="0",maxNum=2000000000,bagType=1,number=8,getWay="0",},
@@ -1207,7 +1207,7 @@ local ItemConfig = {
 };
 
 local DefaultValueTable = {
-id=0,name="",text="",nameTrans=0,icon="",smallIcon="",iconDesecribe="英雄突破道具，参与秘典获得",iconTrans=0,reincarnation=0,quality=0,drop=0,type=0,time=0,sale=0,price="",payment="",use=0,useNumLimit=0,resolve=0,resolveGain="",useType=0,useParm="",maxNum=0,bagType=0,number=0,getWay="",occupy=0,recruitlook="",
+id=0,name="",text="",nameTrans=0,icon="",smallIcon="",iconDesecribe="英雄突破道具，参与秘典获得",iconTrans=0,reincarnation=0,quality=0,drop=0,type=0,time=0,sale=0,price="",payment="",use=0,useNumLimit=0,resolve=0,resolveGain="",useType=0,useParm="",maxNum=0,bagType=0,number=0,getWay="",occupy=0,recruitlook="",showAdd=0
 };
 
 local base = { __index = DefaultValueTable }
