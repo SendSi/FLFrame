@@ -28,7 +28,7 @@ function TopEles:OnRendererCurrencyListCom(index, gObject)
 end
 
 function TopEles:Dispose()
-
+    require("Utils.UIListExtra"):ListItemDispose(self.currencyList)
 end
 
 return TopEles
