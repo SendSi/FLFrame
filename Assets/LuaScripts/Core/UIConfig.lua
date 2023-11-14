@@ -48,7 +48,7 @@ local uiConfig = {
     },
     MainCenterView = {
         className = "UI.MainCenter.MainCenterView", --主页面
-        packageName = "Main",
+        packageName = "MainCenter",
         viewName = "MainCenterView",
         sortingOrder = 10,
         matchMode = 0,

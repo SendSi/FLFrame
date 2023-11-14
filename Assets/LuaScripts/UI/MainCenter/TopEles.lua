@@ -3,17 +3,30 @@
 --- Created by SendSi.   fgui-->mainTopPlayerInfo
 --- DateTime: 2022/8/28 21:28
 ---
-
 local TopEles = {}
 
 function TopEles:Init(rootUI)
     if rootUI then
-        self.uiComs = require('ToolGen.Main.UI_TopEles'):OnConstruct(rootUI.m_topEles)
+        self.uiComs = require('ToolGen.MainCenter.UI_TopEles'):OnConstruct(rootUI.m_topEles)
 
         self.uiComs.m_mainPlayerBtn.onClick:Add(function()
             require("UI.MainRole.ProxyMainRoleModule"):OpenRoleMainView()
         end)
+
+        self.currencyList = self.uiComs.m_currencyListCom:GetChild("currencyList")
+        self.currencyList.itemRenderer = function(index, gObject)
+            self:OnRendererCurrencyListCom(index, gObject)
+        end
+        self.mListDto = { 1, 1, 1, 11, 1 }
+        self.currencyList.numItems = 5
+
+
     end
+end
+
+function TopEles:OnRendererCurrencyListCom(index, gObject)
+    local dto = self.mListDto[index + 1]
+    gObject:SetData(dto)--Item_Currency**.lua
 end
 
 function TopEles:Dispose()

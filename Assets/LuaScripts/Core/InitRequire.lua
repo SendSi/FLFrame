@@ -6,4 +6,6 @@ end)
 
 require("Core.FrameworkFunctions")
 require("Core.FairyGUI")
+require("Common.UIClassExtend_Register")
 require("UI.GM.ProxyGMModule")
+

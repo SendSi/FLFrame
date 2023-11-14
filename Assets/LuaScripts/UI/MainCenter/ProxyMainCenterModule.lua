@@ -3,8 +3,7 @@ local UIConfig = require("Core.UIConfig")
 local UIMgr = require("Core.UIMgr")
 
 function ProxyMainCenterModule:OpenMainCenter()
-    local uiset = UIConfig.MainCenterView
-    UIMgr:OpenWindow(uiset, function(uiWin)
+    UIMgr:OpenWindow(UIConfig.MainCenterView, function(uiWin)
         uiWin:SetData("我的emoji")
     end)
 end
