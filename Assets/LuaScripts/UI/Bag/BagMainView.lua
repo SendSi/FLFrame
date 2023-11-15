@@ -8,20 +8,46 @@ local UIWindow = require('Core.UIWindow')
 local BagMainView = fgui.window_class(UIWindow)
 local GlobalEvent = require("Core.GlobalEvent")
 local EventName = require("Common.EventName")
+local mListDto
+local BagManager = require("UI.Bag.BagManager")
 
 function BagMainView:LoadComponent()
     self.uiComs = require('ToolGen.Bag.UI_BagMainView'):OnConstruct(self.contentPane)
-    self.uiComs.m_tab02.onClick:Add(function()
-        GlobalEvent:Fire(EventName.BagUpdate, 1001,"999999")
+
+    self.uiComs.m_propList.itemRenderer = function(index, gObject)
+        self:OnRendererPropList(index, gObject)
+    end
+    self.uiComs.m_propList.onClickItem:Add(function(context)
+        self:OnClickPropList(context)
     end)
+    self.uiComs.m_propList:SetVirtual()
+    mListDto = BagManager:GetBagViewListItem()
+    if #mListDto > 0 then
+        self.uiComs.m_propList.numItems = #mListDto
+        self.uiComs.m_hasDataCtrl.selectedIndex = 0
+    else
+        self.uiComs.m_hasDataCtrl.selectedIndex = 1
+    end
 end
 
+function BagMainView:OnRendererPropList(index, gObject)
+    local dto = mListDto[index + 1]
+    gObject:SetData(dto)--ComItem_bag.lua
+end
+
+function BagMainView:OnClickPropList(context)
+    local data = context.data:GetData()--ComItem_bag.lua
+    if data then
+        loggZSXError(data)
+    end
+end
 function BagMainView:BindRegisterEvent()
 
 end
 
 function BagMainView:OnHide()
     UIWindow.OnHide(self)
+    require("Utils.UIListExtra"):ListVirtualItemsDispose(self.currencyList)
 end
 
 function BagMainView:OnInit()

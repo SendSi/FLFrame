@@ -8,16 +8,16 @@ function Item_Currency:ctor()
     self.uiComs = require("ToolGen.CommonPKG.UI_Item_Currency"):OnConstruct(self)
     self.events = {
         GlobalEvent:AddListener(EventName.BagUpdate, function()
-			self:OnEventBagUpdate()
+            self:OnEventBagUpdate()
         end)
     }
-self.currencyId=false
+    self.currencyId = false
 end
 
 function Item_Currency:OnEventBagUpdate()
-if self.currencyId then
+    if self.currencyId then
         self.uiComs.m_hasNumTxt.text = BagManager:GetServerItemSum(self.currencyId)
-end
+    end
 end
 
 function Item_Currency:SetData(currencyId)
@@ -25,7 +25,7 @@ function Item_Currency:SetData(currencyId)
         self.uiComs.m_hasNumTxt.text = BagManager:GetServerItemSum(currencyId)
         self.uiComs.m_icon.icon = "ui://Emoji/" .. ItemTab[currencyId].smallIcon
         self.uiComs.m_addCtrl.selectedIndex = (ItemTab[currencyId].showAdd)
-self.currencyId=currency
+        self.currencyId = currencyId
     end
 end
 

@@ -212,6 +212,21 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b12233b146092ed498793c4c571cec80
+    m_Address: UI/ItemPKG
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0f6cf78f3ab21246b9cd5fa4acdcfce
+    m_Address: UI/ItemPKG_atlas0_1
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 753cd82b69b7ff3469e33d9834e8c27b
+    m_Address: UI/ItemPKG_atlas0
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 7f1982874cfeecd4696139b602f60be7, type: 2}
   m_SchemaSet:

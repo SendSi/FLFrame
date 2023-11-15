@@ -1,4 +1,7 @@
 local BagManager = {}
+local GlobalEvent = require("Core.GlobalEvent")
+local EventName = require("Common.EventName")
+local ItemTab = require("Tables.ItemConfig")
 
 --假设服务器下发的这些数据
 local mServerDtos = {
@@ -34,6 +37,42 @@ function BagManager:GetServerItemSum(cfgId)
         return mServerItemDic[cfgId].sum
     end
     return 0
+end
+
+function BagManager:GetBagViewListItem()
+    local tmp
+    local bagList = {}
+    for i = 1, #mServerDtos do
+        tmp = ItemTab[mServerDtos[i].cfgId]
+        if tmp.type > 1 then
+            table.insert(bagList, mServerDtos[i])
+        end
+    end
+    return bagList
+end
+
+function BagManager:SetProtoData()
+    local cfgId = math.random(1, 5)
+    local value = math.random(1, 99)
+    logerror("10秒 10次 道具随机--cfgId=", cfgId, ",value=", value)
+    if mServerItemDic[cfgId] then
+        mServerItemDic[cfgId].sum = mServerItemDic[cfgId].sum + value
+    else
+        mServerItemDic[cfgId] = { cfgId = cfgId, sum = value, uid = "abc" }
+        table.insert(mServerDtos, { cfgId = cfgId, sum = value, uid = "abc" })
+    end
+    ---------------- ---------------- ---------------- ---------------- ----------------
+    local cfgId = math.random(10001, 11002)
+    local value = math.random(1, 99)
+    logerror("10秒 10次 道具随机--cfgId=", cfgId, ",value=", value)
+    if mServerItemDic[cfgId] then
+        mServerItemDic[cfgId].sum = mServerItemDic[cfgId].sum + value
+    else
+        mServerItemDic[cfgId] = { cfgId = cfgId, sum = value, uid = "abc" }
+        table.insert(mServerDtos, { cfgId = cfgId, sum = value, uid = "abc" })
+    end
+
+    GlobalEvent:Fire(EventName.BagUpdate)
 end
 
 function BagManager:Dispose()

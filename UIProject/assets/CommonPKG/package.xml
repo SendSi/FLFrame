@@ -1095,6 +1095,7 @@
     <component id="ig9038" name="comBtn_Icon.xml" path="/_new/" exported="true"/>
     <component id="ig90hz9czq" name="comBtn_IconTxt.xml" path="/_new/" exported="true"/>
     <component id="nqbv1ygcg9y" name="comBtn_tab.xml" path="/_new/" exported="true"/>
+    <component id="odfq1ygcgrr" name="ComItem_bag.xml" path="/components/components_new/" exported="true" favorite="true"/>
   </resources>
   <publish name="" genCode="true"/>
 </packageDescription>

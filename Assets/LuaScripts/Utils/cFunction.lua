@@ -110,10 +110,14 @@ function ShowAccountInfo()
         require("DialogTip.ProxyDialogTipModule"):AddFloatTip("别按啦,还没登录吧")
     end
 end
-
+local BagManager = require("UI.Bag.BagManager")
 -----------------------------------------------上面的代码基本不用改的啦------------------------------------------------------------------
 function SingleClickButton0()
     loginfo("测试0")
+    Timer.New(function ()
+        BagManager:SetProtoData()
+    end,10,10):Start()
+
 end
 
 function SingleClickButton1()
