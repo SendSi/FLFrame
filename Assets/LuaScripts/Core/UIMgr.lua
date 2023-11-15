@@ -56,6 +56,7 @@ function UIMgr:InstanceWindow(uiConfig, callBack)
         mUIWindows[className] = uiWin
         if callBack then
             callBack(uiWin)
+            callBack=false
         end
     end)
 end
@@ -116,6 +117,7 @@ function UIMgr:Load_Dependent(package, refCount, callBack)
         self:LoadPackage(useOther, function()
             if refCount <= 0 and callBack then
                 callBack()
+                callBack=false
             end
         end)
     end

@@ -1,4 +1,4 @@
-local ComItem_bag = fgui.extension_class(FairyGUI.GCButton)
+local ComItem_bag = fgui.extension_class(FairyGUI.GButton)
 local BagManager = require("UI.Bag.BagManager")
 local ItemTab = require("Tables.ItemConfig")
 local GlobalEvent = require("Core.GlobalEvent")
