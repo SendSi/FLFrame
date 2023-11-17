@@ -15,8 +15,8 @@ public class LuaAssetPostProcessor : AssetPostprocessor
     private static void OnPostprocessAllAssets(string[] importedAssets, string[] deletedAssets, string[] movedAssets,
         string[] movedFromAssetPaths)
     {
-        var isTemp = PlayerPrefs.GetInt("LuaEditorDymaticHF", 0);
-        var isEnable = (isTemp == 1);        
+        var isEnable = PlayerPrefsHelper.GetBool("LuaEditorHF", false);
+        Debug.LogError(isEnable);
         if (!isEnable)
             return;           
 

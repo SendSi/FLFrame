@@ -44,6 +44,8 @@ function BagMainView:LoadComponent()
     end)
 
     self.uiComs.m_propList.selectedIndex = 0
+
+    logerror("打开页面 测试编辑器下 热更")
 end
 
 function BagMainView:OnClickBtnCanUsing()
@@ -65,6 +67,7 @@ function BagMainView:OnClickPropList(context)
         mSelectItemDto = data
         self:ShowRightInfo()
     end
+
 end
 
 function BagMainView:ShowRightInfo()
