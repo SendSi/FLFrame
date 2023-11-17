@@ -22,15 +22,13 @@ function UI_BagMainView:OnConstruct(windowCom)
 	m_nothingLbl = windowCom:GetChild("nothingLbl"),
 	m_equipmentGoToBtn = windowCom:GetChild("equipmentGoToBtn"),
 	m_iconProp = windowCom:GetChild("iconProp"),
-	m_titleProp = windowCom:GetChild("titleProp"),
-	m_lblExplain = windowCom:GetChild("lblExplain"),
-	m_itemInfo = windowCom:GetChild("itemInfo"),
+	m_titlePropTxt = windowCom:GetChild("titlePropTxt"),
+	m_descTxt = windowCom:GetChild("descTxt"),
 	m_lbl01 = windowCom:GetChild("lbl01"),
-	m_lblHave = windowCom:GetChild("lblHave"),
-	m_noUsing = windowCom:GetChild("noUsing"),
+	m_hasTxt = windowCom:GetChild("hasTxt"),
 	m_btnCanUsing = windowCom:GetChild("btnCanUsing"),
-	m_n62 = windowCom:GetChild("n62"),
-	m_propTopList = windowCom:GetChild("propTopList"),
+	m_rightInfo = windowCom:GetChild("rightInfo"),
+	m_currencyList = windowCom:GetChild("currencyList"),
 	}
 	return tb
 end

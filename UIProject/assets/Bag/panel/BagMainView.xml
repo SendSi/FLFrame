@@ -5,7 +5,7 @@
     <remark page="0" value="左边有格子"/>
     <remark page="1" value="无数据"/>
   </controller>
-  <controller name="quality" pages="0,,1,,2,,3,,4," selected="3">
+  <controller name="quality" pages="0,,1,,2,,3,,4," selected="0">
     <remark page="0" value="绿"/>
     <remark page="1" value="蓝"/>
     <remark page="2" value="紫"/>
@@ -65,21 +65,19 @@
       <relation target="" sidePair="center-center,middle-middle"/>
       <Button title="前往锻造"/>
     </component>
-    <component id="n65_cjed" name="iconProp" src="j842hz9cyi" fileName="components/components_new/comItem.xml" pkg="2r331opv" xy="1023,150" group="n46_aylj" touchable="false"/>
-    <text id="n17_xbay" name="titleProp" xy="909,280" size="349,49" group="n46_aylj" font="ui://2r331opvno3vhz9d63" fontSize="30" color="#50382e" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="它的名字"/>
-    <text id="n19_xbay" name="lblExplain" xy="877,326" size="413,136" group="n46_aylj" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#917349" align="center" leading="0" ubb="true" autoSize="none" autoClearText="true" text="增加领主经验值[color=#E77917]100[/color]"/>
-    <group id="n46_aylj" name="itemInfo" xy="877,150" size="413,312" group="n62_axao" advanced="true"/>
-    <text id="n30_grws" name="lbl01" xy="978,470" size="129,34" group="n32_grws" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#845744" align="center" autoSize="none" text="拥有数量："/>
-    <text id="n31_grws" name="lblHave" xy="1091,470" size="137,34" group="n32_grws" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#e77917" autoSize="none" autoClearText="true" text="100000"/>
-    <group id="n32_grws" name="noUsing" xy="978,470" size="250,34" group="n62_axao" advanced="true"/>
-    <component id="n50_f3wx" name="btnCanUsing" src="c4umz9cnc" fileName="components/components_new/com_btn_001.xml" pkg="2r331opv" xy="989,584" size="199,78" group="n62_axao">
+    <component id="n65_cjed" name="iconProp" src="odfq1ygcgrr" fileName="components/components_new/ComItem_bag.xml" pkg="2r331opv" xy="1019,153" group="n62_axao" touchable="false"/>
+    <text id="n17_xbay" name="titlePropTxt" xy="905,283" size="349,49" group="n62_axao" font="ui://2r331opvno3vhz9d63" fontSize="30" color="#50382e" align="center" vAlign="middle" autoSize="none" autoClearText="true" text="它的名字"/>
+    <text id="n19_xbay" name="descTxt" xy="873,329" size="413,136" group="n62_axao" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#917349" align="center" leading="0" ubb="true" autoSize="none" autoClearText="true" text="增加领主经验值[color=#E77917]100[/color]"/>
+    <text id="n30_grws" name="lbl01" xy="974,473" size="129,34" group="n62_axao" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#845744" align="center" autoSize="none" text="拥有数量："/>
+    <text id="n31_grws" name="hasTxt" xy="1087,473" size="137,34" group="n62_axao" font="ui://2r331opvno3vhz9d63" fontSize="24" color="#e77917" autoSize="none" autoClearText="true" text="100000"/>
+    <component id="n50_f3wx" name="btnCanUsing" src="c4umz9cnc" fileName="components/components_new/com_btn_001.xml" pkg="2r331opv" xy="965,582" size="199,78" group="n62_axao">
       <Button title="使用" titleFontSize="34"/>
     </component>
-    <group id="n62_axao" name="n62" xy="877,150" size="413,512" advanced="true">
+    <group id="n62_axao" name="rightInfo" xy="873,153" size="413,507" advanced="true">
       <gearDisplay controller="hasDataCtrl" pages="1"/>
       <relation target="" sidePair="right-right"/>
     </group>
-    <component id="n89_x956" name="propTopList" src="ykwwkx" fileName="components/components_new/currencyListCom.xml" pkg="2r331opv" xy="598,12" size="692,40">
+    <component id="n89_x956" name="currencyList" src="ykwwkx" fileName="components/components_new/currencyListCom.xml" pkg="2r331opv" xy="598,12" size="692,40">
       <relation target="" sidePair="right-right"/>
     </component>
   </displayList>

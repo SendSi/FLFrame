@@ -15,16 +15,12 @@ function TopEles:Init(rootUI)
 
         self.currencyList = self.uiComs.m_currencyListCom:GetChild("currencyList")
         self.currencyList.itemRenderer = function(index, gObject)
-            self:OnRendererCurrencyListCom(index, gObject)
+            local dto = self.currencyIds[index + 1]
+            gObject:SetData(dto)--Item_Currency.lua
         end
         self.currencyIds = { 1, 2, 3, 4, 5 }
         self.currencyList.numItems = 5
     end
-end
-
-function TopEles:OnRendererCurrencyListCom(index, gObject)
-    local dto = self.currencyIds[index + 1]
-    gObject:SetData(dto)--Item_Currency.lua
 end
 
 function TopEles:Dispose()

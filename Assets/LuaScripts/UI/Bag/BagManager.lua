@@ -12,6 +12,7 @@ local mServerDtos = {
     { cfgId = 4, sum = 111, uid = "abc" },
     { cfgId = 59, sum = 10, uid = "abc" },
     { cfgId = 58, sum = 10, uid = "abc" },
+    { cfgId = 2401, sum = 15, uid = "abc" },
     { cfgId = 10001, sum = 10, uid = "abc" },
     { cfgId = 10002, sum = 10, uid = "abc" },
     { cfgId = 10003, sum = 10, uid = "abc" },
@@ -62,7 +63,7 @@ function BagManager:SetProtoData()
         table.insert(mServerDtos, { cfgId = cfgId, sum = value, uid = "abc" })
     end
     ---------------- ---------------- ---------------- ---------------- ----------------
-    local cfgId = math.random(10001, 11002)
+    local cfgId = math.random(2401, 2413)
     local value = math.random(1, 99)
     logerror("10秒 10次 道具随机--cfgId=", cfgId, ",value=", value)
     if mServerItemDic[cfgId] then
