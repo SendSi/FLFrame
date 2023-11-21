@@ -1,8 +1,7 @@
 # FLFrame
-搭toLua+FairyGUI+addressable Unity版本2022.1.6f1
+搭toLua+FairyGUI+addressable Unity版本2022.1.6f1  unity2023会有问题
 
 https://github.com/SendSi/FGUI_Frame_2021_0615 这个使用toLua+FairyGUI+ab,把这个改成了toLua+FairyGUI+aa了
-
 
 ```
 看此文章.https://www.jianshu.com/p/045f667d05c9
